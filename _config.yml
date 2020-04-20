@@ -1,14 +1,18 @@
-name: White Paper
+name: Miere's Personal Observations
 description: >
-    A simple jekyll theme aimed at programmers who like clean interface to write posts
-    and show off some code.
+    Personal observations made by myself. I write about technology, software engineering, history and,
+    ocasionally, politics. I shall try my best to keep it as scientific as possible, using facts to
+    support my point of view. Hopefully, you will give me a hand whenever I did a mistake.
 about: >
-    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+    Personal observations made by myself. I write about technology, software engineering, history and,
+    ocasionally, politics. I shall try my best to keep it as scientific as possible, using facts to
+    support my point of view. Hopefully, you will give me a hand whenever I did a mistake.
 
 master_repo: false
-url: "http://vinitkumar.github.io/white-paper"
+url: "https://miere.observer"
 markdown: kramdown
 highlighter: rouge
+destination: docs
 
 plugins: ['jekyll-paginate', 'jekyll-gist', 'jekyll-feed']
 
@@ -18,17 +22,15 @@ logo:             logo.png
 disqus_shortname:
 
 rtl: false
+
 owner:
-  name:           whitepaper
-  avatar:         "https://avatars1.githubusercontent.com/u/537678?s=240&v=4"
-  email:          "vinit1414.08@bitmesra.ac.in"
+  name:           Miere Liniel Teixeira
+  avatar:         "/myself.jpeg"
+  email:          "miere00@gmail.com"
   # Social networking links used in footer. Update and remove as you like.
-  twitter: vinitkme
-  github: https://github.com/vinitkumar
-  stackexchange: https://stackoverflow.com/users/859112/vinit-kumar?tab=profile
-  linkedin: https://www.linkedin.com/in/vinitatlinkedin
-  # For Google Authorship https://plus.google.com/authorship
-  google_plus:
+  twitter: miere
+  github: https://github.com/miere
+  linkedin: https://www.linkedin.com/in/miere
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:

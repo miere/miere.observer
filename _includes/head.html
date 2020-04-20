@@ -24,8 +24,11 @@
 {% if site.owner.google_plus %}<link rel="author" href="{{ site.owner.google_plus }}?rel=author">{% endif %}
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
 
+<!-- External Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- Styles -->
 {% if site.rtl %}
 <link rel="stylesheet" href="{{ '/css/main.min.rtl.css' | relative_url }}" type="text/css" />
 <style>
@@ -34,5 +37,5 @@
     }
 </style>
 {% else %}
-<link rel="stylesheet" href="{{ '/css/main.min.css' | relative_url }}" type="text/css" />
+<link rel="stylesheet" href="{{ '/css/base.css' | relative_url }}" type="text/css" />
 {% endif %}
