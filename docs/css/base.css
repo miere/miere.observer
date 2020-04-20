@@ -44,6 +44,7 @@ p {
   font-size: 18px;
   text-align: justify;
   text-justify: inter-word;
+  margin: 0.5em 0 1em;
 }
 
 a.top-link {
@@ -85,7 +86,8 @@ hr:before {
 }
 
 .container {
-  width: 60%;
+  width: 80%;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -93,7 +95,7 @@ hr:before {
 
 @media(max-width: 768px) {
   .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding: 0 20px;
   }
@@ -104,8 +106,7 @@ hr:before {
 }
 
 header {
-  margin: 20px 0 20px 0;
-  /* text-align: right; */
+  margin: 20px 0 45px 0;
 }
 
 ul.nav {
@@ -113,35 +114,31 @@ ul.nav {
   padding: 0;
   list-style-type: none;
   float: right;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 ul.nav li {
   display: inline-block;
   text-transform: uppercase;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 200;
 }
-@media only screen and (max-width: 520px) {
+
+@media(max-width: 768px) {
   ul.nav {
-    position: relative;
-  }
-  ul.nav li {
-    margin: 0 4px;
-    font-size: 13px;
-  }
-  ul.nav li.logo {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    margin-left: -14px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style-type: none;
+    float: none;
+    font-weight: 100;
   }
 }
+
 ul.nav li a {
   color: deepskyblue;
   margin-right: 10px;
   text-decoration: none;
-  font-weight: 100;
 }
 ul.nav li a:hover {
   color: #2382c8;
@@ -181,7 +178,7 @@ ul.nav li.logo a {
 
 .listing .post p.date {
   font-size: 14px;
-  color: #bbb;
+  color: green;
 }
 
 .listing .post h2 {
@@ -193,7 +190,7 @@ ul.nav li.logo a {
 .listing .post h2 a {
   text-decoration: none;
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .listing .post h2 i {
@@ -280,7 +277,15 @@ p.intro {
 p.intro a {
   color: #55acee;
 }
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1em;
+  font-weight: 300;
+  margin: 1em 0 0.25em 0;
+}
 
+h1 {
+  font-size: 42px;
+}
 h1.words {
   color: #DB2C17;
 }
@@ -293,8 +298,7 @@ h1.link .desc {
 }
 @media only screen and (max-width: 700px) {
   h1 {
-    font-size: 48px;
-    letter-spacing: 0;
+    line-height: 1.05em;
   }
 }
 
@@ -449,32 +453,36 @@ p > a > img {
 /*----------------------------------------------------------------------------
   Post details
 ----------------------------------------------------------------------------*/
-div.post-details {
+div.post-details, div.author-details {
   position: relative;
   display: block;
   width: 100%;
   overflow: hidden;
   padding: 10px 0;
-  margin-top: -25px;
+  margin-top: -10px;
 }
 
-div.post-details img {
+div.post-details > img,
+div.author-details > img {
   float: left;
   width: 50px;
   border-radius: 100%;
 }
 
-div.post-details div {
+div.post-details > div,
+div.author-details > div {
   float: left;
   padding: 7px 10px;
 }
 
-div.post-details div > span {
+div.post-details > div > span,
+div.author-details > div > span {
   display: block;
   line-height: 1em;
 }
 
-div.post-details div > span.post-date {
+div.post-details div > span.post-date,
+div.author-details div > span.post-date {
   color: green;
   margin-top: 3px
 }
@@ -572,4 +580,10 @@ code.html span.doctype {
   width: 100%;
   text-align: center;
   font-weight: 100;
+}
+
+.utterances {
+  margin: 20px 0 0;
+  max-width: 100% !important;
+  width: 100% !important;
 }

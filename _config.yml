@@ -1,12 +1,10 @@
 name: Miere's Personal Observations
-description: >
-    Personal observations made by myself. I write about technology, software engineering, history and,
-    ocasionally, politics. I shall try my best to keep it as scientific as possible, using facts to
-    support my point of view. Hopefully, you will give me a hand whenever I did a mistake.
+description: Miere's Personal Observations
 about: >
-    Personal observations made by myself. I write about technology, software engineering, history and,
-    ocasionally, politics. I shall try my best to keep it as scientific as possible, using facts to
-    support my point of view. Hopefully, you will give me a hand whenever I did a mistake.
+    This is a blog composed by my personal observations and thoughts. I write about mostly about technology,
+    science and software engineering, but I might write occasionaly about history and politics as well. I shall
+    try my best to keep it as scientific as possible, using facts to support my point of view. Hopefully, you
+    will give me a hand whenever I did a mistake.
 
 master_repo: false
 url: "https://miere.observer"
@@ -25,6 +23,8 @@ rtl: false
 
 owner:
   name:           Miere Liniel Teixeira
+  description: >
+    Lead Software Engineer, Distributed Services, Helper, Dad, Husband, bankupt guitarist.
   avatar:         "/myself.jpeg"
   email:          "miere00@gmail.com"
   # Social networking links used in footer. Update and remove as you like.
