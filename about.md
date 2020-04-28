@@ -7,7 +7,7 @@ I'm a Lead Software Engineer who has been working in the industry since 2000. I 
 
 I created this blog to express my ideas, observations and thoughts. I write about mostly about technology, science and software engineering, but I might write occasionaly about history and politics as well. I shall try my best to keep it as scientific as possible, using facts to support my point of view. I really hope you enjoy. Hopefully, you will give me a hand whenever I did a mistake.
 
-You can find me in a few places over the internet. Feel free to contact me, I'll try my best to answer you as polite and respectful as possible. Although it might take time, I usually reply to everyone, even if you disagree with me.
+You can find me in a few places over the internet. Feel free to contact me, I'll try my best to answer you as soon as possible.
 
 <div class="pagination">
   {% if site.owner.linkedin %}

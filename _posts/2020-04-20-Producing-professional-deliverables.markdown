@@ -1,11 +1,60 @@
 ---
 layout: post
-title:  "Producing professional deliverables"
+title:  "Producing Professional Deliverables"
 categories: [engineering]
-tags: [engineering]
+tags: [engineering, master]
 ---
-It was 2008 when I first received a bad feedback about a job I did. My team was performing
-[360 Degree Feedback](https://en.wikipedia.org/wiki/360-degree_feedback). The feedbacks were appaling. I never had that feeling before. It came to point I was questioning if people felt like I was a complete fraud. They complains were diverse, most of them quite
-harsh and my manager agreed with me on that.
+When someone describes them as a professional one might see that person as someone who does something for a living. Others might agree with Cambridge dictionary, seeing professionals as those who have "the type of job that needs a high level of education and training" [^1]. Perhaps we can all agree that meaning of words evolves as the time passes by hence having its meaning adapted to suit a more recent context. Maybe "professional" in the modern days might've acquired different meaning from what it used to have in the past.
 
----
+## The need for consistency
+For instance, let's take football players [^2] for a moment. They started to being paid as professionals since last quarter of the 18th century [^3] but when we compare the quality of the games back then with nowadays', and we put nostalgia aside, the gap is huge. Pelé, Maradona, Zidane and Messi are told by the history as those who found new ways to take the game to the next level. But so did managers and couches, "who dreamed up _catenaccio_ and _zonal marking_ and the _sweeper system_, all of it designed to stop the virtuosos showcasing their talents" [^4].
+
+The bar was raised to a point where we've been scoring less than a hundred ago [^4]. While only a few of players can keep up with their careers for more than 8 years [^5], most of them tend to retire quite early - especially if we compare to a software engineer. In fact, the most successful footballers were those who had more **consistent performance** in their teams.
+
+_Consistency_ is probably the most desirable skill I look for when I hire someone. Independently on how senior as engineer you are, delivering consistent results means that I can predict how long does it take for you to finish your tasks, how many issues you might introduce in a software and how much effort should I put into you to reach the ideal performance within the team.
+
+The more senior you are the less issues you might introduce, the faster you can learn and adopt a new technique and the more adaptable you are to tackle problems you've never faced before. But, if you don't master the techniques you've learned before in a way that you produce consistent results from it, your seniority might be easily replaceable by a junior. Think about it, if you can learn consistently, the more I teach you the more improvement I can see on your deliverables. On the other hand, a non-consistent senior developer might learn something new and put it in practice straightaway, but may struggle to use it a different scenario as he hasn't trained long enough to master his new skill.
+
+## Reproducibility is key
+If we travel in time a few centuries to the past, we would see a craft worker (such as [Artisans](https://en.wikipedia.org/wiki/Artisan)) in action, perhaps the contemporary version the Software Engineer as we know [^7]. A skilled craft worker makes or creates material objects partly or entirely by hand. Artisans were the dominant producers of consumer products before the Industrial Revolution. Once passed through the career chain from apprentice to journeyman, he could be elected to become a master craftsman, enjoying one of the highest social status in their communities at time. [^6]
+
+The success of the [Agricultural Revolution](https://en.wikipedia.org/wiki/British_Agricultural_Revolution) of the 18th century created a favorable climate for industrialization. With the increasing food production, the British population could be fed at lower prices with less effort than ever before. The surplus of food meant that British families [could use the money they saved to purchase manufactured goods](https://study.com/academy/lesson/causes-of-the-first-industrial-revolution.html). Under given circumstances, it's easy to understand that craft workers wasn't enough to cope with the higher demand of goods that was needed.
+
+Just as the demand for consistently and reliably delivered goods led artisans ending up being replaced by machines, <span class="highlight">the overwhelming demand for value to be provided by the current software industry will also raise the bar</span> in a way that Software Engineers who lacks precision, predictability or measurement won't make through their further job interviews.
+
+To better understand this idea, let's assume a developer was elected by his team to design a microservice from scratch. On his team there's no one in charge of the infrastructure or taking macro architectural decisions. A good outcome from this project might be big deal on his reputation, especially if no one else have to worry about bugs, if there's a brief README file explaining how to run the software locally and releasing a new version of it is just a matter of having a Pull Request approved.
+
+One might argue that taking care of all of these details consume valuable time that would be better spent implementing new features. But I dread the days I had to stop what I was doing to answer questions from my colleagues when they have to maintain a software I've previously did without a proper documentation. Eventually I realized that when the README file is enough I have less interruptions. When my unit tests covers most of - if not all - the source code, I have less bugs to fix hence having more time to create something new.
+
+A wise engineer, though, may go even further and streamline his knowledge in a way that it can be easily reproducible as well. What if a Kotlin developer have [a small gradle project](https://github.com/Skullabs/kos-sample-gradle) on his Github account? Why don't we create [a module to deploy our software using Docker](https://github.com/miere/terraform-aws-fargate-ha-web)? Won't be useful if you save that [small script](https://github.com/miere/terraw) that automate everything you need to run your terraform scripts? If designing software is the main part of your job, perhaps you should figure out a way to reproduce the boring tasks as quick as possible, when the necessity comes up you will be able to delivery a master piece but faster than anyone else.
+
+## Going beyond Kent's Simple Design
+Speaking of master pieces, in the 1990's Kent Beck introduced The Four Elements of Simple Design, a principle that would be later eternized on his [book Extreme Programming Explained](https://www.amazon.com/gp/product/0201616416). He states these rules as followed:
+- Runs all the tests
+- Has no duplicated logic. Be wary of hidden duplication like parallel class hierarchies
+- States every intention important to the programmer
+- Has the fewest possible classes and methods
+
+His rules were written in priority order, where the ones at the top takes priority over the following ones. It comes as no surprise that, if you can't afford the time to have all of it, he would like you to put more effort on tests. Being behind the roots of unit testing frameworks we have nowadays [^9], being the author of [SUnit](https://en.wikipedia.org/wiki/SUnit) and [co-authoring](https://en.wikipedia.org/wiki/Kent_Beck) JUnit with Erich Gamma, he's an avid advocate of testing as feedback tool [^8], something you can read from the man itself on his award winning book [^10] [Test-Driven Development by Example](https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530/).
+
+Let's take the popular [MVC pattern](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) to draw a comparison with Beck's rules. Between late 2000s and early 2010s MVC was considered the _silver bullet pattern_ for his adopters [^11]. On an era where nobody was really concerned about [Separation of Concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) and the front-end were mostly rendered by the backend, it was indeed quite convenient to grow your software by simply placing classes in one of its three buckets. Despite of its convenience not all software designed mostly using MVC (from end-to-end) is easy to maintain, once it grows bigger the need for new features to be included urges us to adopt different approaches - a phenomenon well described by Meir Lehman [on another master piece](https://ieeexplore.ieee.org/document/1456074) [^12].
+
+Kent rules, on other hand, are distinguished from other methodologies by focusing on the _outcome you might have_ instead of _how one have to organize his code_. It is benefit driven, encouraging you to adopt whatever strategy you got on your playbook as long as you respect those outcomes. As a result, maintainability and fast feedback on breaking changes will be the benefits those who adopts it will be rewarded with. That's the actual mindset a professional has that to keeps the **quality** of their deliverables higher than the average.
+
+
+
+## Takeaways
+Professionalism is quite subjective
+
+[^1]: [Cambrige dictionary's definition of the word "professional"](https://dictionary.cambridge.org/dictionary/english/professional)
+[^2]: [Footbal](https://en.wikipedia.org/wiki/Football_player), also known as soccer for the Americans
+[^3]: [Fergus Suter](https://en.wikipedia.org/wiki/Fergus_Suter) was arguably the first recognised professional footballer.
+[^4]: Instead of the consistent and insistent downward trend in goals we have seen over a century and a half of play, in the last 60 years or so there appears to be a leveling off. Goals are not dying. They are plateauing. Scoring has remained essentially stable in the last two decades, perhaps even as far back as the 1970s. See: [The Great Leveling](https://slate.com/culture/2013/08/the-numbers-game-why-soccer-teams-score-fewer-goals-than-they-did-100-years-ago.html)
+[^5]: Professional soccer careers can be very lucrative, but tend to only last for around eight years, with the average age of retirement being 35 years old. Check the list of the [Oldest Soccer Players](https://www.oldest.org/sports/soccer-players/) for more details.
+[^6]: See _History of Western Civilization_ at Boise State University's ["Document No.23"](https://web.archive.org/web/20090107061228/http://history.boisestate.edu/westciv/medsoc/23.shtml). Archived from the [original](http://history.boisestate.edu/westciv/medsoc/23.shtml) on 2009-01-07. Retrieved 2009-01-08.
+[^7]: In fact, there's a whole movement in which developers describes themselves as Software Craftsman. Perhaps the best description on how Software Engineering became more relevant in the field can be found in [this article](https://en.wikipedia.org/wiki/Software_craftsmanship) in the Wikipedia.
+[^8]: [According to Beck](https://medium.com/@kentbeck_7670/programmer-test-principles-d01c064d7934), "Programmer tests are an oracle providing feedback coding-decision-by-coding-decision".
+[^9]: Kent Bech is often casted as the mind that lead to the [xUnit](https://en.wikipedia.org/wiki/XUnit) frameworks being widely adopted.
+[^10]: Co-authored by Addison-Wesley, the book is award winning of the Jolt Productivity Award.
+[^11]: [Here](https://twitter.com/miere/status/14496627913924608) is a discussion (in PT_BR) back in 2010 I had on Twitter about this very topic, showing how heated a conversation can get when enquiring MVC developers about MVC replacements. At the time, I was under heavy training by [one of my previous mentors](https://twitter.com/anielson), as he noticed my knowledge was mostly focused on hardware and low-level software development neglecting common design patterns.
+[^12]: In 1974, Lehman stated on his book that "as an E-type system evolves, its complexity increases unless work is done to maintain or reduce it".

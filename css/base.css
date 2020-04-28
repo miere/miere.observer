@@ -47,6 +47,14 @@ p {
   margin: 0.5em 0 1em;
 }
 
+sup {
+  vertical-align: bottom;
+  top: -0.25em !important;
+  display: inline-block;
+  position: relative;
+  margin-left: -3px;
+}
+
 a.top-link {
   color: #999;
   font-size: 20px;
@@ -60,16 +68,19 @@ a.top-link:hover {
   text-decoration: none;
 }
 
-strong {
-  font-weight: bold;
+strong, span.highlight {
+  font-style: italic;
+  font-weight: 400;
 }
 
 a {
-  color: deepskyblue;
+  color: #1277dc;
+  font-weight: 400;
   text-decoration: none;
 }
+
 a:hover {
-  color: #2382c8;
+  color: #1277dc;
   text-decoration: underline;
 }
 
@@ -109,6 +120,8 @@ header {
   margin: 20px 0 45px 0;
 }
 
+li { margin-left: 30px; }
+
 ul.nav {
   margin: 0;
   padding: 0;
@@ -118,6 +131,7 @@ ul.nav {
 }
 
 ul.nav li {
+  margin: 0px;
   display: inline-block;
   text-transform: uppercase;
   font-size: 18px;
@@ -468,6 +482,7 @@ div.author-details > img {
   float: left;
   width: 50px;
   border-radius: 100%;
+  margin-left: 4px;
 }
 
 div.post-details > div,
@@ -485,7 +500,8 @@ div.author-details > div > span {
 div.post-details div > span.post-date,
 div.author-details div > span.post-date {
   color: green;
-  margin-top: 3px
+  margin-top: 4px;
+  font-size: 0.8em;
 }
 
 /*----------------------------------------------------------------------------
@@ -581,6 +597,31 @@ code.html span.doctype {
   width: 100%;
   text-align: center;
   font-weight: 100;
+}
+
+.footnotes {
+  margin: 0;
+  padding: 30px 0;
+}
+.footnotes::before {
+  content: "References and Footnotes";
+  font-size: 1em;
+  font-weight: 600;
+}
+.footnotes > ol {
+  margin: 0;
+}
+.footnotes > ol > li {
+  margin-left: 30px;
+  font-size: 14px;
+  vertical-align: super;
+  line-height: 1.75em;
+  padding: 0;
+}
+.footnotes > ol > li > p {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
 }
 
 .utterances {
