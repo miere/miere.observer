@@ -106,8 +106,19 @@
 
 <p>Kent rules, on other hand, are distinguished from other methodologies by focusing on the <em>outcome you might have</em> instead of <em>how one have to organize his code</em>. It is benefit driven, encouraging you to adopt whatever strategy you got on your playbook as long as you respect those outcomes. As a result, maintainability and fast feedback on breaking changes will be the benefits those who adopts it will be rewarded with. That’s the actual mindset a professional has that to keeps the <strong>quality</strong> of their deliverables higher than the average.</p>
 
+<p>Since it’s passed more than 2 decades since these rules has been crafted, if you allow me, I’d like to respectfully include a couple of items which I think should be mandatory for any professional delivery in software.</p>
+<ol>
+  <li>It should be possible to run all your tests with a single (yet simple) command.</li>
+  <li>It should be possible to run your software with a single (yet simple) command.</li>
+  <li>It should be possible to package your software with a single (yet simple) command.</li>
+</ol>
+
+<p>While these 3 rules I’m introducing might be seen as silly on a first glance, it makes perfect sense when you need to handover your deliverable to someone else. Just as Beck’s rules, they’ve been ordered by priority as well, thus, if you can’t afford to have all of them, let others developers which is the ideal way to run all tests and check for regressions on your software. The last two rules are somewhat related, as you need to package your software to run it locally. As you have to thoroughly review all the dependencies (libraries, tools and dependent services) your service rely on, these steps are <a href="https://dzone.com/articles/learn-how-to-setup-a-cicd-pipeline-from-scratch">the foundation to have a painless CI/CD setup process</a>.</p>
+
 <h2 id="takeaways">Takeaways</h2>
-<p>Professionalism is quite subjective</p>
+<p>Professionalism is a quite subjective topic, but it worth keep in mind that we’re living in a different world where the current standards of our industry expects higher delivery pace, less time spent on bugs or amending poorly developed features. Even complex structures has been shrewdly discouraged. In fact, managers are going one step further in this direction, trying its best on reducing the learning curve when developers jump in to maintain a different microservice, independently from whether the developer is a newcomer or long-time hero within the company <sup id="fnref:13"><a href="#fn:13" class="footnote">13</a></sup>.</p>
+
+<p>If I could sum up the aforementioned topics, I’d say the Professional Software Engineer from nowadays should be consistently capable to delivery high quality software in a way that anyone with the source code could maintain it with no hassle.</p>
 
 <div class="footnotes">
   <ol>
@@ -146,6 +157,9 @@
     </li>
     <li id="fn:12">
       <p>In 1974, Lehman stated on his book that “as an E-type system evolves, its complexity increases unless work is done to maintain or reduce it”. <a href="#fnref:12" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:13">
+      <p>It worth read about <a href="https://hbr.org/2014/01/how-netflix-reinvented-hr">how Netflix reinvented the way they manage their teams</a>, what are they expectations and for how long they’ve decided to invest and quality and reproducibility on their teams to avoid rework and spend more time on what will have higher return of investment. <a href="#fnref:13" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>

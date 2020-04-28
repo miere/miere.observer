@@ -41,10 +41,17 @@ Let's take the popular [MVC pattern](https://en.wikipedia.org/wiki/Model%E2%80%9
 
 Kent rules, on other hand, are distinguished from other methodologies by focusing on the _outcome you might have_ instead of _how one have to organize his code_. It is benefit driven, encouraging you to adopt whatever strategy you got on your playbook as long as you respect those outcomes. As a result, maintainability and fast feedback on breaking changes will be the benefits those who adopts it will be rewarded with. That's the actual mindset a professional has that to keeps the **quality** of their deliverables higher than the average.
 
+Since it's passed more than 2 decades since these rules has been crafted, if you allow me, I'd like to respectfully include a couple of items which I think should be mandatory for any professional delivery in software.
+1. It should be possible to run all your tests with a single (yet simple) command.
+1. It should be possible to run your software with a single (yet simple) command.
+1. It should be possible to package your software with a single (yet simple) command.
 
+While these 3 rules I'm introducing might be seen as silly on a first glance, it makes perfect sense when you need to handover your deliverable to someone else. Just as Beck's rules, they've been ordered by priority as well, thus, if you can't afford to have all of them, let others developers which is the ideal way to run all tests and check for regressions on your software. The last two rules are somewhat related, as you need to package your software to run it locally. As you have to thoroughly review all the dependencies (libraries, tools and dependent services) your service rely on, these steps are [the foundation to have a painless CI/CD setup process](https://dzone.com/articles/learn-how-to-setup-a-cicd-pipeline-from-scratch).
 
 ## Takeaways
-Professionalism is quite subjective
+Professionalism is a quite subjective topic, but it worth keep in mind that we're living in a different world where the current standards of our industry expects higher delivery pace, less time spent on bugs or amending poorly developed features. Even complex structures has been shrewdly discouraged. In fact, managers are going one step further in this direction, trying its best on reducing the learning curve when developers jump in to maintain a different microservice, independently from whether the developer is a newcomer or long-time hero within the company [^13].
+
+If I could sum up the aforementioned topics, I'd say the Professional Software Engineer from nowadays should be consistently capable to delivery high quality software in a way that anyone with the source code could maintain it with no hassle.
 
 [^1]: [Cambrige dictionary's definition of the word "professional"](https://dictionary.cambridge.org/dictionary/english/professional)
 [^2]: [Footbal](https://en.wikipedia.org/wiki/Football_player), also known as soccer for the Americans
@@ -58,3 +65,4 @@ Professionalism is quite subjective
 [^10]: Co-authored by Addison-Wesley, the book is award winning of the Jolt Productivity Award.
 [^11]: [Here](https://twitter.com/miere/status/14496627913924608) is a discussion (in PT_BR) back in 2010 I had on Twitter about this very topic, showing how heated a conversation can get when enquiring MVC developers about MVC replacements. At the time, I was under heavy training by [one of my previous mentors](https://twitter.com/anielson), as he noticed my knowledge was mostly focused on hardware and low-level software development neglecting common design patterns.
 [^12]: In 1974, Lehman stated on his book that "as an E-type system evolves, its complexity increases unless work is done to maintain or reduce it".
+[^13]: It worth read about [how Netflix reinvented the way they manage their teams](https://hbr.org/2014/01/how-netflix-reinvented-hr), what are they expectations and for how long they've decided to invest and quality and reproducibility on their teams to avoid rework and spend more time on what will have higher return of investment.
