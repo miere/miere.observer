@@ -4,7 +4,7 @@ title:  "Producing Professional Deliverables"
 categories: [engineering]
 tags: [engineering, master]
 ---
-When someone describes them as a professional one might see that person as someone who does something for a living. Others might agree with the Cambridge dictionary, seeing professionals as those who have "the type of job that needs a high level of education and training" [^1]. Perhaps we can all agree that the meaning of words evolves as time passes by hence having its meaning adapted to suit a more recent context. Maybe "professional" in the modern days might've acquired different meanings from what it used to have in the past. Unbox your tool kit and get rid with the rust because we need to be prepared for the next era of the software engineering.
+When someone describes them as a professional one might see that person as someone who does something for a living. Others might agree with the Cambridge dictionary, seeing professionals as those who have "the type of job that needs a high level of education and training" [^1]. Perhaps we can all agree that the meaning of words evolves as time passes by hence having its meaning adapted to suit a more recent context. Maybe "professional" in the modern days might've acquired different meanings from what it used to have in the past. Unbox your tool kit and clean the rust out because it's time to be prepared for the next era of the software engineering.
 
 <img class="main-banner" src="../../../../imgs/craft-tools.jpg">
 
