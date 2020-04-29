@@ -4,12 +4,14 @@ title:  "Producing Professional Deliverables"
 categories: [engineering]
 tags: [engineering, master]
 ---
-When someone describes them as a professional one might see that person as someone who does something for a living. Others might agree with the Cambridge dictionary, seeing professionals as those who have "the type of job that needs a high level of education and training" [^1]. Perhaps we can all agree that the meaning of words evolves as time passes by hence having its meaning adapted to suit a more recent context. Maybe "professional" in the modern days might've acquired different meanings from what it used to have in the past.
+When someone describes them as a professional one might see that person as someone who does something for a living. Others might agree with the Cambridge dictionary, seeing professionals as those who have "the type of job that needs a high level of education and training" [^1]. Perhaps we can all agree that the meaning of words evolves as time passes by hence having its meaning adapted to suit a more recent context. Maybe "professional" in the modern days might've acquired different meanings from what it used to have in the past. Unbox your tool kit and get rid with the rust because we need to be prepared for the next era of the software engineering.
+
+<img class="main-banner" src="../../../../imgs/craft-tools.jpg">
 
 ## The need for consistency
 For instance, let's take football players [^2] for a moment. They started to being paid as professionals since last quarter of the 18th century [^3] but when we compare the quality of the games back then with nowadays', and we put nostalgia aside, the gap is huge. Pelé, Maradona, Zidane, and Messi are told by history as those who found new ways to take the game to the next level. But so did managers and couches, "who dreamed up _catenaccio_ and _zonal marking_ and the _sweeper system_, all of it designed to stop the virtuosos showcasing their talents" [^4].
 
-The bar was raised to a point where we've been scoring less than a hundred ago [^4]. While only a few players can keep up with their careers for more than 8 years [^5], most of them tend to retire quite early - especially if we compare to a software engineer. In fact, the most successful footballers were those who had more **consistent performance** in their teams.
+The bar was raised to a point where we've been scoring less than a hundred years ago [^4]. While only a few players can keep up with their careers for more than 8 years [^5], most of them tend to retire quite early - especially if we compare to a software engineer. In fact, the most successful footballers were those who had more **consistent performance** in their teams.
 
 _Consistency_ is probably the most desirable skill I look for when I hire someone. Independently on how senior as an engineer you are, delivering consistent results means that I can predict how long does it take for you to finish your tasks, how many issues you might introduce in software and how much effort should I put into you to reach the ideal performance within the team.
 
