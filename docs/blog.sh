@@ -3,7 +3,8 @@
 cd $(dirname $0)
 
 # FUNCTIONS
-clean(){
+clean_and_build(){
+    echo "Cleaning up and rebuilding blog..."
     echo "Cleaning up $PWD at $(date)" >> /tmp/jekyll.blog
     jekyll build 2>> /tmp/jekyll.blog >> /tmp/jekyll.blog
 }
@@ -12,7 +13,7 @@ save(){
     echo "What modifications have you done? [ENTER to finish, Ctrl+C to abort]"
     read MSG
 
-    clean
+    clean_and_build
     git add .
     git commit -m "$MSG"
 }
@@ -22,7 +23,7 @@ revert(){
 }
 
 publish(){
-    clean
+    clean_and_build
     git push -u origin master
 }
 
@@ -31,7 +32,7 @@ local(){
 }
 
 modifications(){
-    clean
+    clean_and_build
 	RESP=$(git status -s)
 	if [ ! "$RESP" = "" ]; then
 		echo "Changes on your current work."
@@ -47,6 +48,7 @@ case $1 in
   "publish") publish ;;
   "local" ) local ;;
   "modif"|"modifications") modifications ;;
+  "build") clean_and_build ;;
   *)
     echo "Bad syntax."
     echo "Usage $0 <OPTS>"
@@ -57,5 +59,7 @@ case $1 in
     echo " * publish"
     echo " * local"
     echo " * modif|modifications"
+    echo " * build"
+    echo
  ;;
 esac
