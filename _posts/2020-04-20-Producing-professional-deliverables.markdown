@@ -55,6 +55,9 @@ Professionalism is a quite subjective topic, but it worth keeping in mind that w
 
 If I could sum up the aforementioned topics, I'd say the Professional Software Engineer from nowadays should be consistently capable of delivering high-quality software in a way that anyone with the source code could maintain it with no hassle.
 
+---
+_Special thanks to Ricardo Baumgartner and [Varun Naik](http://vnaik.com) for their contributions._
+
 [^1]: [Cambrige dictionary's definition of the word "professional"](https://dictionary.cambridge.org/dictionary/english/professional)
 [^2]: [Football](https://en.wikipedia.org/wiki/Football_player), also known as soccer for the Americans
 [^3]: [Fergus Suter](https://en.wikipedia.org/wiki/Fergus_Suter) was arguably the first recognised professional footballer.

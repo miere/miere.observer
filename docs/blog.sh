@@ -46,6 +46,7 @@ case $1 in
   "save") save ;;
   "revert") revert ;;
   "publish") publish ;;
+  "save_publish" ) save && publish ;;
   "local" ) local ;;
   "modif"|"modifications") modifications ;;
   "build") clean_and_build ;;
