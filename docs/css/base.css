@@ -475,6 +475,7 @@ div.post-details, div.author-details {
   overflow: hidden;
   padding: 10px 0;
   margin-top: -10px;
+  margin-bottom: 20px;
 }
 
 div.post-details > img,
@@ -635,4 +636,83 @@ img.main-banner {
   margin: 30px auto 0;
   width: 100%;
   max-width: 1024px;
+}
+
+/* Timeline Article Styles */
+header.briefing {
+  left: 0;
+  overflow: auto;
+  margin: 0 -100%;
+  background: whitesmoke;
+  padding-bottom: 20px;
+}
+
+header.briefing p {
+  position: relative;
+  width: 80%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header.briefing > .video {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+}
+
+header.briefing > .video > iframe {
+  position: relative;
+  width: 100%;
+  max-width: 1024px;
+  height: 570px;
+}
+
+@media only screen and (max-width: 520px) {
+  header.briefing > .video > iframe { height: 280px;}
+}
+
+@media only screen and (max-width: 800px) {
+  header.briefing > .video > iframe { height: 451px;}
+}
+
+.timeline {
+  position: relative;
+  margin: 0px 0 30px;
+}
+
+.timeline > section {
+  padding: 30px 10px 30px 80px;
+  border-color: whitesmoke;
+  border-width: 2px;
+}
+
+.timeline > section:nth-child(odd) {
+  border-style: none solid solid none;
+}
+
+.timeline > section:nth-child(even) {
+  border-style: none none solid solid;
+}
+
+.timeline > section > h2,
+.timeline > section > p,
+.timeline > section > ul {
+    width: 90%;
+}
+
+.timeline > section > h2 {
+  margin: 0;
+}
+
+.timeline > section > p {
+  margin: 0.5em 0;
+}
+
+.timeline > section > p:last-child {
+  margin-bottom: 0;
+}
+
+.timeline > section > time {
+  position: absolute;
+  left: 14px;
 }

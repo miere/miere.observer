@@ -10,7 +10,7 @@ title: Miere's Personal Observations
         {{ post.date | date_to_string }} &bull;
         <a href="{{site.url}}{{post.url}}">read more...</a>
       </p>
-      {{ post.excerpt }}
+      {{ post.content | strip_html | truncatewords:75 }}
     </div>
     {% endfor %}
 </div>
