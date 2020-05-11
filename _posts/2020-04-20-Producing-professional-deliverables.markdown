@@ -6,8 +6,6 @@ tags: [engineering, master]
 ---
 When someone is described as a professional one might see that person as someone who does something for a living. Others might agree with the Cambridge dictionary, seeing professionals as those who have “[...] the type of job that needs a high level of education and training” [^1]. Perhaps we can all agree that the meaning of words evolves as time passes by - having its meaning adapted to suit a more recent context. Maybe “professional” in the modern days might’ve acquired different meaning from what it used to have in the past.
 
-<img class="main-banner" src="../../../../imgs/craft-tools.jpg">
-
 ## The need for consistency
 Let’s take football players [^2] for a moment. They only begun getting paid as professionals since last quarter of the 18th century [^3] but when we compare the quality of the games back then with nowadays’, and we put nostalgia aside, the gap is huge. Pelé, Maradona, Zidane and Messi are historically regarded as those who took the game to the next level. But so did managers and coaches, “who dreamed up catenaccio and zonal marking and the sweeper system, all of it designed to stop the virtuosos showcasing their talents” [^4].
 
