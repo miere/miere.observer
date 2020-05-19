@@ -375,9 +375,22 @@ blockquote {
   font-size: 16px;
   border-left: 2px solid #aaa;
 }
+
 blockquote p {
   margin: 12px 0;
   color: #999;
+}
+
+blockquote.note {
+  border: 1px solid #d3e6ff;
+  border-left: 5px solid #c4f0ff;
+  padding: 20px 30px;
+  color: #666;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  background: #fdfdff;
+  text-shadow: none;
 }
 
 table {
@@ -681,17 +694,11 @@ header.briefing > .video > iframe {
 }
 
 .timeline > section {
-  padding: 30px 10px 30px 80px;
+  padding: 30px 10px 30px 50px;
   border-color: whitesmoke;
   border-width: 2px;
-}
-
-.timeline > section:nth-child(odd) {
-  border-style: none solid solid none;
-}
-
-.timeline > section:nth-child(even) {
-  border-style: none none solid solid;
+  margin-left: 30px;
+  border-style: none none none solid;
 }
 
 .timeline > section > h2,
@@ -712,7 +719,68 @@ header.briefing > .video > iframe {
   margin-bottom: 0;
 }
 
+.timeline > section > blockquote {
+  padding-left: 0;
+  margin-left: 40px;
+  width: calc( 90% - 40px );
+  border-left: none;
+}
+
+.timeline > section > blockquote:before {
+  display: block;
+  height: 0;
+  content: "“";
+  margin-left: -.65em;
+  font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+  color: #999;
+}
+
+.timeline > section > blockquote > p {
+  color: black;
+  font-weight: 600;
+}
+
 .timeline > section > time {
   position: absolute;
-  left: 14px;
+  left: 0;
+  background: #666;
+  padding: 0px 10px 2px;
+  color: white;
+  border-radius: 5px;
+  width: 40px;
+  text-align: center;
+  text-shadow: none;
+}
+
+/* Embedded Gists */
+.gist {
+  margin-bottom: 50px;
+}
+
+.gist .gist-file {
+  height: 400px;
+  overflow: auto;
+  position: relative;
+  padding-bottom: 40px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.gist .gist-file .gist-data {
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+
+
+.gist .gist-file .gist-data article {
+  padding: 20px
+}
+
+.gist .gist-file .gist-meta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc( 100% - 20px );
 }

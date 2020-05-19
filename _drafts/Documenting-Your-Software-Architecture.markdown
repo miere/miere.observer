@@ -27,8 +27,9 @@ For the sake of productivity, the documentation should be started with the Sourc
 
 Bear in mind that long lists of commands can lead to reproducibility issues. So try to keep it as neat as possible, [automating it before documenting it](https://miere.observer/engineering/2020/04/20/Producing-professional-deliverables.html#going-beyond-kents-simple-design).
 
-> [Here](https://gist.github.com/miere/cba07143f3f37c64fc0fa82a8e9179a6) you can find a sample document that answers these questions as topics, making them easy to read.
-
+<blockquote class="note">
+<a href="https://gist.github.com/miere/cba07143f3f37c64fc0fa82a8e9179a6">Here</a> you can find a sample document that answers these questions as topics, making them easy to read.
+</blockquote>
 
 ## The Architecture Decisions Guideline
 Next comes the Architecture Decisions Guideline, which complies of everything that might affect the daily routine of any contributor to your software. It should be straightforward and concise, not only pointing the exact direction one has to follow to contribute to the software, but also introducing them lessons learnt from the past and decision taken to avoid possible issues. It may contain:
@@ -41,7 +42,9 @@ Next comes the Architecture Decisions Guideline, which complies of everything th
 
 When to compose this document is a complex topic. Synergic teams are constantly aligned and might be on the same page right from the conception of the software, which would allow the team to postpone the document creation to a future moment. It's desirable, though, to have it finished once the first stable version of the software is released. Its existence will be the backbone of any code review that might happen in the future. It will ensure that the quality the code base achieved will last long enough so developers can move to the next project with peace of mind.
 
-> [Here](https://gist.github.com/miere/bcd10534a0c26f30b7e6d5234c4e903e) you can find a sample document that exemplifies how it can be composed. No rocket science there, although this one is a bit more dense as it was based on a previously written document taken from a previous customer.
+<blockquote class="note">
+<a href="https://gist.github.com/miere/bcd10534a0c26f30b7e6d5234c4e903e">Here</a> you can find a sample document that exemplifies how it can be composed. No rocket science there, although this one is a bit more dense as it was based on a previously written document taken from a previous customer.
+</blockquote>
 
 
 
