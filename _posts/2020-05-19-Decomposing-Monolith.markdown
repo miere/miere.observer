@@ -1,13 +1,15 @@
 ---
 layout: post
 title:  "Decomposing a Monolith"
+subtitle: "An opinionated transcription of Sam Newman's talk on how to decompose a Monolith Service"
 categories: [engineering]
 tags: [engineering, information architecture, cost management]
+header-img: 'https://i.ytimg.com/vi/9I9GdSQ1bbM/maxresdefault.jpg'
 ---
 
 <header class="briefing">
 <div class="video"><iframe class="video" src="https://www.youtube-nocookie.com/embed/9I9GdSQ1bbM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-<p>This a transcription of (with some comments about) the best points of a talk that <a href="https://samnewman.io/">Sam Newman</a> has presented in the 2019 GOTO Conference, Berlin edition. There were several points on his presentation that, I think, were spot on and deserves to be transcribed and better explained. There is a bit of a debate about whether or not to start from a Monolith and then move to a Microservice Architecture. Understanding how <i>decomposing monolith</i> might not only shed a light on this but also made us understand the benefits of doing it gradually.</p>
+<p>This an opinionated transcription of a talk that <a href="https://samnewman.io/">Sam Newman</a> has presented in the 2019 GOTO Conference, Berlin edition. There were several points on his presentation that, I think, were spot on and deserves to be transcribed and better explained. There is a bit of a debate about whether or not to start from a Monolith and then move to a Microservice Architecture. Understanding how <i>decomposing monolith</i> might not only shed a light on this but also made us understand the benefits of doing it gradually.</p>
 </header>
 
 <article class="timeline">
