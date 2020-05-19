@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Analysis: Prioritizing Technical Debt as if Time and Money Matters"
+title:  "Prioritizing Technical Debt as if Time and Money Matters"
 categories: [engineering]
 tags: [engineering, information architecture, cost management]
 ---
