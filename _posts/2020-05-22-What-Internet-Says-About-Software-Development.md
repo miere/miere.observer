@@ -3,6 +3,7 @@ layout: post
 title:  "Stuff Internet Says About Software Development #1"
 categories: [news]
 tags: [engineering, news]
+header-img: 'https://pbs.twimg.com/media/EYn3vfkVcAIwXuB?format=jpg&name=medium'
 ---
 _This is my reading list from the past few days. I decided to put them here as it might be helpful to someone else. It was deeply inspired by [HighScalability](http://highscalability.com) blog, a source I've been consuming for years._
 
