@@ -28,7 +28,7 @@ publish(){
 }
 
 local(){
-    jekyll serve --drafts
+    jekyll serve --drafts --future
 }
 
 modifications(){

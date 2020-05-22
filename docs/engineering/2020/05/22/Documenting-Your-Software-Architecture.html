@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+<title>Documenting Your Software Architecture</title>
+<meta name="description" content="Miere's Personal Observations">
+<meta name="keywords" content="engineering">
+<!-- Twitter Card and Open Graph tags -->
+<meta name="twitter:title" content="Documenting Your Software Architecture">
+<meta name="twitter:description" content="Miere's Personal Observations">
+<meta name="twitter:creator" content="@miere">
+<meta name="twitter:card" content="summary">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Documenting Your Software Architecture">
+<meta property="og:description" content="Miere's Personal Observations">
+<meta property="og:url" content="https://miere.observer/engineering/2020/05/22/Documenting-Your-Software-Architecture.html">
+<meta property="og:site_name" content="">
+
+
+<!-- Webmaster Tools verfication -->
+
+
+
+
+<link rel="canonical" href="https://miere.observer/engineering/2020/05/22/Documenting-Your-Software-Architecture.html">
+<link href="https://miere.observer/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- External Fonts -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+
+<link rel="stylesheet" href="/css/base.css" type="text/css" />
+
+
+</head>
+<body>
+  <div class="header-container container">
+  <header>
+    <a href="https://miere.observer" class="top-link">Miere's Personal Observations</a>
+    <ul class="nav">
+      <!--Change the  URL here if working on an absolute domain-->
+      <li><a href="https://miere.observer">Home</a></li>
+      <li><a href="https://miere.observer/about">About</a></li>
+      
+        <li><a href="https://github.com/miere" target="_blank">Projects</a></li>
+      
+      <li><a href="https://miere.observer/feed.xml">RSS</a></li>
+    </ul>
+  </header>
+</div>
+
+  <div class="container">
+  <h1>Documenting Your Software Architecture</h1>
+<div class="post-details">
+  <img src="../../../../myself.jpeg">
+  <div>
+    <span class="post-author">Miere Liniel Teixeira</span>
+    <span class="post-date">22 May 2020</span>
+  </div>
+</div>
+
+<div class="post">
+<p>In the 2000s we went from documenting every single class of our software to not at all. It was an attempt to increase the delivery pace, keeping the team away from tasks that, eventually, have to be remade once the software changes. As a side effect, scaling the team became a problem. The most notable one is the lack of autonomy from its members. Not only newcomers need special attention to get familiarized with the basics of their software (like building and running it), but they would still ask several questions until they understand how it works and how it solves the problem it was designed for.</p>
+
+<p>It is a known fact that designing new software requires meticulous planning, strict alignment between team members and keep them focused on the defined goal. Reducing the scope of your documentation to the software architecture might be a good starting point, as you probably don’t need to document every single class of your software to give them enough direction when they are coding. It relieves teams from frequently asked questions and forcing its members to stick with previous definitions unless a big change is necessary, and will let them focus on the business side of their projects.</p>
+
+<p>Unlike the lack of autonomy, lack of accountability plays a non-neglectable indirect impact on team performance. Let us assume that in a Software Development team we are going to face only three types of issues: bugs, business-related issues and architecture issues. While Developers are accountable for solving bugs, and Product Owners for business-related issues, even on teams where there’s a dedicated Software Architect nobody responds for the architectural problems the team faces. On first glance, it seems unfair to blame him for a problem that was introduced collectively by a multitude of reasons that happened together.</p>
+
+<p>In reality, once the team starts documenting their learnings and architectural decisions they will become more accountable from their architectural decisions. By being fully aware of the technical decisions made in the past and understanding the expected positive outcome it introduced, teams can be accountable for architecture issues on the software, erasing the grey zone between Architecture Decisions and Business Decisions.</p>
+
+<h2 id="documenting-for-your-different-audiences">Documenting for your different audiences</h2>
+<p>Documentation is a tool to transfer knowledge, to keep the team on the same page regarding <strong>what problem the software solves, how those problems were solved, what were the technical decisions that should be followed widely during the development, and how one can run the software and see it in action</strong>. Having long essays written in an MS Word document or a Wiki page is not enough to efficiently convey the information to the team members.</p>
+
+<p>On <a href="https://youtu.be/x2-rSnhpw0g">his talk</a> Visualising The Software Architecture, <a href="https://simonbrown.je/">Simon Brown</a> stressed that “as your software have different audiences with different needs”. He means that you need different tools to cover how the different layers of our software work. Thus, along with his iconic C4Model - which will be discussed later - I have adopted a couple of simple-yet-powerful guidelines that helped me to contextualize whoever is maintaining our source code.</p>
+
+<h2 id="the-source-code-guideline">The Source Code Guideline</h2>
+<p>For the sake of productivity, the documentation should be started with the Source Code Guideline, which covers the basics concepts a developer might need to understand how the project source code is structured. A basic version of this document should answer the following questions a developer might have - although it can be enhanced with more topics whenever needed:</p>
+
+<ul>
+  <li>How to run the software locally?</li>
+  <li>How to run all automated tests locally?</li>
+  <li>How to package the software?</li>
+  <li>How to deploy the software?</li>
+  <li>How to edit the software?</li>
+</ul>
+
+<p>Bear in mind that long lists of commands can lead to reproducibility issues. So try to keep it as neat as possible, <a href="https://miere.observer/engineering/2020/04/20/Producing-professional-deliverables.html#going-beyond-kents-simple-design">automating it before documenting it</a>.</p>
+
+<blockquote class="note">
+<a href="https://gist.github.com/miere/cba07143f3f37c64fc0fa82a8e9179a6">Here</a> you can find a sample document that answers these questions with topics, making them easy to read.
+</blockquote>
+
+<h2 id="the-architecture-decisions-guideline">The Architecture Decisions Guideline</h2>
+<p>Next comes the Architecture Decisions Guideline, which complies of everything that might affect the daily routine of any contributor to your software. It should be straightforward and concise, not only pointing the exact direction one has to follow to contribute to the software, but also introducing them lessons learnt from the past and decision taken to avoid possible issues. It may contain:</p>
+
+<ul>
+  <li>An analytical list of problems, techniques and methodologies that should be avoided on the project.</li>
+  <li>A detailed process of how issues should be fixed and how new features should be introduced in the software. Make sure to state the tools involved in this process - e.g. Git branches.</li>
+  <li>A brief explanation of how new releases are rolled out to production.</li>
+  <li>An explanation of how quality is enforced before a release is closed.</li>
+  <li>What coding principles shall be applied otherwise the proposed modifications might be denied.</li>
+</ul>
+
+<p>When to compose this document is a complex topic. Synergic teams are constantly aligned and might be on the same page right from the conception of the software, which would allow the team to postpone the document creation to a future moment. It’s desirable, though, to have it finished once the first stable version of the software is released. Its existence will be the backbone of any code review that might happen in the future. It will ensure that the quality the code base achieved will last long enough so developers can move to the next project with peace of mind.</p>
+
+<blockquote class="note">
+<a href="https://gist.github.com/miere/bcd10534a0c26f30b7e6d5234c4e903e">Here</a> you can find a sample document that exemplifies how it can be composed. This one, though, is a bit denser than the previous one as it was based on a previously written document taken from a previous customer.
+</blockquote>
+
+<h2 id="the-c4model">The C4Model</h2>
+<p>C4Model is probably the most pragmatic documentation model I’ve come across. Simon came with the idea to represent the different layers of software with diagrams. When he conceived it, he wanted us to experience a model that worked like maps: by zooming out you get more context you dive into more details, but when you zoom out to better understand in which context the software is running on.  According to the way he conceives it, any software can be described in four main layers, each of which is represented by one diagram:</p>
+
+<ul>
+  <li><strong>System Context Diagram</strong> - Shows the software in question in the centre, identifying who works with it and what it depends on.</li>
+  <li><strong>Containers Diagram</strong> - Illustrates the overall shape of the architecture and a few technology choices.</li>
+  <li><strong>Components Diagram</strong> - Explains the logical components and their interactions within the component.</li>
+  <li><strong>Code Diagrams</strong> - Explains component implementations in detail.</li>
+</ul>
+
+<p>The first three diagrams are his creations, all of which adopts simplistic notations to demonstrate how a particular piece of the system is working. Code Diagrams, on the other hand, are basically UML and he discourages us to adopt them as they tend to become outdated quite frequently. It is there in the case you have a specific need where documenting the source code itself is mandatory task.</p>
+
+<p>C4Model is <a href="https://c4model.com/">well documented on its website</a>, with several years spent polishing it to reach this level of simplicity and organization. The beauty behind these diagrams lies in the fact we can pick our target audience, allowing us to choose when and who should be involved in the documentation process.</p>
+
+</div>
+
+<!-- Allow users to Comment -->
+<script src="https://utteranc.es/client.js"
+        repo="miere/miere.observer"
+        issue-term="title"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<!-- Default Statcounter -->
+<script type="text/javascript">
+  var sc_project=12246984; 
+  var sc_invisible=1; 
+  var sc_security="9c2d4712"; 
+  var sc_https=1; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<!-- End of Statcounter Code -->
+
+
+  
+
+
+<div class="footer-pagination">
+  <span class="copyright">&copy; 2020 Miere Liniel Teixeira</span>
+</div>
+  </div><!-- /.main -->
+</body>
+</html>
