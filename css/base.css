@@ -687,6 +687,7 @@ header.briefing > .video > iframe {
   header.briefing > .video > iframe { height: 451px;}
 }
 
+/* Timeline */
 .timeline {
   position: relative;
   margin: 0px 0 30px;
@@ -725,16 +726,6 @@ header.briefing > .video > iframe {
   border-left: none;
 }
 
-blockquote.quote:before,
-.timeline > section > blockquote:before {
-  display: block;
-  height: 0;
-  content: "“";
-  margin-left: -.65em;
-  font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
-  color: #999;
-}
-
 .timeline > section > blockquote > p {
   color: black;
   font-weight: 600;
@@ -750,6 +741,55 @@ blockquote.quote:before,
   width: 40px;
   text-align: center;
   text-shadow: none;
+}
+
+/* Internet Timeline */
+.internet-timeline,
+.internet-timeline section,
+.internet-timeline section h2,
+.internet-timeline section h3,
+.internet-timeline section blockquote {
+    padding: 0;
+    margin: 0;
+}
+
+.internet-timeline section {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.internet-timeline section blockquote {
+    margin: 0 0 20px 20px;
+}
+
+.internet-timeline section blockquote:before {
+    font-size: 1.5em;
+    position: relative;
+    top: 0.65em;
+}
+
+.internet-timeline section blockquote p {
+    border: 0px solid #aaa;
+    border-width: 0 0 0 0px;
+    color: black;
+}
+
+.internet-timeline section h3 {
+    color: forestgreen;
+    font-size: 1em;
+    margin: 7px 0 10px;
+    line-height: 1.5em;
+}
+
+/* Custom Quotations */
+blockquote.quote:before,
+.timeline > section > blockquote:before {
+  display: block;
+  height: 0;
+  content: "“";
+  margin-left: -.65em;
+  font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+  color: #999;
 }
 
 /* Embedded Gists */
