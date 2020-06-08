@@ -47,6 +47,20 @@ p {
   margin: 0.5em 0 1em;
 }
 
+p.image {
+  line-height: 1em;
+  background: #efefef;
+}
+
+p.image > img ~ small {
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-size: 0.8em;
+  color: grey;
+  padding: 2px 0px 5px 0px;
+}
+
 sup {
   vertical-align: bottom;
   top: -0.25em !important;
@@ -82,6 +96,13 @@ a {
 a:hover {
   color: #1277dc;
   text-decoration: underline;
+}
+
+i, em {
+  font-weight: 400;
+  color: black;
+  background: cornsilk;
+  font-style: normal;
 }
 
 hr {
@@ -782,6 +803,14 @@ header.briefing > .video > iframe {
 }
 
 /* Custom Quotations */
+blockquote.quote > * {
+  color: #666;
+  line-height: 1.5em;
+  font-size: 1.2em;
+}
+
+blockquote.quote cite { color: black; }
+
 blockquote.quote:before,
 .timeline > section > blockquote:before {
   display: block;
