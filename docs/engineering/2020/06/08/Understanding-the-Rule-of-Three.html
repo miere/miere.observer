@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+<title>Understanding the Rule of Three</title>
+<meta name="description" content="Miere's Personal Observations">
+<meta name="keywords" content="engineering">
+<!-- Twitter Card and Open Graph tags -->
+<meta name="twitter:title" content="Understanding the Rule of Three">
+<meta name="twitter:description" content="Miere's Personal Observations">
+<meta name="twitter:creator" content="@miere">
+<meta name="twitter:card" content="summary">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Understanding the Rule of Three">
+<meta property="og:description" content="Fully Understanding the Rule of Three to make better engineering decisions.">
+<meta property="og:url" content="https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three.html">
+<meta property="og:site_name" content="">
+
+<meta property="og:image" content="https://res.cloudinary.com/practicaldev/image/fetch/s--gOcSeHXc--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.synthesis.co.za/wp-content/uploads/bfi_thumb/AgileArchitecture1-1rl3zo5ig9008zq8zgwie6cn9vnbl7um76y52b72jvbo.jpeg" />
+<meta name="twitter:image:src" content="https://res.cloudinary.com/practicaldev/image/fetch/s--gOcSeHXc--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.synthesis.co.za/wp-content/uploads/bfi_thumb/AgileArchitecture1-1rl3zo5ig9008zq8zgwie6cn9vnbl7um76y52b72jvbo.jpeg">
+
+
+<!-- Webmaster Tools verfication -->
+
+
+
+
+<link rel="canonical" href="https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three.html">
+<link href="https://miere.observer/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- External Fonts -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+
+<link rel="stylesheet" href="/css/base.css" type="text/css" />
+
+
+</head>
+<body>
+  <div class="header-container container">
+  <header>
+    <a href="https://miere.observer" class="top-link">Miere's Personal Observations</a>
+    <ul class="nav">
+      <!--Change the  URL here if working on an absolute domain-->
+      <li><a href="https://miere.observer">Home</a></li>
+      <li><a href="https://miere.observer/about">About</a></li>
+      
+        <li><a href="https://github.com/miere" target="_blank">Projects</a></li>
+      
+      <li><a href="https://miere.observer/feed.xml">RSS</a></li>
+    </ul>
+  </header>
+</div>
+
+  <div class="container">
+  <h1>Understanding the Rule of Three</h1>
+<div class="post-details">
+  <img src="../../../../myself.jpeg">
+  <div>
+    <span class="post-author">Miere Liniel Teixeira</span>
+    <span class="post-date">08 Jun 2020</span>
+  </div>
+</div>
+
+<div class="post">
+<p>There is this subconscious understanding that unnecessary complexity is root of all evil in software development. We have been <a href="https://twitter.com/search?q=dependency%20hell&amp;src=typed_query">fiercely ranting about the dreadful experience</a> caused by the dependency hell. We’ve been detracting legacy code as <a href="https://s3.amazonaws.com/systemsandpapers/papers/bigballofmud.pdf">big ball of mud because</a> nobody can honestly understand how it works. Fearlessly, we’ve been <a href="https://twitter.com/kumar_abhirup/status/1267777496524574721">shushing our developer mates</a> arguing that they’ve done the wrong coding choices.</p>
+
+<p>It is funny how Machiavellian we can become in name of the simplicity. Surely, we can have better days with less cyclic dependencies, we probably can adopt better design patterns or even avoid syntaxes that ordinary people can’t easily read in our source code. But, to remove complexity from our daily routine, we need a systematic approach that our help us to weigh up the benefits of every piece of code we introduce in our software.</p>
+
+<h2 id="the-rule-of-three">The rule of three</h2>
+<p>The first piece of advice I’ve ever read that advocated benefit first to gauge the judgement of any decision made on a piece of code came from Martin Fowler, on his iconic book <a href="https://archive.org/details/isbn_9780201485677">Refactoring</a>. According to him, we should adopt the <a href="https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)">rule of three</a> to drive our refactoring decisions, avoiding overcomplicated strategies that might need to <a href="https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction">be rethink again in the future</a>. Since then, the Rule of Three has been constantly repeated on the internet with subjective definition and, in some cases, with no clear steps to reproduce this technique in the future.</p>
+
+<h2 id="distinguishing-chance-coincidence-and-trend">Distinguishing Chance, Coincidence and Trend</h2>
+<p>My professor of Statistics once taught me about a similar concept: identifying trend behaviour. Letting all mathematic formulas aside, I would reproduce his reasoning and translate to the Software Development world as follows:</p>
+<ul>
+  <li><strong>Take a chance and design the most simplistic solution to your problem</strong>. Testing your code will cost you less time, and it will be easier to adapt in case your needs change.</li>
+  <li><strong>Treat further changes as a coincidence</strong>. We have this instinct to introduce generic solutions to solve problems that might happen in the future. A premature generalization might require further refactoring, or might be removed altogether being replaced by a different approach in the future. Sometimes, a simple if/else statement is our best choice.</li>
+  <li><strong>A good hint to identify trend behaviours is the introduction of duplicated pieces of code</strong>. That’s the perfect opportunity to introduce abstractions that not only removes these duplications but also allows developers to extend the current logic without modifying it <sup id="fnref:2"><a href="#fn:2" class="footnote">1</a></sup>.</li>
+</ul>
+
+<p>Looking to these rules it is clear that it focuses on the software design, diverging from its original proposal as a technique to help you to refactor your code wisely. <em>By adopting it in the early stages of our development, we enforce simplicity over reaction</em>, where complex solutions will be introduced only when we need to solve a complex problem.</p>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Sometimes the requirements are clear enough so you can jump to the complex solution, but that is not usually the case. The above mindset was an attempt to narrow down the scope and try to make it more reproducible on a daily-basis. As a bonus hint, I’d like to left here one another definition that approaches the Rule of Three as something totally different way. I found it when I was reviewing the references for this article and it has been echoing on my mind for a bit of time already. Hopefully it will be just enlightening for you as it was for me.</p>
+
+<blockquote class="quote">
+    <p>There are two "rules of three" in  reuse:</p>
+    <ul>
+        <li>It is three times as difficult to build reusable components as single use components, and</li>
+        <li>a reusable component should be tried out in three different applications before it will be sufficiently general to accept into a reuse library.</li>
+    </ul>
+    <footer>
+        <cite>- Fact#18 from <a href="https://www.amazon.com/Facts-Fallacies-Software-Engineering-FORGOT-ebook-dp-B001TKD4RG/dp/B001TKD4RG">Facts and Fallacies of Software Engineering</a></cite>
+    </footer>
+</blockquote>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:2">
+      <p>The <a href="https://stackify.com/solid-design-open-closed-principle/">Open-Closed Principle</a> is the perfect technique for this job as, by definition, it closes out methods or classes for modification by introducing customization points that allow it to be extended from outside. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+<!-- Allow users to Comment -->
+<script src="https://utteranc.es/client.js"
+        repo="miere/miere.observer"
+        issue-term="title"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+<!-- Default Statcounter -->
+<script type="text/javascript">
+  var sc_project=12246984; 
+  var sc_invisible=1; 
+  var sc_security="9c2d4712"; 
+  var sc_https=1; 
+</script>
+<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
+<!-- End of Statcounter Code -->
+
+
+  
+
+
+<div class="footer-pagination">
+  <span class="copyright">&copy; 2020 Miere Liniel Teixeira</span>
+</div>
+  </div><!-- /.main -->
+</body>
+</html>
