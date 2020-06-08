@@ -9,7 +9,7 @@ header-img: 'https://i.ytimg.com/vi/V_tHVUHKqZQ/maxresdefault.jpg'
 
 <header class="briefing">
 <div class="video"><iframe class="video" src="https://www.youtube.com/embed/V_tHVUHKqZQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-<p>This is an opinionated transcription of <a href="">Eric Johnson's</a> talk <b>Thinking Asynchronously</b>. He has presented in the 2020 GOTO Conference, online edition because of COVID pandemic. His straightforward presentation approach guides us through steps that take advantage of asynchronous persistence pipelines to provide a better experience to our users. I took the opportunity to elaborate more on a few services used by him on his talk, and I also wrote down a few words as a counter-argument to his fully serverless approach.</p>
+<p>This is an opinionated transcription of <a href="">Eric Johnson's</a> talk <b>Thinking Asynchronously</b>. He has presented in the 2020 GOTO Conference, online edition because of COVID pandemic. His straightforward presentation approach guides us through steps that take advantage of asynchronous persistence pipelines to provide a better experience to our users. It is a great opportunity for newcomers to understand where AWS want to achieve with serverless from know on. I took the opportunity to elaborate more on a few services used by him on his talk to give more context.</p>
 </header>
 
 <article class="timeline">
