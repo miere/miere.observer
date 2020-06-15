@@ -52,6 +52,16 @@ p.image {
   background: #efefef;
 }
 
+p.image.right-panel {
+  float: right;
+  margin: 0 0 0 20px;
+  padding-top: 20px;
+}
+
+p.image.no-background {
+  background: transparent;
+}
+
 p.image > img ~ small {
   text-align: center;
   width: 100%;
@@ -538,6 +548,14 @@ div.author-details div > span.post-date {
   font-size: 0.8em;
 }
 
+div.post-details > div.pagination {
+  float: right;
+}
+
+div.post-details > div.pagination .fa {
+  font-size: 1.2em;
+}
+
 /*----------------------------------------------------------------------------
   Code Styles
 ----------------------------------------------------------------------------*/
@@ -841,8 +859,6 @@ blockquote.quote:before,
   position: relative;
 }
 
-
-
 .gist .gist-file .gist-data article {
   padding: 20px
 }
@@ -853,3 +869,6 @@ blockquote.quote:before,
   left: 0;
   width: calc( 100% - 20px );
 }
+
+/* Other customizations */
+i.fa { background: transparent; }

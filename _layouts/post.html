@@ -8,11 +8,32 @@ layout: default
     <span class="post-author">{% if page.author %}{{ page.author }}{% else %}{{ site.owner.name }}{% endif %}</span>
     <span class="post-date">{{ page.date | date_to_string }}</span>
   </div>
+  <div class="pagination">
+    {% if site.owner.linkedin %}
+      <a href="{{ site.owner.linkedin }}" class="social-media-icons"><i class="fa fa-2x fa-linkedin-square" aria-hidden="true"></i></a>
+    {% endif %}
+    {% if site.owner.email %}
+      <a href="mailto:{{ site.owner.email }}" class="social-media-icons"><i class="fa fa-2x fa-envelope-square" aria-hidden="true"></i></a>
+    {% endif %}
+    {% if site.owner.twitter %}
+      <a href="https://twitter.com/{{ site.owner.twitter }}" class="social-media-icons"><i class="fa fa-2x fa-twitter-square" aria-hidden="true"></i></a>
+    {% endif %}
+    {% if site.owner.github %}
+      <a href="{{ site.owner.github }}" class="social-media-icons"><i class="fa fa-2x fa-github-square" aria-hidden="true"></i></a>
+    {% endif %}
+  </div>
 </div>
 
 <div class="post">
 {{ content }}
 </div>
+
+<hr>
+<p style="font-style: italic;">If you read this far, <a target="blank" 
+  href="https://twitter.com/intent/tweet?related=miere&text={{site.url}}{{ page.url | absolute_path | url_encode }}">
+  share this post with your friends</a>. If you have any question, or utterly disagree with what was written above,
+  please login with your Github account and write down your comments.
+</p>
 
 <!-- Allow users to Comment -->
 <script src="https://utteranc.es/client.js"
