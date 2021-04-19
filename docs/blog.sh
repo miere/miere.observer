@@ -28,7 +28,7 @@ publish(){
 }
 
 local(){
-    jekyll serve --drafts --future
+    jekyll serve --drafts --future --unpublished --verbose
 }
 
 modifications(){
@@ -50,6 +50,7 @@ case $1 in
   "local" ) local ;;
   "modif"|"modifications") modifications ;;
   "build") clean_and_build ;;
+  "setup") bundle ;;
   *)
     echo "Bad syntax."
     echo "Usage $0 <OPTS>"

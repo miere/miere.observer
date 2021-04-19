@@ -7,3 +7,4 @@ gem 'jekyll-feed'
 gem "json"
 gem "rouge"
 gem 'jekyll-compose', group: [:jekyll_plugins]
+gem 'jekyll-sitemap'

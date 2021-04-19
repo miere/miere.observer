@@ -22,6 +22,16 @@
 <meta name="twitter:image:src" content="https://imgs.xkcd.com/comics/automation.png">
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RT4RL09JGB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RT4RL09JGB');
+</script>
+
 <!-- Webmaster Tools verfication -->
 
 
@@ -94,7 +104,7 @@
     <small>Source: <a href="https://xkcd.com/1319/">xkcd</a></small>
 </p>
 
-<p><strong>Benefit-first</strong> <sup id="fnref:3"><a href="#fn:3" class="footnote">1</a></sup> is a technique to guide the decisions you made when you develop a software. Basically, before introduce any piece of code on your software you have to list pros and cons of adopting it, and analyse the impact of maintaining it in short and long term. If the benefit of introducing it is bigger than the cost of maintaining it, then it is probably safe to proceed.</p>
+<p><strong>Benefit-first</strong> <sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">1</a></sup> is a technique to guide the decisions you made when you develop a software. Basically, before introduce any piece of code on your software you have to list pros and cons of adopting it, and analyse the impact of maintaining it in short and long term. If the benefit of introducing it is bigger than the cost of maintaining it, then it is probably safe to proceed.</p>
 
 <p>The first piece of advice I’ve ever read that advocated a similar approach came from Martin Fowler on his iconic book <a href="https://archive.org/details/isbn_9780201485677">Refactoring</a>. According to him, we should adopt the <a href="https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)">rule of three</a> to drive our refactoring decisions, avoiding overcomplicated strategies that might need to <a href="https://www.sandimetz.com/blog/2016/1/20/the-wrong-abstraction">be rethink again in the future</a>. As the book got notorious and relevant, the Rule of Three has been constantly repeated on the internet with subjective definition and, in some cases, with no clear steps to reproduce this technique in the future.</p>
 
@@ -103,7 +113,7 @@
 <ul>
   <li><strong>Take a chance and design the most simplistic solution to your problem</strong>. As you have a simple piece of code testing it take less time, and it will be easier to adapt in case your needs change.</li>
   <li><strong>Treat further changes as a coincidence</strong>. We have this instinct to introduce generic solutions to solve problems that might happen in the future. A premature generalization might require further refactoring, or might even be removed altogether being replaced by a different approach in the future. Sometimes, a simple if/else statement is our best choice.</li>
-  <li><strong>A good hint to identify trend behaviours is the introduction of duplicated pieces of code</strong>. That’s the perfect opportunity to introduce abstractions that not only removes these duplications but also allows developers to extend the current logic without modifying it <sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup>.</li>
+  <li><strong>A good hint to identify trend behaviours is the introduction of duplicated pieces of code</strong>. That’s the perfect opportunity to introduce abstractions that not only removes these duplications but also allows developers to extend the current logic without modifying it <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</li>
 </ul>
 
 <p>By looking to these rules it is clear that they focus on the software design, diverging from its original proposal as a technique to help you to refactor your code wisely. <em>By adopting it in the early stages of the development, we enforce simple and evolving code over reactive trial-error-refactor approach</em>, where complex solutions will be introduced only when we need to solve a complex problem.</p>
@@ -122,13 +132,13 @@
     </footer>
 </blockquote>
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:3">
-      <p>Benefit-first isn’t a term carved by me. Although I’ve never saw any specific mention to this term on a book or a lecture before, I heard about it a few years ago from my <a href="https://twitter.com/anielson">first mentor</a> and I’ve been using it since then. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:3" role="doc-endnote">
+      <p>Benefit-first isn’t a term carved by me. Although I’ve never saw any specific mention to this term on a book or a lecture before, I heard about it a few years ago from my <a href="https://twitter.com/anielson">first mentor</a> and I’ve been using it since then. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2">
-      <p>The <a href="https://stackify.com/solid-design-open-closed-principle/">Open-Closed Principle</a> is the perfect technique for this job as, by definition, it closes out methods or classes for modification by introducing customization points that allow it to be extended from outside. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:2" role="doc-endnote">
+      <p>The <a href="https://stackify.com/solid-design-open-closed-principle/">Open-Closed Principle</a> is the perfect technique for this job as, by definition, it closes out methods or classes for modification by introducing customization points that allow it to be extended from outside. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -152,22 +162,12 @@
         async>
 </script>
 
-<!-- Default Statcounter -->
-<script type="text/javascript">
-  var sc_project=12246984; 
-  var sc_invisible=1; 
-  var sc_security="9c2d4712"; 
-  var sc_https=1; 
-</script>
-<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-<!-- End of Statcounter Code -->
-
 
   
 
 
 <div class="footer-pagination">
-  <span class="copyright">&copy; 2020 Miere Liniel Teixeira</span>
+  <span class="copyright">&copy; 2021 Miere Liniel Teixeira</span>
 </div>
   </div><!-- /.main -->
 </body>

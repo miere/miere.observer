@@ -22,6 +22,16 @@
 <meta name="twitter:image:src" content="https://149351115.v2.pressablecdn.com/wp-content/uploads/2020/05/iStock-1165279830-1103x630.jpg">
 
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RT4RL09JGB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RT4RL09JGB');
+</script>
+
 <!-- Webmaster Tools verfication -->
 
 
@@ -100,17 +110,17 @@
 
 <p>The term <strong>Blue/Green Deployment</strong> was first introduced <a href="https://gitlab.com/snippets/1846041">ages ago</a>, having been carved by <a href="http://dannorth.net">Daniel Terhorst-North</a> and <a href="https://www.thoughtworks.com/profiles/jez-humble">Jez Humble</a> by early 2010s. The fundamental idea is to have two easily switchable environments to switch between, allowing the software to be pre-released and tested on a deployment environment similar to the production. Once considered stable, a switch mechanism takes place, redirecting user’s request traffic to the just deployed software.</p>
 
-<p>The <a href="https://martinfowler.com/bliki/BlueGreenDeployment.html">switch mechanism may vary</a> depending on the business expectation (e.g. high availability SLAs) or different technical needs (e.g. run smoke tests before release) might you have. One of them is the Canary Release. It “is a technique to reduce the risk of introducing a new software version in production by slowly rolling out the change to a small subset of users before rolling it out to the entire infrastructure and making it available to everybody” <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+<p>The <a href="https://martinfowler.com/bliki/BlueGreenDeployment.html">switch mechanism may vary</a> depending on the business expectation (e.g. high availability SLAs) or different technical needs (e.g. run smoke tests before release) might you have. One of them is the Canary Release. It “is a technique to reduce the risk of introducing a new software version in production by slowly rolling out the change to a small subset of users before rolling it out to the entire infrastructure and making it available to everybody” <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
 
 <p>By introducing the ability to analyse the impact of the just-released software with real data coming from the production request stream, <em>Data Analysts</em> and <em>Software Architects</em> can measure the impact the new release will have, rolling it back if the results are not satisfactory. Blue/Green Deployment, on the other hand, is closely related to the deployment itself, therefore it focuses mostly on the technical side of it - namely high-availability and easy rollback.</p>
 
 <h2 id="final-thoughts">Final Thoughts</h2>
 <p>I’d like to stress that the richness of the blog post content should not be blurred away despite the two topics that I covered. Gather all the information needed to compose such post is no easy task and might take precious ours to compose and wrap it in a way that his audience might enjoy. Perhaps a few links in the original to an external content could be enough to clarify the points I’ve made here, although writing down a few paragraphs helped to keep my understanding of those concepts fresh.</p>
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p><a href="https://martinfowler.com/bliki/CanaryRelease.html">Canary Release</a> by <a href="http://www.dtsato.com/blog/">Danilo Sato</a>. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p><a href="https://martinfowler.com/bliki/CanaryRelease.html">Canary Release</a> by <a href="http://www.dtsato.com/blog/">Danilo Sato</a>. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -134,22 +144,12 @@
         async>
 </script>
 
-<!-- Default Statcounter -->
-<script type="text/javascript">
-  var sc_project=12246984; 
-  var sc_invisible=1; 
-  var sc_security="9c2d4712"; 
-  var sc_https=1; 
-</script>
-<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-<!-- End of Statcounter Code -->
-
 
   
 
 
 <div class="footer-pagination">
-  <span class="copyright">&copy; 2020 Miere Liniel Teixeira</span>
+  <span class="copyright">&copy; 2021 Miere Liniel Teixeira</span>
 </div>
   </div><!-- /.main -->
 </body>
