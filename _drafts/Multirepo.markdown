@@ -1,6 +1,11 @@
-# Multiple repositories to rule them all?
+---
+layout: post
+title:  "Multiple repositories to rule them all?"
+categories: [engineering]
+tags: [engineering]
+---
 
-### The Problem
+## The Problem
 If your software is getting bigger, than your application may have one of the following behaviors:
 * A shared piece of code
 * A shared library
@@ -13,7 +18,7 @@ If your software is complex though, you may also have:
 Either way you need:
 * To automatically discovery new entries on your 
 
-### Pros of multirepo
+## Pros of multirepo
 * Lower learning curve to understand a new micro-service
 * Easy to grasp the _whole picture_ as developers are introduced to one part of the software at the time
 * Easy to setup different deployment rules
@@ -23,7 +28,7 @@ Either way you need:
 * Less overhead to your IDE
 * It welcomes different languages and toolset in your development ecosystem
 
-### Cons of multirepo
+## Cons of multirepo
 * Hard and complicated initial setup
 * Easy to maintain the pipeline, hard to share the knowledge with another DevOps/Software Architect
 

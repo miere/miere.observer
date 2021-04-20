@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Decomposing a Monolith"
+title:  "Analysis: Decomposing a Monolith"
 subtitle: "An opinionated transcription of Sam Newman's talk on how to decompose a Monolith Service"
 categories: [engineering]
 tags: [engineering, information architecture, cost management]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Thinking Asynchronously"
+title:  "Analysis: Thinking Asynchronously"
 subtitle: "An opinionated transcription of Eric Johnson's talk Thinking Asynchronously"
 categories: [engineering]
 tags: [engineering, master]
