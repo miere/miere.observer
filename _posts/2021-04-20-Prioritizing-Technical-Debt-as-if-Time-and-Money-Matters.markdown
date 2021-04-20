@@ -4,6 +4,7 @@ title:  "Analysis: Prioritizing Technical Debt - Part I"
 subtitle: "Technical Debts as a concept is something usually underrated by several (if not most of) big companies. The amount of money and man-hour effort spent fixing problems is often pointed as an order of magnitude higher than avoiding it before being released into production."
 categories: [engineering]
 tags: [engineering, information architecture, cost management, lehman law, git, static code analysis]
+header-img: 'https://i.ytimg.com/vi/fl4aZ2KXBsQ/maxresdefault.jpg'
 ---
 
 <header class="briefing">
