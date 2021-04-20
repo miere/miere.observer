@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+<title>Lehman Laws and The Software Architecture</title>
+<meta name="description" content="Miere's Personal Observations">
+<meta name="keywords" content="engineering, information architecture, cost management">
+<!-- Twitter Card and Open Graph tags -->
+<meta name="twitter:title" content="Lehman Laws and The Software Architecture">
+<meta name="twitter:description" content="Miere's Personal Observations">
+<meta name="twitter:creator" content="@miere">
+<meta name="twitter:card" content="summary">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lehman Laws and The Software Architecture">
+<meta property="og:description" content="Miere's Personal Observations">
+<meta property="og:url" content="http://localhost:4000/engineering/2021/04/19/Lehman-Laws-And-Software-Architecture.html">
+<meta property="og:site_name" content="">
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RT4RL09JGB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RT4RL09JGB');
+</script>
+
+<!-- Webmaster Tools verfication -->
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/engineering/2021/04/19/Lehman-Laws-And-Software-Architecture.html">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title=" Feed">
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- External Fonts -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+
+<link rel="stylesheet" href="/css/base.css" type="text/css" />
+
+
+</head>
+<body>
+  <div class="header-container container">
+  <header>
+    <a href="http://localhost:4000" class="top-link">Miere's Personal Observations</a>
+    <ul class="nav">
+      <!--Change the  URL here if working on an absolute domain-->
+      <li><a href="http://localhost:4000">Home</a></li>
+      <li><a href="http://localhost:4000/about">About</a></li>
+      
+        <li><a href="https://github.com/miere" target="_blank">Projects</a></li>
+      
+      <li><a href="http://localhost:4000/feed.xml">RSS</a></li>
+    </ul>
+  </header>
+</div>
+
+  <div class="container">
+  <h1>Lehman Laws and The Software Architecture</h1>
+<div class="post-details">
+  <img src="../../../../myself.jpeg">
+  <div>
+    <span class="post-author">Miere Liniel Teixeira</span>
+    <span class="post-date">19 Apr 2021</span>
+  </div>
+  <div class="pagination">
+    
+      <a href="https://www.linkedin.com/in/miere" class="social-media-icons"><i class="fa fa-2x fa-linkedin-square" aria-hidden="true"></i></a>
+    
+    
+      <a href="mailto:miere00@gmail.com" class="social-media-icons"><i class="fa fa-2x fa-envelope-square" aria-hidden="true"></i></a>
+    
+    
+      <a href="https://twitter.com/miere" class="social-media-icons"><i class="fa fa-2x fa-twitter-square" aria-hidden="true"></i></a>
+    
+    
+      <a href="https://github.com/miere" class="social-media-icons"><i class="fa fa-2x fa-github-square" aria-hidden="true"></i></a>
+    
+  </div>
+</div>
+
+<div class="post">
+<p>Start simple, make it complex when needed. That seems to be the most cost-effective approach to design a software from scratch nowadays, although not always feasible to put in practice. Let’s try to cover why this happen and how the so called Lehman Laws of Software Evolution can give us some special hints on to tackle it.</p>
+
+<h2 id="information-architecture-matters">Information Architecture Matters</h2>
+<ul>
+  <li>We spend little time understanding how the information we hold will be approached by our users by the UI</li>
+  <li>Drawing diagrams simulating how it might work, or even <a href="http://wiki.c2.com/?CrcCard">CRC Cards</a>, is useful to understand the whole picture</li>
+  <li>Biggest problem lies on the fact we’ve been trained to design our services based on entities</li>
+  <li>The increasing coupling between entities might introduce even harder relationship them, introducing unwanted issues like code fragility. So called Big Ball of Mud?</li>
+</ul>
+
+<h2 id="lehman-laws-as-for-2006">Lehman Laws as for 2006</h2>
+<ul>
+  <li>In 2006 Lehman, along with Fernández-Ramil,</li>
+</ul>
+
+</div>
+
+<hr>
+<p style="font-style: italic;">If you read this far, <a target="blank" 
+  href="https://twitter.com/intent/tweet?related=miere&text=http://localhost:4000%2Fengineering%2F2021%2F04%2F19%2FLehman-Laws-And-Software-Architecture.html">
+  share this post with your friends</a>. If you have any question, or utterly disagree with what was written above,
+  please login with your Github account and write down your comments.
+</p>
+
+<!-- Allow users to Comment -->
+<script src="https://utteranc.es/client.js"
+        repo="miere/miere.observer"
+        issue-term="title"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+  
+
+
+<div class="footer-pagination">
+  <span class="copyright">&copy; 2021 Miere Liniel Teixeira</span>
+</div>
+  </div><!-- /.main -->
+</body>
+</html>

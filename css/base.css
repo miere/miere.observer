@@ -700,14 +700,14 @@ header.briefing {
   overflow: auto;
   margin: 0 -100%;
   background: whitesmoke;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 header.briefing p {
   position: relative;
   width: 80%;
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 0 auto 10px;
 }
 
 header.briefing > .video {
@@ -812,7 +812,7 @@ header.briefing > .video > iframe {
     top: 0.65em;
 }
 
-.internet-timeline section blockquote p {
+blockquote.quote p {
     border: 0px solid #aaa;
     border-width: 0 0 0 0px;
     color: black;
