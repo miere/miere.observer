@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://miere.observer/engineering/2021/04/19/Lehman-Laws-And-Software-Architecture.html</loc>
-<lastmod>2021-04-19T12:25:14+10:00</lastmod>
-</url>
-<url>
-<loc>https://miere.observer/engineering/2021/04/20/Multirepo.html</loc>
-<lastmod>2021-04-20T11:56:14+10:00</lastmod>
-</url>
-<url>
 <loc>https://miere.observer/engineering/2021/04/19/The-Big-Ball-Of-Mud.html</loc>
 <lastmod>2021-04-19T12:25:14+10:00</lastmod>
 </url>
@@ -53,8 +45,5 @@
 </url>
 <url>
 <loc>https://miere.observer/</loc>
-</url>
-<url>
-<loc>https://miere.observer/page2/</loc>
 </url>
 </urlset>
