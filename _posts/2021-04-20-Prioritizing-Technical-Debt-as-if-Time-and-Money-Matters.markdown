@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: timeline-post
 title:  "Analysis: Prioritizing Technical Debt - Part I"
 subtitle: "Technical Debts as a concept is something usually underrated by several (if not most of) big companies. The amount of money and man-hour effort spent fixing problems is often pointed as an order of magnitude higher than avoiding it before being released into production."
 categories: [engineering]
@@ -8,7 +8,10 @@ header-img: 'https://i.ytimg.com/vi/fl4aZ2KXBsQ/maxresdefault.jpg'
 ---
 
 <header class="briefing">
-<div class="video"><iframe class="video" src="https://www.youtube-nocookie.com/embed/fl4aZ2KXBsQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="video">
+<iframe class="video" id="youtube-video"
+    src="https://www.youtube-nocookie.com/embed/fl4aZ2KXBsQ?enablejsapi=1&modestbranding=1"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 <p>
     This post is the part I of the video analysis in which I'll elaborate on a few points exposed by
     <a href="https://empear.com/blog/">Adam Tornhill</a> on a talk presented in the 2019 GOTO Conference

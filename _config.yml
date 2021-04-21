@@ -3,6 +3,7 @@ description: Miere's Personal Observations
 about: This is a blog composed of my personal observations and thoughts. I write about mostly about technology, science and software engineering, but I might write occasionally about history and politics as well. I shall try my best to keep it as scientific as possible, using facts to support my point of view. Hopefully, you will give me a hand whenever I did a mistake.
 
 master_repo: false
+#url: "http://localhost:4000"
 url: "https://miere.observer"
 markdown: kramdown
 highlighter: rouge

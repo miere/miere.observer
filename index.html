@@ -10,7 +10,7 @@ title: Miere's Personal Observations
         {{ post.date | date_to_string }} &bull;
         <a href="{{site.url}}{{post.url}}">read more...</a>
       </p>
-      {{ post.content | strip_html | truncatewords:75 }}
+      <p>{{ post.content | strip_html | truncatewords:75 }}</p>
     </div>
     {% endfor %}
 </div>
@@ -19,13 +19,3 @@ title: Miere's Personal Observations
 <style>
   a.footnote, .footnotes { display: none; }
 </style>
-
-<!-- Default Statcounter -->
-<script type="text/javascript">
-  var sc_project=12246984; 
-  var sc_invisible=1; 
-  var sc_security="9c2d4712"; 
-  var sc_https=1; 
-</script>
-<script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
-<!-- End of Statcounter Code -->

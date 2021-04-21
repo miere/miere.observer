@@ -45,7 +45,9 @@
 
 <!-- External Fonts -->
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<!--<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,100;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 <!-- Styles -->
 
@@ -70,7 +72,50 @@
 </div>
 
   <div class="container">
-  <h1>Analysis: Thinking Asynchronously</h1>
+  <script type="text/javascript">
+  var tag = document.createElement('script');
+  tag.id = 'iframe-demo';
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var youtubePlayerApi;
+  function onYouTubeIframeAPIReady() {
+    console.log("YouTube Initialized")
+    youtubePlayerApi = new YT.Player('youtube-video');
+  }
+
+  function moveVideoTo(mmss) {
+    var mm_ss = mmss.split(":")
+    var minutes = parseInt(mm_ss[0])
+    var seconds = parseInt(mm_ss[1])
+    var total_seconds = (minutes * 60) + seconds
+    youtubePlayerApi.seekTo(total_seconds)
+  }
+
+  function attachListenerSoPlayerWillStartFromPointInTime(element, pointInTime) {
+    element.onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'})
+      moveVideoTo(pointInTime)
+    }
+  }
+
+  window.onload = window.load = function() {
+    var found = document.querySelectorAll(".timeline > section > time")
+
+    for (var i=0; i<found.length; i++) {
+      var time = found[i]
+      var pointInTime = time.textContent
+      attachListenerSoPlayerWillStartFromPointInTime(time, pointInTime)
+
+      var h2 = time.nextElementSibling
+      attachListenerSoPlayerWillStartFromPointInTime(h2, pointInTime)
+    }
+  }
+
+</script>
+
+<h1>Analysis: Thinking Asynchronously</h1>
 <div class="post-details">
   <img src="../../../../myself.jpeg">
   <div>
@@ -95,7 +140,8 @@
 
 <div class="post">
 <header class="briefing">
-<div class="video"><iframe class="video" src="https://www.youtube.com/embed/V_tHVUHKqZQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<div class="video">
+<iframe class="video" id="youtube-video" src="https://www.youtube.com/embed/V_tHVUHKqZQ?enablejsapi=1&amp;modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>This is an opinionated transcription of <a href="https://twitter.com/edjgeek">Eric Johnson's</a> talk <b>Thinking Asynchronously</b>. He has presented in the 2020 GOTO Conference, online edition because of COVID pandemic. His straightforward presentation approach guides us through steps that take advantage of asynchronous persistence pipelines to provide a better experience to our users. It is a great opportunity for newcomers to understand where AWS want to achieve with serverless from know on. I took the opportunity to elaborate more on a few services used by him on his talk to give more context.</p>
 </header>
 
@@ -223,6 +269,6 @@
 <div class="footer-pagination">
   <span class="copyright">&copy; 2021 Miere Liniel Teixeira</span>
 </div>
-  </div><!-- /.main -->
+  </div>
 </body>
 </html>

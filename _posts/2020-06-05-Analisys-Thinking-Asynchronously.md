@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: timeline-post
 title:  "Analysis: Thinking Asynchronously"
 subtitle: "An opinionated transcription of Eric Johnson's talk Thinking Asynchronously"
 categories: [engineering]
@@ -8,7 +8,9 @@ header-img: 'https://i.ytimg.com/vi/V_tHVUHKqZQ/maxresdefault.jpg'
 ---
 
 <header class="briefing">
-<div class="video"><iframe class="video" src="https://www.youtube.com/embed/V_tHVUHKqZQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="video">
+<iframe class="video" id="youtube-video"
+    src="https://www.youtube.com/embed/V_tHVUHKqZQ?enablejsapi=1&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 <p>This is an opinionated transcription of <a href="https://twitter.com/edjgeek">Eric Johnson's</a> talk <b>Thinking Asynchronously</b>. He has presented in the 2020 GOTO Conference, online edition because of COVID pandemic. His straightforward presentation approach guides us through steps that take advantage of asynchronous persistence pipelines to provide a better experience to our users. It is a great opportunity for newcomers to understand where AWS want to achieve with serverless from know on. I took the opportunity to elaborate more on a few services used by him on his talk to give more context.</p>
 </header>
 

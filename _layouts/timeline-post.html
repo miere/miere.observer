@@ -1,0 +1,89 @@
+---
+layout: default
+---
+<script type="text/javascript">
+  var tag = document.createElement('script');
+  tag.id = 'iframe-demo';
+  tag.src = 'https://www.youtube.com/iframe_api';
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  var youtubePlayerApi;
+  function onYouTubeIframeAPIReady() {
+    console.log("YouTube Initialized")
+    youtubePlayerApi = new YT.Player('youtube-video');
+  }
+
+  function moveVideoTo(mmss) {
+    var mm_ss = mmss.split(":")
+    var minutes = parseInt(mm_ss[0])
+    var seconds = parseInt(mm_ss[1])
+    var total_seconds = (minutes * 60) + seconds
+    youtubePlayerApi.seekTo(total_seconds)
+  }
+
+  function attachListenerSoPlayerWillStartFromPointInTime(element, pointInTime) {
+    element.onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'})
+      moveVideoTo(pointInTime)
+    }
+  }
+
+  window.onload = window.load = function() {
+    var found = document.querySelectorAll(".timeline > section > time")
+
+    for (var i=0; i<found.length; i++) {
+      var time = found[i]
+      var pointInTime = time.textContent
+      attachListenerSoPlayerWillStartFromPointInTime(time, pointInTime)
+
+      var h2 = time.nextElementSibling
+      attachListenerSoPlayerWillStartFromPointInTime(h2, pointInTime)
+    }
+  }
+
+</script>
+
+<h1>{{ page.title }}</h1>
+<div class="post-details">
+  <img src="{% if page.avatar %}{{ page.avatar }}{% else %}../../../../myself.jpeg{% endif %}">
+  <div>
+    <span class="post-author">{% if page.author %}{{ page.author }}{% else %}{{ site.owner.name }}{% endif %}</span>
+    <span class="post-date">{{ page.date | date_to_string }}</span>
+  </div>
+  <div class="pagination">
+    {% if site.owner.linkedin %}
+      <a href="{{ site.owner.linkedin }}" class="social-media-icons"><i class="fa fa-2x fa-linkedin-square" aria-hidden="true"></i></a>
+    {% endif %}
+    {% if site.owner.email %}
+      <a href="mailto:{{ site.owner.email }}" class="social-media-icons"><i class="fa fa-2x fa-envelope-square" aria-hidden="true"></i></a>
+    {% endif %}
+    {% if site.owner.twitter %}
+      <a href="https://twitter.com/{{ site.owner.twitter }}" class="social-media-icons"><i class="fa fa-2x fa-twitter-square" aria-hidden="true"></i></a>
+    {% endif %}
+    {% if site.owner.github %}
+      <a href="{{ site.owner.github }}" class="social-media-icons"><i class="fa fa-2x fa-github-square" aria-hidden="true"></i></a>
+    {% endif %}
+  </div>
+</div>
+
+<div class="post">
+{{ content }}
+</div>
+
+<hr>
+<p style="font-style: italic;">If you read this far, <a target="blank" 
+  href="https://twitter.com/intent/tweet?related=miere&text={{site.url}}{{ page.url | absolute_path | url_encode }}">
+  share this post with your friends</a>. If you have any question, or utterly disagree with what was written above,
+  please login with your Github account and write down your comments.
+</p>
+
+<!-- Allow users to Comment -->
+<script src="https://utteranc.es/client.js"
+        repo="miere/miere.observer"
+        issue-term="title"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>

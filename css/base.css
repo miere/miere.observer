@@ -31,7 +31,7 @@ a img{ border:none; }
 ----------------------------------------------------------------------------*/
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Poppins', 'Noto Sans JP', 'Raleway', sans-serif;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.75em;
@@ -47,9 +47,10 @@ p {
   margin: 0.5em 0 1em;
 }
 
-p.image {
+p.image, .timeline > section > p.image {
   line-height: 1em;
-  background: #efefef;
+  background: #fafafa;
+  margin: 1.5em 0 1.5em;
 }
 
 p.image.right-panel {
@@ -109,10 +110,7 @@ a:hover {
 }
 
 i, em {
-  font-weight: 400;
   color: black;
-  background: cornsilk;
-  font-style: normal;
 }
 
 hr {
@@ -249,7 +247,7 @@ ul.nav li.logo a {
 
 .listing .post.other {
   color: #666;
-  /*border-left: 1px solid #ddd;*/
+  margin-bottom: 60px;
 }
 .listing .post.other h2 {
   margin: -5px 0 -15px 0;
@@ -265,6 +263,7 @@ ul.nav li.logo a {
 }
 .listing .post.other p:last-child {
   margin-bottom: 0;
+  color: #666;
 }
 
 .listing .post.other .icon {
@@ -331,6 +330,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 42px;
   font-weight: 600;
+  margin-bottom: 0.5em;
 }
 h1.words {
   color: #DB2C17;
@@ -352,6 +352,7 @@ h2 {
   font-size: 30px;
   color: #000;
   font-weight: 500;
+  font-family: 'Noto Sans';
 }
 
 h3 {
@@ -524,7 +525,7 @@ div.post-details, div.author-details {
   overflow: hidden;
   padding: 10px 0;
   margin-top: -10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 div.post-details > img,
@@ -701,7 +702,7 @@ header.briefing {
   overflow: auto;
   margin: 0 -100%;
   background: whitesmoke;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
 }
 
 header.briefing p {
@@ -712,7 +713,7 @@ header.briefing p {
 }
 
 header.briefing > .video {
-  margin: 0 auto;
+  margin: 0 auto 20px;
   width: 100%;
   max-width: 1024px;
 }
@@ -765,15 +766,15 @@ header.briefing > .video > iframe {
 }
 
 .timeline > section > blockquote {
-  padding-left: 0;
-  margin-left: 40px;
-  width: calc( 90% - 40px );
+  width: calc( 90% - 75px );
   border-left: none;
+  background: #eee;
+  padding: 20px 30px 20px 45px
 }
 
 .timeline > section > blockquote > p {
   color: black;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .timeline > section > time {
@@ -786,6 +787,19 @@ header.briefing > .video > iframe {
   width: 40px;
   text-align: center;
   text-shadow: none;
+}
+
+.timeline > section > time:hover,
+.timeline > section > h2:hover {
+  cursor: pointer;
+}
+
+.timeline > section > time:hover {
+  background-color: #008aff;
+}
+
+.timeline > section > h2:hover {
+  color: #008aff;
 }
 
 /* Internet Timeline */
@@ -817,6 +831,7 @@ blockquote.quote p {
     border: 0px solid #aaa;
     border-width: 0 0 0 0px;
     color: black;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .internet-timeline section h3 {
