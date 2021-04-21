@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://miere.observer/engineering/2021/04/19/The-Big-Ball-Of-Mud.html</loc>
-<lastmod>2021-04-19T12:25:14+10:00</lastmod>
-</url>
-<url>
 <loc>https://miere.observer/engineering/2020/04/20/Producing-professional-deliverables.html</loc>
 <lastmod>2020-04-20T00:00:00+10:00</lastmod>
 </url>
