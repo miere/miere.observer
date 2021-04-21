@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://miere.observer/feed.xml" rel="self" type="application/atom+xml" /><link href="https://miere.observer/" rel="alternate" type="text/html" /><updated>2021-04-20T17:57:47+10:00</updated><id>https://miere.observer/feed.xml</id><title type="html">Miere’s Personal Observations</title><subtitle>Miere's Personal Observations</subtitle><entry><title type="html">Multiple repositories to rule them all?</title><link href="https://miere.observer/engineering/2021/04/20/Multirepo.html" rel="alternate" type="text/html" title="Multiple repositories to rule them all?" /><published>2021-04-20T11:56:14+10:00</published><updated>2021-04-20T11:56:14+10:00</updated><id>https://miere.observer/engineering/2021/04/20/Multirepo</id><content type="html" xml:base="https://miere.observer/engineering/2021/04/20/Multirepo.html">&lt;h2 id=&quot;the-problem&quot;&gt;The Problem&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://miere.observer/feed.xml" rel="self" type="application/atom+xml" /><link href="https://miere.observer/" rel="alternate" type="text/html" /><updated>2021-04-21T12:11:20+10:00</updated><id>https://miere.observer/feed.xml</id><title type="html">Miere’s Personal Observations</title><subtitle>Miere's Personal Observations</subtitle><entry><title type="html">Multiple repositories to rule them all?</title><link href="https://miere.observer/engineering/2021/04/20/Multirepo.html" rel="alternate" type="text/html" title="Multiple repositories to rule them all?" /><published>2021-04-20T11:56:14+10:00</published><updated>2021-04-20T11:56:14+10:00</updated><id>https://miere.observer/engineering/2021/04/20/Multirepo</id><content type="html" xml:base="https://miere.observer/engineering/2021/04/20/Multirepo.html">&lt;h2 id=&quot;the-problem&quot;&gt;The Problem&lt;/h2&gt;
 &lt;p&gt;If your software is getting bigger, than your application may have one of the following behaviors:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;A shared piece of code&lt;/li&gt;
@@ -172,7 +172,182 @@
 &lt;h2 id=&quot;lehman-laws-as-for-2006&quot;&gt;Lehman Laws as for 2006&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;In 2006 Lehman, along with Fernández-Ramil,&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="engineering" /><category term="engineering" /><category term="information architecture" /><category term="cost management" /><summary type="html">Start simple, make it complex when needed. That seems to be the most cost-effective approach to design a software from scratch nowadays, although not always feasible to put in practice. Let’s try to cover why this happen and how the so called Lehman Laws of Software Evolution can give us some special hints on to tackle it.</summary></entry><entry><title type="html">Understanding the Rule of Three</title><link href="https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three.html" rel="alternate" type="text/html" title="Understanding the Rule of Three" /><published>2020-06-08T00:00:00+10:00</published><updated>2020-06-08T00:00:00+10:00</updated><id>https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three</id><content type="html" xml:base="https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three.html">&lt;p&gt;There is this subconscious understanding that unnecessary complexity is root of all evil in software development. We have been &lt;a href=&quot;https://twitter.com/search?q=dependency%20hell&amp;amp;src=typed_query&quot;&gt;fiercely ranting about the dreadful experience&lt;/a&gt; caused by the dependency hell. We’ve been detracting legacy code as &lt;a href=&quot;https://s3.amazonaws.com/systemsandpapers/papers/bigballofmud.pdf&quot;&gt;big ball of mud because&lt;/a&gt; nobody can honestly understand how it works. Fearlessly, we’ve been &lt;a href=&quot;https://twitter.com/kumar_abhirup/status/1267777496524574721&quot;&gt;shushing our developer mates&lt;/a&gt; arguing that they’ve done the wrong coding choices.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="engineering" /><category term="engineering" /><category term="information architecture" /><category term="cost management" /><summary type="html">Start simple, make it complex when needed. That seems to be the most cost-effective approach to design a software from scratch nowadays, although not always feasible to put in practice. Let’s try to cover why this happen and how the so called Lehman Laws of Software Evolution can give us some special hints on to tackle it.</summary></entry><entry><title type="html">Beginners guide to web-services scalability</title><link href="https://miere.observer/engineering/2021/04/02/Beginners-Guide-To-Web-Services-Scalability.html" rel="alternate" type="text/html" title="Beginners guide to web-services scalability" /><published>2021-04-02T00:00:00+11:00</published><updated>2021-04-02T00:00:00+11:00</updated><id>https://miere.observer/engineering/2021/04/02/Beginners-Guide-To-Web-Services-Scalability</id><content type="html" xml:base="https://miere.observer/engineering/2021/04/02/Beginners-Guide-To-Web-Services-Scalability.html">&lt;p class=&quot;disclaimer&quot;&gt;
+    This content was &lt;a href=&quot;https://www.quora.com/What-are-some-tips-for-building-scalable-web-services-in-Java/answer/Miere-Teixeira?__nsrc__=4&amp;amp;__snid3__=20201704894&quot;&gt;
+    originally posted&lt;/a&gt; in Quora long time ago. I decided to re-post it into this blog for the sake of
+    cohesion and better discoverability. I also took the opportunity to revisit a few topics and fix
+    several grammar issues. It can be used as a starting point, giving you a broad perspective of how to
+    scale a web platform, but certainly your mileage might vary depending on the context.
+&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I don’t think that there’s a general answer to this question and, honestly, anyone well-intended would
+need extra context to elaborate a good one. Every discussion about scalability that is raised on the
+internet is usually guided by specific performance-related topics, which usually only applies to that
+particular situation. When looking for broad tips about scalability, one is probably just trying to
+be prepared for future problems and be ready when they pop in.&lt;/p&gt;
+
+&lt;p&gt;The best definition of scalability I’ve ever seen came from Dictionary.com - a simple statement that
+drew my attention when I was reading this article&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+
+&lt;blockquote class=&quot;quote&quot;&gt;
+    &lt;p&gt;the ability of something, esp a computer system, to adapt to increased demands&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That said, I would like to expatiate from this perspective and dig into some related topics that I think would be relevant to your question.&lt;/p&gt;
+
+&lt;h2 id=&quot;high-availability&quot;&gt;High Availability&lt;/h2&gt;
+&lt;p&gt;It may sound obvious but, as either Software and Hardware are susceptible to failures, we should focus our
+effort on tools and techniques that would increase the uptime of our services. Several possible issues would
+make them less reliable, such as when your software is partially down, your database is performing
+an important ETL script or you’ve received a burst of requests in short time spam. Hence, it’s important
+to be aimed with proper tools to make the software more resilient to such cases.&lt;/p&gt;
+
+&lt;h2 id=&quot;load-balancer&quot;&gt;Load Balancer&lt;/h2&gt;
+&lt;p&gt;Load Balancer is the most common tool for these matters, providing a simple mechanism to evenly distribute
+the load between a fleet of machines. All major cloud vendors have a managed Load Balancer&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;,
+so you don’t have to deep dive into low-level network protocol knowledge to have it properly configured.
+You also have well written Open Source solutions like NginX or HAProxy that would help you to achieve the
+same results if you are concerned about being locked into a cloud vendor - at the cost of spending more
+ours configuring suck tools by yourself.&lt;/p&gt;
+
+&lt;h2 id=&quot;metrics-dashboards-and-alarms&quot;&gt;Metrics, Dashboards and Alarms&lt;/h2&gt;
+&lt;p&gt;Metrics are the most important piece of your architecture. If I had to choose between Load Balancers and
+Metrics, I would always choose the latest. Especially during the initial phase of your application, when
+you have fewer customers, hence less load on your servers, all you need is to keep posted by how your
+services are behaving and take action when something comes up.&lt;/p&gt;
+
+&lt;p&gt;A well-designed dashboard, fulfilled with relevant cherry-picked metrics, is a good start point to
+understand how to scale your software. It will give insights on where are the biggest hotspots, which
+Rest endpoints are the most demanding, which are the slowest and which puts more pressure on your
+Database services. Aimed with this you’ll understand when you should include one or more instances
+on your service fleet.&lt;/p&gt;
+
+&lt;p&gt;Then we have Alarms and Triggers. Once you’ve been monitoring your service for a while you’ll probably
+notice that some routines are quite repetitive. You can use alarms to be notified in case something went
+wrong. If these tasks can be done programmatically, you can certainly trigger actions and automate most
+of these tasks. As an example, high CPU alarms could trigger an action to automatically increase the
+umber of instances of your service fleet (AutoScaling?).&lt;/p&gt;
+
+&lt;p&gt;At this point, you might be able to Observe your whole system. I’m intentionally picking the word
+“observe” instead of “monitor” because the latest has been dramatically linked to the analysing metrics
+individually. Recently, though, observability has been trending as a slightly different approach where
+(we can summarise to) analyse how the important business-related bits of your system (infrastructure +
+software) behaves. The guys from NewStack have covered this topic very well recently &lt;sup id=&quot;fnref:6&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;At this point, you (or your team), might be concerned about how to balance the need to include new
+features on your software (time-to-market) and ensure that your users will have a good experience
+(maintaining the software healthy and reliable). Monitoring (the Metrics and Alarms) and Observability
+are the key techniques to let you start simple, being the best decision-making tool, in such a small
+investment, you will ever have. You can use it to postpone performance improvements to the last
+responsible moment, or even use it as an excuse to start your software as a monolith and create
+microservices only when you’ve identified that a particular piece of your service needs to scale out&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;It worth repeat that all the biggest cloud vendors have easy-to-use Managed Monitoring solutions, so
+you can have all sorted out in a few minutes (hours if that’s your first time).&lt;/p&gt;
+
+&lt;h2 id=&quot;continuous-deployment&quot;&gt;Continuous Deployment&lt;/h2&gt;
+&lt;p&gt;CI/CD is quite an old topic, nevertheless it still a relevant and underrated subject that most architects
+and software don’t take advantage of. Once you design software to be easily built, tested and packaged,
+you can have your new features deployed into production in a few seconds (minutes depending on the
+size of the project).&lt;/p&gt;
+
+&lt;p&gt;CI in general is the right tool to scale your Quality Assurance team, continuously running all the good
+techniques they know every time the source code changes. Software Architects can also take advantage
+of these tools to check if unit tests are broken, or if Developers are not following the expected code
+convention, or if you mistakenly committed credentials in your source code or even if you accidentally
+included a version of a library with a known security issue.&lt;/p&gt;
+
+&lt;p&gt;One may see it as an optional step, somewhat cumbersome or even unnecessary. But, if the goal is
+scalability, team scalability matters. The more automated the better. It necessarily means less
+repetitive tasks, a codebase less susceptible to failure, being able to find bugs before deploying
+the software into production, etc. There’s no rocket science here, any simple tool can be used to
+achieve all the above-described goals. If you have money (and patience) you can use Atlassian Bamboo,
+or the popular open-source Jenkins deployed on your premises. If you are like me and don’t want to
+spend time managing build instances and agents, you should definitively give it a try on CircleCI,
+CodeShip or GitLabCI. AWS is also offering similar services in the usual pay-as-you-go fashion.&lt;/p&gt;
+
+&lt;h2 id=&quot;application-performance-monitoring&quot;&gt;Application Performance Monitoring&lt;/h2&gt;
+&lt;p&gt;By choosing a good Application Performance Monitoring (APM for short) Tool, you will have all extra
+knowledge about how your application works internally. Even if you have little-to-no-knowledge about
+your chosen development platform, you will be able to use these extra metrics to take sensible action
+whenever incidents happens.&lt;/p&gt;
+
+&lt;p&gt;Usually, these tools introspects your application (in runtime), adding extra execution points that
+collects data (like memory and CPU usage by process, request throughput, etc), sends it to a centralised
+application that groups them together and generates useful report about your application healthy.&lt;/p&gt;
+
+&lt;p&gt;NewRelic and DataDog are probably the most advertised APM solutions you will find on the internet. They
+are reasonably priced - although they can get expensive quite quickly - and offer a comprehensive
+feature set on their portfolio, being the ideal solution when you want to solve application performance
+issues in a short notice. However, some major cloud vendors started to offer similar solutions - being
+AWS X-Ray the most mature one.&lt;/p&gt;
+
+&lt;p&gt;I encourage you to pursue an OpenSource solution whenever the costs start to become prohibitive. Each
+ecosystem has its own set of tool, it’s worth investigate the one that best fits your needs.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-chaos-day-is-upon-us&quot;&gt;The Chaos-Day is upon us&lt;/h2&gt;
+&lt;p&gt;Now you have properly invested your time by setting up a highly available software, configured dozens
+of important alarms based on the key metrics your application provide and have cleverly hooked some
+auto-scaling trigger in case the Heap memory consumption is greater than the expected. You feel like
+you have nothing else to worry, right?&lt;/p&gt;
+
+&lt;p&gt;Well, not really! Now that everything is set up we have to define a strategy to cope with the Caos Day:
+the day your server will go nuts, and you have to fix it as fast as possible.&lt;/p&gt;
+
+&lt;p&gt;What does it have to do with Scalability? Well, no software is perfect, therefore, no
+automation will be perfect too. You need to be prepared to manual scale your software in case of
+a severe incident happens and, in the worst case scenario, you might need to rebuild it from ground up.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-good-enough-disaster-recover-plan&quot;&gt;A good enough Disaster Recover plan&lt;/h3&gt;
+&lt;p&gt;I really encourage you to have a disaster recover plan in place. It will take you one or two days to
+have it thoroughly tested, but it’s worth every second spent on it. Keeping simplicity in mind, after
+all we improve this later on, I’d focus on:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Having a fresh backup will give you piece of mind, allowing you to carry on, knowing that no matter
+how drastic is the problem, you will be able to start over.&lt;/li&gt;
+  &lt;li&gt;Infrastructure as Code. This is an important bit, you must be able to recreate your whole
+infrastructure in a short notice. Having it automated from the day one will save you time (money)
+and hair loss.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;With these ready, all you need is to ensure that you are easily able to restore your backup
+as soon as your new infrastructure is ready. Bear in mind that, you need to constantly revisit this
+from time to time, you don’t want to have to test it when you need it to be working the most.&lt;/p&gt;
+
+&lt;h2 id=&quot;to-wrap-up&quot;&gt;To wrap up&lt;/h2&gt;
+&lt;p&gt;Choose Simplicity as the backbone of your coding design, Automation as the way to deliver any solution
+and Monitoring Tools as the source of truth for your further architectural decisions, and you will have
+an efficient and small team capable to have same productivity as a big wealthy tech company.&lt;/p&gt;
+
+&lt;p&gt;Smaller and efficient teams will make your company more profitable, more money to be paid to the
+employees. One may see this as utopia, but from my personal experience I’ve witnessed a few companies
+awarded its employees with a (big) slice of the profit they’ve got by reducing their operational cost.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;http://shiflett.org/blog/2003/what-is-scalability&quot;&gt;What Is Scalability?&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html&quot;&gt;What Is an Application Load Balancer?&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://cloud.google.com/load-balancing/docs/load-balancing-overview&quot;&gt;Overview of Load Balancing - Google Cloud&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview&quot;&gt;What is Azure Load Balancer?&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:6&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://thenewstack.io/monitoring-vs-observability-whats-the-difference/&quot;&gt;Monitoring vs Observability: what’s the difference&lt;/a&gt; &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;&lt;a href=&quot;https://martinfowler.com/bliki/MonolithFirst.html&quot;&gt;Monolith First&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="engineering" /><category term="engineering" /><category term="scalability" /><category term="Java" /><summary type="html">This content was originally posted in Quora long time ago. I decided to re-post it into this blog for the sake of cohesion and better discoverability. I also took the opportunity to revisit a few topics and fix several grammar issues. It can be used as a starting point, giving you a broad perspective of how to scale a web platform, but certainly your mileage might vary depending on the context.</summary></entry><entry><title type="html">Understanding the Rule of Three</title><link href="https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three.html" rel="alternate" type="text/html" title="Understanding the Rule of Three" /><published>2020-06-08T00:00:00+10:00</published><updated>2020-06-08T00:00:00+10:00</updated><id>https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three</id><content type="html" xml:base="https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three.html">&lt;p&gt;There is this subconscious understanding that unnecessary complexity is root of all evil in software development. We have been &lt;a href=&quot;https://twitter.com/search?q=dependency%20hell&amp;amp;src=typed_query&quot;&gt;fiercely ranting about the dreadful experience&lt;/a&gt; caused by the dependency hell. We’ve been detracting legacy code as &lt;a href=&quot;https://s3.amazonaws.com/systemsandpapers/papers/bigballofmud.pdf&quot;&gt;big ball of mud because&lt;/a&gt; nobody can honestly understand how it works. Fearlessly, we’ve been &lt;a href=&quot;https://twitter.com/kumar_abhirup/status/1267777496524574721&quot;&gt;shushing our developer mates&lt;/a&gt; arguing that they’ve done the wrong coding choices.&lt;/p&gt;
 
 &lt;p&gt;It is funny how Machiavellian we can become in name of the simplicity. Surely, we can have better days with less cyclic dependencies, we probably can adopt better design patterns or even avoid syntaxes that ordinary people can’t easily read in our source code. But, to remove complexity from our daily routine, we need a systematic approach that help us to weigh up the benefits of every piece of code we introduce in our software.&lt;/p&gt;
 
@@ -632,88 +807,4 @@
       &lt;p&gt;&lt;a href=&quot;https://martinfowler.com/bliki/CanaryRelease.html&quot;&gt;Canary Release&lt;/a&gt; by &lt;a href=&quot;http://www.dtsato.com/blog/&quot;&gt;Danilo Sato&lt;/a&gt;. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="engineering" /><summary type="html">A few days ago, I spotted a blog post from StackOverflow that drew my attention: Ensuring backwards compatibility in distributed systems. That is the sort of topic I love to consume as it gives me new insights and let me know how people are solving similar problems. The article was engagingly good and kept me focused on reading it until the end.</summary></entry><entry><title type="html">Analysis: Decomposing a Monolith</title><link href="https://miere.observer/engineering/2020/05/19/Analysis-Decomposing-Monolith.html" rel="alternate" type="text/html" title="Analysis: Decomposing a Monolith" /><published>2020-05-19T00:00:00+10:00</published><updated>2020-05-19T00:00:00+10:00</updated><id>https://miere.observer/engineering/2020/05/19/Analysis-Decomposing-Monolith</id><content type="html" xml:base="https://miere.observer/engineering/2020/05/19/Analysis-Decomposing-Monolith.html">&lt;header class=&quot;briefing&quot;&gt;
-&lt;div class=&quot;video&quot;&gt;&lt;iframe class=&quot;video&quot; src=&quot;https://www.youtube-nocookie.com/embed/9I9GdSQ1bbM&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-&lt;p&gt;This an opinionated transcription of a talk that &lt;a href=&quot;https://samnewman.io/&quot;&gt;Sam Newman&lt;/a&gt; has presented in the 2019 GOTO Conference, Berlin edition. There were several points on his presentation that, I think, were spot on and deserves to be transcribed and better explained. There is a bit of a debate about whether or not to start from a Monolith and then move to a Microservice Architecture. Understanding how &lt;i&gt;decomposing monolith&lt;/i&gt; might not only shed a light on this but also made us understand the benefits of doing it gradually.&lt;/p&gt;
-&lt;/header&gt;
-
-&lt;article class=&quot;timeline&quot;&gt;
-    &lt;section&gt;
-        &lt;time&gt;2:40&lt;/time&gt;
-        &lt;h2&gt;Monolith&lt;/h2&gt;
-        &lt;p&gt;Sam emphasises that Monolith Service is not the same as a Legacy System. In practice, they differ substantially and we need to observe them differently so we can deliver a better solution to our managers and customers.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;time&gt;4:16&lt;/time&gt;
-        &lt;h2&gt;Modular Monolith Deployment&lt;/h2&gt;
-        &lt;p&gt;After introducing the basic concept of a Monolith, Newman quickly discusses Modular Monolith deployment. Architecture wise, its components are internally split into modules (depending on the language you use it can simply be packages, namespaces or libraries). These modules are using run on the same process and its persistence layer is usually centralized in a single database instance.&lt;/p&gt;
-        &lt;p&gt;He believes &lt;i&gt;this is, in theory, a good scenario to be, as these modules can be easily split into smaller services later&lt;/i&gt;, reducing the effort to transition the service into a microservice. &quot;Most people are better of in a modular monolith deployment&quot; than in a microservice architecture - as he will discuss later.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;time&gt;7:14&lt;/time&gt;
-        &lt;h2&gt;Third-party Monolith&lt;/h2&gt;
-        &lt;p&gt;Newman describes a third-party monolith as everything &quot;that is completely out of your control&quot;, something you can't change its internal behaviour. It might be your CRM software that your SaaS application relies on or even that old piece of software which you don't have the source code.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;time&gt;8:01&lt;/time&gt;
-        &lt;h2&gt;Distributed Monolith&lt;/h2&gt;
-        &lt;p&gt;Distributed Monolith differs from a simple monolith by having its functionalities are split across different services, using the network to communicate with each other. Because of how we split our system apart, or even due to different reasons, we often end up having pieces of code being changed across module boundaries.&lt;/p&gt;
-        &lt;p&gt;It is, arguably, the worst scenario you can be as the team who maintains it will have all the challenges a distributed system has along with the downsides of a monolith. It introduces a high cost to change functionalities, larger-scoped deployments and requires higher co-ordination activities - as you have more things that might go wrong.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;time&gt;10:20&lt;/time&gt;
-        &lt;blockquote&gt;
-            &lt;p&gt;Fundamentally, you have to accept that monolith isn't necessarily the enemy - it's extremely rare that your goal is to kill the monolith. It sometimes happens but, most of the time, you're in a situation where you're trying to achieve something as a business but your current architecture won't let you achieve that goal.&lt;/p&gt;
-        &lt;/blockquote&gt;
-        &lt;p&gt;This is an important bit from his presentation and it needs to be transcribed as is. A Monolith Service by itself is not a bad thing and, like any other architectural decision, it has its pros and cons. We should only switch from a monolith to a microservice architecture when its benefits overcome the cost of maintaining a complex distributed system.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;time&gt;12:44&lt;/time&gt;
-        &lt;blockquote&gt;
-            &lt;p&gt;You won't appreciate the true horror, pain and suffering of microservices until you're running then in production.&lt;/p&gt;
-        &lt;/blockquote&gt;
-        &lt;p&gt;Perhaps a good start might be extracting one module from your Modular Monolith into an external service. What you learn from observing this new service might give you enough insights to continue with the transition from a monolith to a microservice architecture.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;time&gt;15:15&lt;/time&gt;
-        &lt;h2&gt;Strangler Fig Pattern&lt;/h2&gt;
-        &lt;p&gt;At this point in his presentation, Sam cut the chase and started to present solutions (architectural patterns) that will help us to decompose a monolith service. Strangler Fig is a pattern in which you wrap new functionalities around the existing ones in a way that the existing solution is not changed or is aware of it. In practical terms, he suggests us introduce an HTTP Proxy to intercept calls to the existing service diverting the calls to the new one as well.&lt;/p&gt;
-        &lt;p&gt;The &lt;b&gt;Strangler Fit Pattern fits perfectly when we are at the beginning of the transition to a microservice or when dealing with Third-Party Monoliths&lt;/b&gt;, as other components of our existing solution still depend on the data managed by the one which will be replaced. The original component tables will still be fed with new data, giving us time to rethink or redesign other components in the future.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;time&gt;22:04&lt;/time&gt;
-        &lt;h2&gt;Branch By Abstraction&lt;/h2&gt;
-        &lt;p&gt;Although his explanation about this pattern was good enough for a presentation in front of a big audience, I reckon his own definition (taken from &lt;a href=&quot;https://samnewman.io/patterns/architectural/branch-by-abstraction/&quot;&gt;his blog&lt;/a&gt;) wraps it up perfectly.&lt;/p&gt;
-        &lt;blockquote&gt;
-            &lt;p&gt;When making a significant change to how a piece of functionality is implemented, the challenge is how to work on this reimplementation over a period of time. With branch-by-abstraction, you create a single abstraction point over the functionality to be reimplemented, allowing both the existing functionality and the new implementation to co-exist inside the same running process at the same time.&lt;/p&gt;
-        &lt;/blockquote&gt;
-        &lt;p&gt;At this point in his presentation, he started to describe the ideal step-by-step to implement this pattern. I've modified it slightly to make it easier to reproduce.&lt;/p&gt;
-        &lt;ol&gt;
-            &lt;li&gt;&lt;b&gt;Isolate the current implementation&lt;/b&gt; - This is the first and most important and delicate step of this pattern, where you isolate the current implementation from the rest of the service. At this step you have to move the logic of the current functionality you intend to replace and move it to a single place (same package, module or folder).&lt;/li&gt;
-            &lt;li&gt;&lt;b&gt;Create an abstraction point&lt;/b&gt; - Create an interface that will behave as the contract to call that given functionality. With the &lt;a href=&quot;http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod&quot;&gt;Liskov Substitution Principle&lt;/a&gt; in mind, you must make sure your software calls a default implementation of this internal, which will call your just isolated functionality.&lt;/li&gt;
-            &lt;li&gt;&lt;b&gt;Start working on the new service implementation&lt;/b&gt; - Once you finish, the new service will be later called by the monolith via HTTP (assuming that you exposed the new functionality through a Web API) and the web client should be wrapped in an alternative implementation of the just created interface.&lt;/li&gt;
-            &lt;li&gt;&lt;b&gt;Switch over when it is ready to release&lt;/b&gt; - &lt;/li&gt;
-            &lt;li&gt;&lt;b&gt;Clean up&lt;/b&gt; - Observe production and gather data to assess the results. A rollback is still possible at this point, allowing you to revisit the implementation until everything is working perfectly. Once everything is working as expected, you can remove the old functionality from your codebase.&lt;/li&gt;
-        &lt;/ol&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;time&gt;26:07&lt;/time&gt;
-        &lt;h2&gt;Parallel Run&lt;/h2&gt;
-        &lt;p&gt;Being a variation of Branch by Abstraction, Parallel Run allows both implementations to co-exist at the same time. This is particularly useful to check if the behaviour has changed. Although both branches have different implementations it's expected that they to behave the same way, unless otherwise noted. Therefore, when comparing the outcome of both functionalities, it's important to take the original implementation as the source of truth, where any discrepancy in the result comparison between them should be considered a failure in the new service.&lt;/p&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;time&gt;28:10&lt;/time&gt;
-        &lt;h2&gt;Accessing the Data&lt;/h2&gt;
-        &lt;p&gt;Entering in the last stage of his talk, Sam finally addresses what he describes as the hardest topic when decomposing a monolith: how to organize and access the data on from/on the just created service. On his conception, on the evolutionary point of view, the data migration should be comprised by the following steps.&lt;/p&gt;
-        &lt;ol&gt;
-            &lt;li&gt;&lt;b&gt;Temporarily reuse the existing functionality database&lt;/b&gt; - Direct communication between the new service and the existing database would be allowed in as a temporary measure to stabilize the new functionality. Treating this as a permanent solution, though, might be the beginning of a new distributed monolith due to how tightly coupled both services became.&lt;/li&gt;
-            &lt;li&gt;&lt;b&gt;Expose the existing data via API&lt;/b&gt; - This solution is intended to reduce, but not remove, the coupling between both services. It gives developers more flexibility to react to possible changes that might happen in the database schema. He encourages us, though, to revisit the way information is consumed or ingested to avoid cyclic dependencies between both services - a common antipattern found in distributed monoliths.&lt;/li&gt;
-            &lt;li&gt;&lt;b&gt;Move the data to the new service&lt;/b&gt; - Turning the new service into the source of truth is the definitive move to finish the migration from monolith to a microservice architecture. It comes with its challenges though. Joins between tables have to be rethought, split tables might be necessary and referential integrity provided by the database layer is completely off the table.&lt;/li&gt;
-        &lt;/ol&gt;
-    &lt;/section&gt;
-&lt;/article&gt;
-
-&lt;h2&gt;Takeaways from talk&lt;/h2&gt;
-&lt;p&gt;Newman did a brilliant job outlining the tradeoffs of prematurely adopting Microservice Architecture and I reckon there’s richness on his speech when he describes the dreadful consequences when we mistakenly end up creating a Distributed Monolith. Tackling the issues it introduces leads us to &lt;a href=&quot;https://github.com/korfuri/awesome-monorepo&quot;&gt;introduce new hacks in our architecture and deployment pipeline&lt;/a&gt;, like monorepo or shared modules between services. As Microservices are independently deployable - and generally speaking share no source code between them - our CI/CD is actually simpler. It is a good balance between cost and delivered value to our stakeholders.&lt;/p&gt;
-
-&lt;p&gt;By reading between the lines we can also notice how much he is concerned about monitoring the runtime environment and tackle unexpected issues at early stages of its deployments. Due to the complexity of distributed systems, handling network and hardware issues before the business requirements make the software complex would save us several hours of development.&lt;/p&gt;</content><author><name></name></author><category term="engineering" /><category term="engineering" /><category term="information architecture" /><category term="cost management" /><summary type="html">This an opinionated transcription of a talk that Sam Newman has presented in the 2019 GOTO Conference, Berlin edition. There were several points on his presentation that, I think, were spot on and deserves to be transcribed and better explained. There is a bit of a debate about whether or not to start from a Monolith and then move to a Microservice Architecture. Understanding how decomposing monolith might not only shed a light on this but also made us understand the benefits of doing it gradually.</summary></entry></feed>
+&lt;/div&gt;</content><author><name></name></author><category term="engineering" /><summary type="html">A few days ago, I spotted a blog post from StackOverflow that drew my attention: Ensuring backwards compatibility in distributed systems. That is the sort of topic I love to consume as it gives me new insights and let me know how people are solving similar problems. The article was engagingly good and kept me focused on reading it until the end.</summary></entry></feed>

@@ -330,6 +330,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 42px;
+  font-weight: 600;
 }
 h1.words {
   color: #DB2C17;
@@ -350,12 +351,12 @@ h1.link .desc {
 h2 {
   font-size: 30px;
   color: #000;
+  font-weight: 500;
 }
 
 h3 {
-  margin: 2.0em 0 -0.75em 0;
-  font-size: 17px;
   color: #333;
+  font-weight: 500;
 }
 h3 a, h3 a:visited, h2 a, h2 a:visited{ color:#000; }
 h3 a:hover, h2 a:hover{ color:#000; border:none; }
@@ -877,3 +878,7 @@ blockquote.quote:before,
 
 /* Other customizations */
 i.fa { background: transparent; }
+p.disclaimer {
+    font-size: 0.9em;
+    color: #999;
+}
