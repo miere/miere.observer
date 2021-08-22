@@ -40,7 +40,7 @@ to be aimed with proper tools to make the software more resilient to such cases.
 
 ## Load Balancer
 Load Balancer is the most common tool for these matters, providing a simple mechanism to evenly distribute
-the load between a fleet of machines. All major cloud vendors have a managed Load Balancer[^2][^3][^4],
+the load between a fleet of machines. All major cloud vendors have a managed Load Balancer[^2] [^3] [^4],
 so you don’t have to deep dive into low-level network protocol knowledge to have it properly configured.
 You also have well written Open Source solutions like NginX or HAProxy that would help you to achieve the
 same results if you are concerned about being locked into a cloud vendor - at the cost of spending more
