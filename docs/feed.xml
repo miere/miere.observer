@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://miere.observer/feed.xml" rel="self" type="application/atom+xml" /><link href="https://miere.observer/" rel="alternate" type="text/html" /><updated>2021-04-21T18:43:43+10:00</updated><id>https://miere.observer/feed.xml</id><title type="html">Miere’s Personal Observations</title><subtitle>Miere's Personal Observations</subtitle><entry><title type="html">Analysis: Prioritizing Technical Debt - Part I</title><link href="https://miere.observer/engineering/2021/04/20/Prioritizing-Technical-Debt-as-if-Time-and-Money-Matters.html" rel="alternate" type="text/html" title="Analysis: Prioritizing Technical Debt - Part I" /><published>2021-04-20T00:00:00+10:00</published><updated>2021-04-20T00:00:00+10:00</updated><id>https://miere.observer/engineering/2021/04/20/Prioritizing-Technical-Debt-as-if-Time-and-Money-Matters</id><content type="html" xml:base="https://miere.observer/engineering/2021/04/20/Prioritizing-Technical-Debt-as-if-Time-and-Money-Matters.html">&lt;header class=&quot;briefing&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://miere.observer/feed.xml" rel="self" type="application/atom+xml" /><link href="https://miere.observer/" rel="alternate" type="text/html" /><updated>2022-01-28T17:20:17+11:00</updated><id>https://miere.observer/feed.xml</id><title type="html">Miere’s Personal Observations</title><subtitle>Miere&apos;s Personal Observations</subtitle><entry><title type="html">Analysis: Prioritizing Technical Debt - Part I</title><link href="https://miere.observer/engineering/2021/04/20/Prioritizing-Technical-Debt-as-if-Time-and-Money-Matters.html" rel="alternate" type="text/html" title="Analysis: Prioritizing Technical Debt - Part I" /><published>2021-04-20T00:00:00+10:00</published><updated>2021-04-20T00:00:00+10:00</updated><id>https://miere.observer/engineering/2021/04/20/Prioritizing-Technical-Debt-as-if-Time-and-Money-Matters</id><content type="html" xml:base="https://miere.observer/engineering/2021/04/20/Prioritizing-Technical-Debt-as-if-Time-and-Money-Matters.html">&lt;header class=&quot;briefing&quot;&gt;
 &lt;div class=&quot;video&quot;&gt;
 &lt;iframe class=&quot;video&quot; id=&quot;youtube-video&quot; src=&quot;https://www.youtube-nocookie.com/embed/fl4aZ2KXBsQ?enablejsapi=1&amp;amp;modestbranding=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 &lt;p&gt;
-    This post is the part I of the video analysis in which I'll elaborate on a few points exposed by
+    This post is the part I of the video analysis in which I&apos;ll elaborate on a few points exposed by
     &lt;a href=&quot;https://empear.com/blog/&quot;&gt;Adam Tornhill&lt;/a&gt; on a talk presented in the 2019 GOTO Conference
-    that happened in Copenhagen. As he addressed several topics, I've decided to tackle it into different fronts.&lt;/p&gt;
-&lt;p&gt; In this initial post I'll cover the first half of the video where he approaches technical debts found
+    that happened in Copenhagen. As he addressed several topics, I&apos;ve decided to tackle it into different fronts.&lt;/p&gt;
+&lt;p&gt; In this initial post I&apos;ll cover the first half of the video where he approaches technical debts found
     within a single code base (or repository if you will). There are several points on his presentation
     that, I believe, are spot on and deserves to be transcribed and better explained. &lt;i&gt;Technical Debts&lt;/i&gt;
     as a concept is something usually underrated by several (if not most of) big companies. The amount of
@@ -17,8 +17,8 @@
 &lt;article class=&quot;timeline&quot;&gt;
     &lt;section&gt;
         &lt;time&gt;0:37&lt;/time&gt;
-        &lt;h2&gt;Lehman Law's&lt;/h2&gt;
-        &lt;p&gt;Adam will use &lt;a href=&quot;https://en.wikipedia.org/wiki/Lehman%27s_laws_of_software_evolution&quot;&gt;Manny Lehman's Laws of Software Evolution&lt;/a&gt; as the foundation of his argument during the whole talk. &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
+        &lt;h2&gt;Lehman Law&apos;s&lt;/h2&gt;
+        &lt;p&gt;Adam will use &lt;a href=&quot;https://en.wikipedia.org/wiki/Lehman%27s_laws_of_software_evolution&quot;&gt;Manny Lehman&apos;s Laws of Software Evolution&lt;/a&gt; as the foundation of his argument during the whole talk. &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
         &lt;ul&gt;
             &lt;li&gt;&lt;b&gt;Continuing Change&lt;/b&gt;: &quot;a system must be continually adapted or it becomes progressively less satisfactory&quot;&lt;/li&gt;
             &lt;li&gt;&lt;b&gt;Increasing Complexity&lt;/b&gt;: &quot;as a system evolves, its complexity increases unless work is done to maintain or reduce it&quot;&lt;/li&gt;
@@ -28,19 +28,19 @@
         &lt;time&gt;2:20&lt;/time&gt;
         &lt;h2&gt;One shall focus on the real issue&lt;/h2&gt;
         &lt;p&gt;
-            As he points out, there's an inherent conflict between these two laws. &lt;i&gt;&quot;On one hand, we have to continuously evolve and adapt
+            As he points out, there&apos;s an inherent conflict between these two laws. &lt;i&gt;&quot;On one hand, we have to continuously evolve and adapt
             our system but as we do, its complexity will increase which makes it harder and harder to respond to change&quot;&lt;/i&gt;. These are so
             intertwined that it prevents us to perceive the problems as it is, leading us to tackle &lt;i&gt;&quot;the symptoms more than the root cause&quot;&lt;/i&gt;.
         &lt;/p&gt;
         &lt;p&gt;
-            What he's experienced is somewhat similar to what I've witnessed in the past few years. If we, as technical and business leaders,
-            only monitor the tickets we have in the backlog we might no be able to identify the impact that technical debts impose to our users.
+            What he has experienced is somewhat similar to what I&apos;ve witnessed in the past few years. If we, as technical and business leaders,
+            only monitor the tickets we have in the backlog we might not be able to identify the impact that technical debts impose to our users.
             Therefore, to actually solve the problem, we need to understand the underlying issue - the root cause of the problem. It might imply
-            on revisiting a software, or component, design - or even how we approach and process the interaction with the user.
+            on revisiting a software, a component design or even how we approach and process the interaction with the user.
         &lt;/p&gt;
         &lt;p&gt;
-            It worth mention that Tornhill is not advocating perfectionism. In general, users don't mind to live with one or two glitches in the app
-            as long as it doesn't impact their work routine. But as we neglect the existence of those technical debts, the time to release of new
+            It worth mention that Tornhill is not advocating perfectionism. In general, users don&apos;t mind living with one or two glitches in the app
+            as long as it doesn&apos;t impact their work routine. But as we neglect the existence of those technical debts, the time to release of new
             features or fix bugs grows bigger (and faster) than the symptoms experienced by the users.      
         &lt;/p&gt;
         &lt;p&gt;
@@ -54,14 +54,14 @@
         &lt;blockquote class=&quot;quote&quot;&gt;
             &lt;p&gt;We really have to consider what kind of behaviour do we reinforce by putting our quantitative goal 
                 on technical debt. [...] People like us (developers) will optimise for what we are measured on. That
-                most likely means that we're going to pick not only the simplest task, but we're going to pick tasks
-                that we're comfortable with. [...] That also means that we lack the most important aspect of the
+                most likely means that we&apos;re going to pick not only the simplest task, but we&apos;re going to pick tasks
+                that we&apos;re comfortable with. [...] That also means that we lack the most important aspect of the
                 technical debt: we lack the business impact.&lt;/p&gt;
         &lt;/blockquote&gt;
-        &lt;p&gt;It's safe to say that, at this point in time, Adam addresses the biggest wound in the current state of the software
-            development industry. We've been putting much more effort on the results (having less tickets in the backlog) than
+        &lt;p&gt;It&apos;s safe to say that, at this point in time, Adam addresses the biggest wound in the current state of the software
+            development industry. We&apos;ve been putting much more effort on the results (having less tickets in the backlog) than
             on the outcomes (deliver more value, or provide a better experience, to our users). By simply removing those issues
-            from our sight we are neglecting to solve the root cause of the problem, as it doesn't guarantee our software won't behave
+            from our sight we are neglecting to solve the root cause of the problem, as it doesn&apos;t guarantee our software won&apos;t behave
             poorly in the foreseeable future.&lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
@@ -69,11 +69,11 @@
         &lt;h2&gt;Assessing the technical debt&lt;/h2&gt;
         &lt;p&gt;Cyclomatic complexity&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; is probably the most common tool
             used to identify whether or not a piece of code needs to be revisited due to its complexity. Adam points out, though,
-            that &quot;code complexity is only a problem when we have to deal with it&quot;. There's no point in optimizing a complex source
+            that &quot;code complexity is only a problem when we have to deal with it&quot;. There&apos;s no point in optimizing a complex source
             that is unlikely to change in the foreseeable future.&lt;/p&gt;
         &lt;p&gt;We can combine Cyclomatic Complexity with Code Change Frequency&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;
-            analysis. Together they give us a different perspective on how we've been dealing with the software, as we could use it
-            to list which sections of it has been more frequently changed. This metric alone wouldn't be really useful, after all,
+            analysis. Together they give us a different perspective on how we&apos;ve been dealing with the software, as we could use it
+            to list which sections of it has been more frequently changed. This metric alone wouldn&apos;t be really useful, after all,
             why should we optimise something that is not complex at all.&lt;/p&gt;
         &lt;p&gt;To better understand the process, Adam proposes us to use our VCS tool and to list the most frequently changed files over
             a given period of time. Once you spotted a file which has been constantly changed, one can be submit each of the changes
@@ -94,7 +94,7 @@
             it might never be merged back again.&lt;/p&gt;
         &lt;p&gt;Reducing the refactor scope is key to succeed here. The speaker then suggests us to narrow down our problematic code base
             analysis to the function/method level. His ingenious suggestion allow us deliver valuable enhancements into our software
-            within days rather than weeks (in case you're refactoring a humungous class) or even years (if we've decided to completely
+            within days rather than weeks (in case you&apos;re refactoring a humungous class) or even years (if we&apos;ve decided to completely
             overhaul the system).&lt;/p&gt;
     &lt;/section&gt;
 &lt;/article&gt;
@@ -105,7 +105,7 @@
         &lt;p&gt;Manny Lehman wrote a set of articles between in the 1970s. He would wrap these articles later in 1980 in a book titled &quot;On Understanding Laws, Evolution, and Conservation in the Large-Program Life Cycle&quot;. &lt;a href=&quot;https://doi.org/10.1016%2F0164-1212%2879%2990022-0&quot;&gt;doi:10.1016/0164-1212(79)90022-0&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:2&quot;&gt;
-        &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Cyclomatic_complexity&quot;&gt;Cyclomatic complexity&lt;/a&gt; is a software metric used to indicate the complexity of a program. It is a quantitative measure of the number of linearly independent paths through a program's source code. It was developed by Thomas J. McCabe, Sr. in 1976.&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Cyclomatic_complexity&quot;&gt;Cyclomatic complexity&lt;/a&gt; is a software metric used to indicate the complexity of a program. It is a quantitative measure of the number of linearly independent paths through a program&apos;s source code. It was developed by Thomas J. McCabe, Sr. in 1976.&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
         &lt;p&gt;Code Change Frequency is a measure to identify files that has been more frequently changed. If you are curious
@@ -114,182 +114,7 @@
     &lt;/li&gt;
     
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="engineering" /><category term="engineering" /><category term="information architecture" /><category term="cost management" /><category term="lehman law" /><category term="git" /><category term="static code analysis" /><summary type="html">This post is the part I of the video analysis in which I'll elaborate on a few points exposed by Adam Tornhill on a talk presented in the 2019 GOTO Conference that happened in Copenhagen. As he addressed several topics, I've decided to tackle it into different fronts. In this initial post I'll cover the first half of the video where he approaches technical debts found within a single code base (or repository if you will). There are several points on his presentation that, I believe, are spot on and deserves to be transcribed and better explained. Technical Debts as a concept is something usually underrated by several (if not most of) big companies. The amount of money and man-hour effort spent fixing problems is often pointed as an order of magnitude higher than avoiding it before being released into production.</summary></entry><entry><title type="html">Beginners guide to web-services scalability</title><link href="https://miere.observer/engineering/2021/04/02/Beginners-Guide-To-Web-Services-Scalability.html" rel="alternate" type="text/html" title="Beginners guide to web-services scalability" /><published>2021-04-02T00:00:00+11:00</published><updated>2021-04-02T00:00:00+11:00</updated><id>https://miere.observer/engineering/2021/04/02/Beginners-Guide-To-Web-Services-Scalability</id><content type="html" xml:base="https://miere.observer/engineering/2021/04/02/Beginners-Guide-To-Web-Services-Scalability.html">&lt;p class=&quot;disclaimer&quot;&gt;
-    This content was &lt;a href=&quot;https://www.quora.com/What-are-some-tips-for-building-scalable-web-services-in-Java/answer/Miere-Teixeira?__nsrc__=4&amp;amp;__snid3__=20201704894&quot;&gt;
-    originally posted&lt;/a&gt; in Quora long time ago. I decided to re-post it into this blog for the sake of
-    cohesion and better discoverability. I also took the opportunity to revisit a few topics and fix
-    several grammar issues. It can be used as a starting point, giving you a broad perspective of how to
-    scale a web platform, but certainly your mileage might vary depending on the context.
-&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;I don’t think that there’s a general answer to this question and, honestly, anyone well-intended would
-need extra context to elaborate a good one. Every discussion about scalability that is raised on the
-internet is usually guided by specific performance-related topics, which usually only applies to that
-particular situation. When looking for broad tips about scalability, one is probably just trying to
-be prepared for future problems and be ready when they pop in.&lt;/p&gt;
-
-&lt;p&gt;The best definition of scalability I’ve ever seen came from Dictionary.com - a simple statement that
-drew my attention when I was reading this article&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;:&lt;/p&gt;
-
-&lt;blockquote class=&quot;quote&quot;&gt;
-    &lt;p&gt;the ability of something, esp a computer system, to adapt to increased demands&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;That said, I would like to expatiate from this perspective and dig into some related topics that I think would be relevant to your question.&lt;/p&gt;
-
-&lt;h2 id=&quot;high-availability&quot;&gt;High Availability&lt;/h2&gt;
-&lt;p&gt;It may sound obvious but, as either Software and Hardware are susceptible to failures, we should focus our
-effort on tools and techniques that would increase the uptime of our services. Several possible issues would
-make them less reliable, such as when your software is partially down, your database is performing
-an important ETL script or you’ve received a burst of requests in short time spam. Hence, it’s important
-to be aimed with proper tools to make the software more resilient to such cases.&lt;/p&gt;
-
-&lt;h2 id=&quot;load-balancer&quot;&gt;Load Balancer&lt;/h2&gt;
-&lt;p&gt;Load Balancer is the most common tool for these matters, providing a simple mechanism to evenly distribute
-the load between a fleet of machines. All major cloud vendors have a managed Load Balancer&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;,
-so you don’t have to deep dive into low-level network protocol knowledge to have it properly configured.
-You also have well written Open Source solutions like NginX or HAProxy that would help you to achieve the
-same results if you are concerned about being locked into a cloud vendor - at the cost of spending more
-ours configuring suck tools by yourself.&lt;/p&gt;
-
-&lt;h2 id=&quot;metrics-dashboards-and-alarms&quot;&gt;Metrics, Dashboards and Alarms&lt;/h2&gt;
-&lt;p&gt;Metrics are the most important piece of your architecture. If I had to choose between Load Balancers and
-Metrics, I would always choose the latest. Especially during the initial phase of your application, when
-you have fewer customers, hence less load on your servers, all you need is to keep posted by how your
-services are behaving and take action when something comes up.&lt;/p&gt;
-
-&lt;p&gt;A well-designed dashboard, fulfilled with relevant cherry-picked metrics, is a good start point to
-understand how to scale your software. It will give insights on where are the biggest hotspots, which
-Rest endpoints are the most demanding, which are the slowest and which puts more pressure on your
-Database services. Aimed with this you’ll understand when you should include one or more instances
-on your service fleet.&lt;/p&gt;
-
-&lt;p&gt;Then we have Alarms and Triggers. Once you’ve been monitoring your service for a while you’ll probably
-notice that some routines are quite repetitive. You can use alarms to be notified in case something went
-wrong. If these tasks can be done programmatically, you can certainly trigger actions and automate most
-of these tasks. As an example, high CPU alarms could trigger an action to automatically increase the
-umber of instances of your service fleet (AutoScaling?).&lt;/p&gt;
-
-&lt;p&gt;At this point, you might be able to Observe your whole system. I’m intentionally picking the word
-“observe” instead of “monitor” because the latest has been dramatically linked to the analysing metrics
-individually. Recently, though, observability has been trending as a slightly different approach where
-(we can summarise to) analyse how the important business-related bits of your system (infrastructure +
-software) behaves. The guys from NewStack have covered this topic very well recently &lt;sup id=&quot;fnref:6&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:6&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;p&gt;At this point, you (or your team), might be concerned about how to balance the need to include new
-features on your software (time-to-market) and ensure that your users will have a good experience
-(maintaining the software healthy and reliable). Monitoring (the Metrics and Alarms) and Observability
-are the key techniques to let you start simple, being the best decision-making tool, in such a small
-investment, you will ever have. You can use it to postpone performance improvements to the last
-responsible moment, or even use it as an excuse to start your software as a monolith and create
-microservices only when you’ve identified that a particular piece of your service needs to scale out&lt;sup id=&quot;fnref:5&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;6&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-
-&lt;p&gt;It worth repeat that all the biggest cloud vendors have easy-to-use Managed Monitoring solutions, so
-you can have all sorted out in a few minutes (hours if that’s your first time).&lt;/p&gt;
-
-&lt;h2 id=&quot;continuous-deployment&quot;&gt;Continuous Deployment&lt;/h2&gt;
-&lt;p&gt;CI/CD is quite an old topic, nevertheless it still a relevant and underrated subject that most architects
-and software don’t take advantage of. Once you design software to be easily built, tested and packaged,
-you can have your new features deployed into production in a few seconds (minutes depending on the
-size of the project).&lt;/p&gt;
-
-&lt;p&gt;CI in general is the right tool to scale your Quality Assurance team, continuously running all the good
-techniques they know every time the source code changes. Software Architects can also take advantage
-of these tools to check if unit tests are broken, or if Developers are not following the expected code
-convention, or if you mistakenly committed credentials in your source code or even if you accidentally
-included a version of a library with a known security issue.&lt;/p&gt;
-
-&lt;p&gt;One may see it as an optional step, somewhat cumbersome or even unnecessary. But, if the goal is
-scalability, team scalability matters. The more automated the better. It necessarily means less
-repetitive tasks, a codebase less susceptible to failure, being able to find bugs before deploying
-the software into production, etc. There’s no rocket science here, any simple tool can be used to
-achieve all the above-described goals. If you have money (and patience) you can use Atlassian Bamboo,
-or the popular open-source Jenkins deployed on your premises. If you are like me and don’t want to
-spend time managing build instances and agents, you should definitively give it a try on CircleCI,
-CodeShip or GitLabCI. AWS is also offering similar services in the usual pay-as-you-go fashion.&lt;/p&gt;
-
-&lt;h2 id=&quot;application-performance-monitoring&quot;&gt;Application Performance Monitoring&lt;/h2&gt;
-&lt;p&gt;By choosing a good Application Performance Monitoring (APM for short) Tool, you will have all extra
-knowledge about how your application works internally. Even if you have little-to-no-knowledge about
-your chosen development platform, you will be able to use these extra metrics to take sensible action
-whenever incidents happens.&lt;/p&gt;
-
-&lt;p&gt;Usually, these tools introspects your application (in runtime), adding extra execution points that
-collects data (like memory and CPU usage by process, request throughput, etc), sends it to a centralised
-application that groups them together and generates useful report about your application healthy.&lt;/p&gt;
-
-&lt;p&gt;NewRelic and DataDog are probably the most advertised APM solutions you will find on the internet. They
-are reasonably priced - although they can get expensive quite quickly - and offer a comprehensive
-feature set on their portfolio, being the ideal solution when you want to solve application performance
-issues in a short notice. However, some major cloud vendors started to offer similar solutions - being
-AWS X-Ray the most mature one.&lt;/p&gt;
-
-&lt;p&gt;I encourage you to pursue an OpenSource solution whenever the costs start to become prohibitive. Each
-ecosystem has its own set of tool, it’s worth investigate the one that best fits your needs.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-chaos-day-is-upon-us&quot;&gt;The Chaos-Day is upon us&lt;/h2&gt;
-&lt;p&gt;Now you have properly invested your time by setting up a highly available software, configured dozens
-of important alarms based on the key metrics your application provide and have cleverly hooked some
-auto-scaling trigger in case the Heap memory consumption is greater than the expected. You feel like
-you have nothing else to worry, right?&lt;/p&gt;
-
-&lt;p&gt;Well, not really! Now that everything is set up we have to define a strategy to cope with the Caos Day:
-the day your server will go nuts, and you have to fix it as fast as possible.&lt;/p&gt;
-
-&lt;p&gt;What does it have to do with Scalability? Well, no software is perfect, therefore, no
-automation will be perfect too. You need to be prepared to manual scale your software in case of
-a severe incident happens and, in the worst case scenario, you might need to rebuild it from ground up.&lt;/p&gt;
-
-&lt;h3 id=&quot;a-good-enough-disaster-recover-plan&quot;&gt;A good enough Disaster Recover plan&lt;/h3&gt;
-&lt;p&gt;I really encourage you to have a disaster recover plan in place. It will take you one or two days to
-have it thoroughly tested, but it’s worth every second spent on it. Keeping simplicity in mind, after
-all we improve this later on, I’d focus on:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Having a fresh backup will give you piece of mind, allowing you to carry on, knowing that no matter
-how drastic is the problem, you will be able to start over.&lt;/li&gt;
-  &lt;li&gt;Infrastructure as Code. This is an important bit, you must be able to recreate your whole
-infrastructure in a short notice. Having it automated from the day one will save you time (money)
-and hair loss.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;With these ready, all you need is to ensure that you are easily able to restore your backup
-as soon as your new infrastructure is ready. Bear in mind that, you need to constantly revisit this
-from time to time, you don’t want to have to test it when you need it to be working the most.&lt;/p&gt;
-
-&lt;h2 id=&quot;to-wrap-up&quot;&gt;To wrap up&lt;/h2&gt;
-&lt;p&gt;Choose Simplicity as the backbone of your coding design, Automation as the way to deliver any solution
-and Monitoring Tools as the source of truth for your further architectural decisions, and you will have
-an efficient and small team capable to have same productivity as a big wealthy tech company.&lt;/p&gt;
-
-&lt;p&gt;Smaller and efficient teams will make your company more profitable, more money to be paid to the
-employees. One may see this as utopia, but from my personal experience I’ve witnessed a few companies
-awarded its employees with a (big) slice of the profit they’ve got by reducing their operational cost.&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;http://shiflett.org/blog/2003/what-is-scalability&quot;&gt;What Is Scalability?&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html&quot;&gt;What Is an Application Load Balancer?&lt;/a&gt; &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://cloud.google.com/load-balancing/docs/load-balancing-overview&quot;&gt;Overview of Load Balancing - Google Cloud&lt;/a&gt; &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-overview&quot;&gt;What is Azure Load Balancer?&lt;/a&gt; &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:6&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://thenewstack.io/monitoring-vs-observability-whats-the-difference/&quot;&gt;Monitoring vs Observability: what’s the difference&lt;/a&gt; &lt;a href=&quot;#fnref:6&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:5&quot; role=&quot;doc-endnote&quot;&gt;
-      &lt;p&gt;&lt;a href=&quot;https://martinfowler.com/bliki/MonolithFirst.html&quot;&gt;Monolith First&lt;/a&gt; &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="engineering" /><category term="engineering" /><category term="scalability" /><category term="Java" /><summary type="html">This content was originally posted in Quora long time ago. I decided to re-post it into this blog for the sake of cohesion and better discoverability. I also took the opportunity to revisit a few topics and fix several grammar issues. It can be used as a starting point, giving you a broad perspective of how to scale a web platform, but certainly your mileage might vary depending on the context.</summary></entry><entry><title type="html">Understanding the Rule of Three</title><link href="https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three.html" rel="alternate" type="text/html" title="Understanding the Rule of Three" /><published>2020-06-08T00:00:00+10:00</published><updated>2020-06-08T00:00:00+10:00</updated><id>https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three</id><content type="html" xml:base="https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three.html">&lt;p&gt;There is this subconscious understanding that unnecessary complexity is root of all evil in software development. We have been &lt;a href=&quot;https://twitter.com/search?q=dependency%20hell&amp;amp;src=typed_query&quot;&gt;fiercely ranting about the dreadful experience&lt;/a&gt; caused by the dependency hell. We’ve been detracting legacy code as &lt;a href=&quot;https://s3.amazonaws.com/systemsandpapers/papers/bigballofmud.pdf&quot;&gt;big ball of mud because&lt;/a&gt; nobody can honestly understand how it works. Fearlessly, we’ve been &lt;a href=&quot;https://twitter.com/kumar_abhirup/status/1267777496524574721&quot;&gt;shushing our developer mates&lt;/a&gt; arguing that they’ve done the wrong coding choices.&lt;/p&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="engineering" /><category term="engineering" /><category term="information architecture" /><category term="cost management" /><category term="lehman law" /><category term="git" /><category term="static code analysis" /><summary type="html">This post is the part I of the video analysis in which I&apos;ll elaborate on a few points exposed by Adam Tornhill on a talk presented in the 2019 GOTO Conference that happened in Copenhagen. As he addressed several topics, I&apos;ve decided to tackle it into different fronts. In this initial post I&apos;ll cover the first half of the video where he approaches technical debts found within a single code base (or repository if you will). There are several points on his presentation that, I believe, are spot on and deserves to be transcribed and better explained. Technical Debts as a concept is something usually underrated by several (if not most of) big companies. The amount of money and man-hour effort spent fixing problems is often pointed as an order of magnitude higher than avoiding it before being released into production.</summary></entry><entry><title type="html">Understanding the Rule of Three</title><link href="https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three.html" rel="alternate" type="text/html" title="Understanding the Rule of Three" /><published>2020-06-08T00:00:00+10:00</published><updated>2020-06-08T00:00:00+10:00</updated><id>https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three</id><content type="html" xml:base="https://miere.observer/engineering/2020/06/08/Understanding-the-Rule-of-Three.html">&lt;p&gt;There is this subconscious understanding that unnecessary complexity is root of all evil in software development. We have been &lt;a href=&quot;https://twitter.com/search?q=dependency%20hell&amp;amp;src=typed_query&quot;&gt;fiercely ranting about the dreadful experience&lt;/a&gt; caused by the dependency hell. We’ve been detracting legacy code as &lt;a href=&quot;https://s3.amazonaws.com/systemsandpapers/papers/bigballofmud.pdf&quot;&gt;big ball of mud because&lt;/a&gt; nobody can honestly understand how it works. Fearlessly, we’ve been &lt;a href=&quot;https://twitter.com/kumar_abhirup/status/1267777496524574721&quot;&gt;shushing our developer mates&lt;/a&gt; arguing that they’ve done the wrong coding choices.&lt;/p&gt;
 
 &lt;p&gt;It is funny how Machiavellian we can become in name of the simplicity. Surely, we can have better days with less cyclic dependencies, we probably can adopt better design patterns or even avoid syntaxes that ordinary people can’t easily read in our source code. But, to remove complexity from our daily routine, we need a systematic approach that help us to weigh up the benefits of every piece of code we introduce in our software.&lt;/p&gt;
 
@@ -339,14 +164,14 @@ awarded its employees with a (big) slice of the profit they’ve got by reducing
 &lt;/div&gt;</content><author><name></name></author><category term="engineering" /><category term="engineering" /><summary type="html">There is this subconscious understanding that unnecessary complexity is root of all evil in software development. We have been fiercely ranting about the dreadful experience caused by the dependency hell. We’ve been detracting legacy code as big ball of mud because nobody can honestly understand how it works. Fearlessly, we’ve been shushing our developer mates arguing that they’ve done the wrong coding choices.</summary></entry><entry><title type="html">Analysis: Thinking Asynchronously</title><link href="https://miere.observer/engineering/2020/06/05/Analisys-Thinking-Asynchronously.html" rel="alternate" type="text/html" title="Analysis: Thinking Asynchronously" /><published>2020-06-05T00:00:00+10:00</published><updated>2020-06-05T00:00:00+10:00</updated><id>https://miere.observer/engineering/2020/06/05/Analisys-Thinking-Asynchronously</id><content type="html" xml:base="https://miere.observer/engineering/2020/06/05/Analisys-Thinking-Asynchronously.html">&lt;header class=&quot;briefing&quot;&gt;
 &lt;div class=&quot;video&quot;&gt;
 &lt;iframe class=&quot;video&quot; id=&quot;youtube-video&quot; src=&quot;https://www.youtube.com/embed/V_tHVUHKqZQ?enablejsapi=1&amp;amp;modestbranding=1&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-&lt;p&gt;This is an opinionated transcription of &lt;a href=&quot;https://twitter.com/edjgeek&quot;&gt;Eric Johnson's&lt;/a&gt; talk &lt;b&gt;Thinking Asynchronously&lt;/b&gt;. He has presented in the 2020 GOTO Conference, online edition because of COVID pandemic. His straightforward presentation approach guides us through steps that take advantage of asynchronous persistence pipelines to provide a better experience to our users. It is a great opportunity for newcomers to understand where AWS want to achieve with serverless from know on. I took the opportunity to elaborate more on a few services used by him on his talk to give more context.&lt;/p&gt;
+&lt;p&gt;This is an opinionated transcription of &lt;a href=&quot;https://twitter.com/edjgeek&quot;&gt;Eric Johnson&apos;s&lt;/a&gt; talk &lt;b&gt;Thinking Asynchronously&lt;/b&gt;. He has presented in the 2020 GOTO Conference, online edition because of COVID pandemic. His straightforward presentation approach guides us through steps that take advantage of asynchronous persistence pipelines to provide a better experience to our users. It is a great opportunity for newcomers to understand where AWS want to achieve with serverless from know on. I took the opportunity to elaborate more on a few services used by him on his talk to give more context.&lt;/p&gt;
 &lt;/header&gt;
 
 &lt;article class=&quot;timeline&quot;&gt;
     &lt;section&gt;
         &lt;time&gt;2:45&lt;/time&gt;
         &lt;h2&gt;Common Serverless Pattern&lt;/h2&gt;
-        &lt;p&gt;Usual serverless application will mimic the typical three-tier architecture. API layer will, as naturally happens, be responsible for Security and Routing, while compute layer will have anything else you need to persist your data into the storage layer. On Eric's perspective this comes with a concerning trade-off: if something goes wrong it will probably fail on your code as it is most vulnerable building block of your architecture.&lt;/p&gt;
+        &lt;p&gt;Usual serverless application will mimic the typical three-tier architecture. API layer will, as naturally happens, be responsible for Security and Routing, while compute layer will have anything else you need to persist your data into the storage layer. On Eric&apos;s perspective this comes with a concerning trade-off: if something goes wrong it will probably fail on your code as it is most vulnerable building block of your architecture.&lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;time&gt;5:24&lt;/time&gt;
@@ -355,9 +180,9 @@ awarded its employees with a (big) slice of the profit they’ve got by reducing
         &lt;ul&gt;
             &lt;li&gt;&lt;b&gt;Greater reliability&lt;/b&gt;. In case of failure in our codebase, we have our data persisted already.&lt;/li&gt;
             &lt;li&gt;&lt;b&gt;Faster response times&lt;/b&gt; in our APIs. By moving the extra computation to a second step, the user already received the feedback in the UI.&lt;/li&gt;
-            &lt;li&gt;&lt;b&gt;We can do more in less apparent time to the client&lt;/b&gt;. As the complex computing is now the last thing to do, our persistence pipeline has bigger room to process data with no apparent impact on user's experience.&lt;/li&gt;
+            &lt;li&gt;&lt;b&gt;We can do more in less apparent time to the client&lt;/b&gt;. As the complex computing is now the last thing to do, our persistence pipeline has bigger room to process data with no apparent impact on user&apos;s experience.&lt;/li&gt;
         &lt;/ul&gt;
-        &lt;p&gt;One might argue that you can squish bits and bytes of your code to provide a similar result. Perhaps the pillars from Eric's approach lies on how it increases the flexibility by reducing the response time on the API side. After all, it's an old known fact that &lt;a href=&quot;https://www.nngroup.com/articles/response-times-3-important-limits/&quot;&gt;better response times implies better user experience&lt;/a&gt;.&lt;/p&gt;
+        &lt;p&gt;One might argue that you can squish bits and bytes of your code to provide a similar result. Perhaps the pillars from Eric&apos;s approach lies on how it increases the flexibility by reducing the response time on the API side. After all, it&apos;s an old known fact that &lt;a href=&quot;https://www.nngroup.com/articles/response-times-3-important-limits/&quot;&gt;better response times implies better user experience&lt;/a&gt;.&lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;time&gt;10:14&lt;/time&gt;
@@ -368,12 +193,12 @@ awarded its employees with a (big) slice of the profit they’ve got by reducing
     &lt;section&gt;
         &lt;time&gt;10:45&lt;/time&gt;
         &lt;h2&gt;Event Driven Patterns&lt;/h2&gt;
-        &lt;p&gt;Event Driven Development is the key to make the suggested approach work. AWS-wise, there's a &lt;a href=&quot;https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html&quot;&gt;multitude of events that can you can listen to&lt;/a&gt; with a AWS Lambda function. Of course, you can also take advantage of AWS network services like SNS, SQS and Kinesis to consume asynchronous events on your Docker container or application instance.&lt;/p&gt;
+        &lt;p&gt;Event Driven Development is the key to make the suggested approach work. AWS-wise, there&apos;s a &lt;a href=&quot;https://docs.aws.amazon.com/lambda/latest/dg/lambda-services.html&quot;&gt;multitude of events that can you can listen to&lt;/a&gt; with a AWS Lambda function. Of course, you can also take advantage of AWS network services like SNS, SQS and Kinesis to consume asynchronous events on your Docker container or application instance.&lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;time&gt;12:06&lt;/time&gt;
         &lt;h2&gt;Amazon API Gateway&lt;/h2&gt;
-        &lt;p&gt;I'd like to draw your attention to this versatile service available in AWS, and the idea behind its conception. API Gateway was first &lt;a href=&quot;https://aws.amazon.com/about-aws/whats-new/2015/07/introducing-amazon-api-gateway/&quot;&gt;introduced in 2015&lt;/a&gt;, it communicates directly with 100+ AWS Services, allowing you to transform requests and response payloads with Apache Velocity templating language (VTL). It's commonly used as serverless Rest API, allowing developers to configure HTTP routes in a higher level abstraction in which you don't have to provision resources to handle the request - matching Eric's personal definition of serverless. Requests received by the API Gateway are translated into events, allowing you to listen it directly to any compatible AWS service, like DynamoDB or Lambda.&lt;/p&gt;
+        &lt;p&gt;I&apos;d like to draw your attention to this versatile service available in AWS, and the idea behind its conception. API Gateway was first &lt;a href=&quot;https://aws.amazon.com/about-aws/whats-new/2015/07/introducing-amazon-api-gateway/&quot;&gt;introduced in 2015&lt;/a&gt;, it communicates directly with 100+ AWS Services, allowing you to transform requests and response payloads with Apache Velocity templating language (VTL). It&apos;s commonly used as serverless Rest API, allowing developers to configure HTTP routes in a higher level abstraction in which you don&apos;t have to provision resources to handle the request - matching Eric&apos;s personal definition of serverless. Requests received by the API Gateway are translated into events, allowing you to listen it directly to any compatible AWS service, like DynamoDB or Lambda.&lt;/p&gt;
         &lt;p&gt;API Gateway is also &lt;a href=&quot;https://microservices.io/patterns/apigateway.html&quot;&gt;a well known pattern&lt;/a&gt;. A few years ago, Netflix OSS team &lt;a href=&quot;https://netflixtechblog.com/embracing-the-differences-inside-the-netflix-api-redesign-15fd8b3dc49d&quot;&gt;introduced their own API Gateway solution&lt;/a&gt;. It was designed with a few key philosophies in mind, &quot;each of which is&quot;, in their words, &quot;instrumental in the design of our new system&quot;:&lt;/p&gt;
         &lt;ul&gt;
             &lt;li&gt;Embrace the Differences of the Devices&lt;/li&gt;
@@ -386,7 +211,7 @@ awarded its employees with a (big) slice of the profit they’ve got by reducing
     &lt;section&gt;
         &lt;time&gt;12:06&lt;/time&gt;
         &lt;h2&gt;Amazon DynamoDB&lt;/h2&gt;
-        &lt;p&gt;DynamoDB is an underrated, fascinating &lt;a href=&quot;https://www.techopedia.com/definition/29431/database-as-a-service-dbaas&quot;&gt;database service&lt;/a&gt;. The description on its website doesn't make justice to its capabilities: &lt;sup&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
+        &lt;p&gt;DynamoDB is an underrated, fascinating &lt;a href=&quot;https://www.techopedia.com/definition/29431/database-as-a-service-dbaas&quot;&gt;database service&lt;/a&gt;. The description on its website doesn&apos;t make justice to its capabilities: &lt;sup&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;
         &lt;/p&gt;
         &lt;ul&gt;
             &lt;li&gt;&lt;b&gt;Key-value data store&lt;/b&gt; - It fits perfectly as a persistence layer for tasks that requires intensive write throughput - being especially good for timeseries data or document persistence.&lt;/li&gt;
@@ -394,8 +219,8 @@ awarded its employees with a (big) slice of the profit they’ve got by reducing
             &lt;li&gt;&lt;b&gt;Global tables&lt;/b&gt; - DynamoDB can manage tables accessible (replicated) globally.&lt;/li&gt;
             &lt;li&gt;&lt;b&gt;In-memory Acceleration with DAX&lt;/b&gt; - It acts as a mix of near cache and table space for ly accessed data. Pricey, but might worth it if you take into account the cost of maintaining such a mechanism by your self.&lt;/li&gt;
         &lt;/ul&gt;
-        &lt;p&gt;Surely, DynamoDB's &lt;a href=&quot;https://aws.amazon.com/dynamodb/&quot;&gt;feature list&lt;/a&gt; is more extensive than that. But the ones above mentioned are ingredients for a multitude of scalable recipes for problems you might face on your daily routine. From &lt;i&gt;The Poor Man's &lt;a href=&quot;https://microservices.io/patterns/data/event-sourcing.html&quot;&gt;Event Sourcing&lt;/a&gt; Tool&lt;/i&gt; &lt;sup&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; to a &lt;i&gt;Globally Distributed Ordered Queue&lt;/i&gt;, it is the kind of Swiss Knife you want to have on your toolbox when you have a complex situation to tackle. You can even create &lt;a href=&quot;https://medium.com/swlh/scheduling-irregular-aws-lambda-executions-through-dynamodb-ttl-attributes-acd397dfbad9&quot;&gt;your ad-hoc scheduling mechanism&lt;/a&gt;, allowing you &quot;to schedule an irregular point of time execution of a lambda execution without abusing CloudWatch crons&quot;.&lt;/p&gt;
-        &lt;p&gt;Inevitably, its simple key-value design introduces trade-offs: indexing is quite limited, you can't join tables and you will probably spend a bit of time trying to fine-tuning it for an optimal cost its read and write provisioning &lt;sup&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. But its flexibility and simple API, along with thoughtfully designed persistence tables, might be an elegant and affordable solution for your company.&lt;/p&gt;
+        &lt;p&gt;Surely, DynamoDB&apos;s &lt;a href=&quot;https://aws.amazon.com/dynamodb/&quot;&gt;feature list&lt;/a&gt; is more extensive than that. But the ones above mentioned are ingredients for a multitude of scalable recipes for problems you might face on your daily routine. From &lt;i&gt;The Poor Man&apos;s &lt;a href=&quot;https://microservices.io/patterns/data/event-sourcing.html&quot;&gt;Event Sourcing&lt;/a&gt; Tool&lt;/i&gt; &lt;sup&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; to a &lt;i&gt;Globally Distributed Ordered Queue&lt;/i&gt;, it is the kind of Swiss Knife you want to have on your toolbox when you have a complex situation to tackle. You can even create &lt;a href=&quot;https://medium.com/swlh/scheduling-irregular-aws-lambda-executions-through-dynamodb-ttl-attributes-acd397dfbad9&quot;&gt;your ad-hoc scheduling mechanism&lt;/a&gt;, allowing you &quot;to schedule an irregular point of time execution of a lambda execution without abusing CloudWatch crons&quot;.&lt;/p&gt;
+        &lt;p&gt;Inevitably, its simple key-value design introduces trade-offs: indexing is quite limited, you can&apos;t join tables and you will probably spend a bit of time trying to fine-tuning it for an optimal cost its read and write provisioning &lt;sup&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. But its flexibility and simple API, along with thoughtfully designed persistence tables, might be an elegant and affordable solution for your company.&lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;time&gt;14:20&lt;/time&gt;
@@ -417,7 +242,7 @@ awarded its employees with a (big) slice of the profit they’ve got by reducing
         &lt;blockquote&gt;
         &lt;p&gt;With Destinations, you can route asynchronous function results as an execution record to a destination resource without writing additional code. An execution record contains details about the request and response in JSON format including version, timestamp, request context, request payload, response context, and response payload. For each execution status such as Success or Failure you can choose one of four destinations: another Lambda function, SNS, SQS, or EventBridge. Lambda can also be configured to route different execution results to different destinations.&lt;/p&gt;
         &lt;footer&gt;
-            &lt;cite&gt;As we've reached the apex of this talk, Eric was so excited that his explanation was a bit disastrous &lt;sup&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;, so I decided to quote an &lt;a href=&quot;https://aws.amazon.com/blogs/compute/introducing-aws-lambda-destinations/&quot;&gt;AWS Blog post about Destinations&lt;/a&gt; instead.&lt;/cite&gt;
+            &lt;cite&gt;As we&apos;ve reached the apex of this talk, Eric was so excited that his explanation was a bit disastrous &lt;sup&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;, so I decided to quote an &lt;a href=&quot;https://aws.amazon.com/blogs/compute/introducing-aws-lambda-destinations/&quot;&gt;AWS Blog post about Destinations&lt;/a&gt; instead.&lt;/cite&gt;
         &lt;/footer&gt;
         &lt;/blockquote&gt;
     &lt;/section&gt;
@@ -432,13 +257,237 @@ awarded its employees with a (big) slice of the profit they’ve got by reducing
         &lt;p&gt;Depending on how you design your tables, TTL and stream listeners, it might be cheaper than spinning up and maintaining a Kafka cluster.&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
-        &lt;p&gt;The pricing model is not the same pay-as-go that you find on most of AWS services, instead of paying for requests you pay for the provisioned read and write capabilities of your tables. It's true that, a long time ago, Amazon introduced auto-scaling capabilities for table provisioning, but still you have to keep its pricing model in mind otherwise you might run out of budget.&lt;/p&gt;
+        &lt;p&gt;The pricing model is not the same pay-as-go that you find on most of AWS services, instead of paying for requests you pay for the provisioned read and write capabilities of your tables. It&apos;s true that, a long time ago, Amazon introduced auto-scaling capabilities for table provisioning, but still you have to keep its pricing model in mind otherwise you might run out of budget.&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:4&quot;&gt;
-        &lt;p&gt;Eric's explanation about Lambda Destination: &quot;There is this really cool thing we announced last Re:Invent called Lambda Destinations. And the way this works is I can run a function and if it is successful than I can just trigger some data into EventBridge, Lambda SNS or SQS. Or if it is on fail, I can then trigger data into the same data.&quot;&lt;/p&gt;
+        &lt;p&gt;Eric&apos;s explanation about Lambda Destination: &quot;There is this really cool thing we announced last Re:Invent called Lambda Destinations. And the way this works is I can run a function and if it is successful than I can just trigger some data into EventBridge, Lambda SNS or SQS. Or if it is on fail, I can then trigger data into the same data.&quot;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name></name></author><category term="engineering" /><category term="engineering" /><category term="master" /><summary type="html">This is an opinionated transcription of Eric Johnson's talk Thinking Asynchronously. He has presented in the 2020 GOTO Conference, online edition because of COVID pandemic. His straightforward presentation approach guides us through steps that take advantage of asynchronous persistence pipelines to provide a better experience to our users. It is a great opportunity for newcomers to understand where AWS want to achieve with serverless from know on. I took the opportunity to elaborate more on a few services used by him on his talk to give more context.</summary></entry><entry><title type="html">Documenting Your Software Architecture</title><link href="https://miere.observer/engineering/2020/05/22/Documenting-Your-Software-Architecture.html" rel="alternate" type="text/html" title="Documenting Your Software Architecture" /><published>2020-05-22T00:00:00+10:00</published><updated>2020-05-22T00:00:00+10:00</updated><id>https://miere.observer/engineering/2020/05/22/Documenting-Your-Software-Architecture</id><content type="html" xml:base="https://miere.observer/engineering/2020/05/22/Documenting-Your-Software-Architecture.html">&lt;p&gt;In the 2000s we went from documenting every single class of our software to not at all. It was an attempt to increase the delivery pace, keeping the team away from tasks that, eventually, have to be remade once the software changes. As a side effect, scaling the team became a problem. The most notable one is the lack of autonomy from its members. Not only newcomers need special attention to get familiarized with the basics of their software (like building and running it), but they would still ask several questions until they understand how it works and how it solves the problem it was designed for.&lt;/p&gt;
+&lt;/div&gt;</content><author><name></name></author><category term="engineering" /><category term="engineering" /><category term="master" /><summary type="html">This is an opinionated transcription of Eric Johnson&apos;s talk Thinking Asynchronously. He has presented in the 2020 GOTO Conference, online edition because of COVID pandemic. His straightforward presentation approach guides us through steps that take advantage of asynchronous persistence pipelines to provide a better experience to our users. It is a great opportunity for newcomers to understand where AWS want to achieve with serverless from know on. I took the opportunity to elaborate more on a few services used by him on his talk to give more context.</summary></entry><entry><title type="html">Stuff Internet Says About Software Development #1</title><link href="https://miere.observer/news/2020/05/22/What-Internet-Says-About-Software-Development.html" rel="alternate" type="text/html" title="Stuff Internet Says About Software Development #1" /><published>2020-05-22T00:00:00+10:00</published><updated>2020-05-22T00:00:00+10:00</updated><id>https://miere.observer/news/2020/05/22/What-Internet-Says-About-Software-Development</id><content type="html" xml:base="https://miere.observer/news/2020/05/22/What-Internet-Says-About-Software-Development.html">&lt;p&gt;&lt;em&gt;This is my reading list from the past few days. I decided to put them here as it might be helpful to someone else. It was deeply inspired by &lt;a href=&quot;http://highscalability.com&quot;&gt;HighScalability&lt;/a&gt; blog, a source I’ve been consuming for years.&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;article class=&quot;internet-timeline&quot;&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Microsoft all over the places&lt;/h2&gt;
+        &lt;h3&gt;Microsoft keeps its push to become a major player in the Open Source community. Let&apos;s take a look at the majestic presence they have at the media recently.&lt;/h3&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;At Microsoft, 47,000 developers generate nearly &lt;b&gt;30 thousand bugs a month&lt;/b&gt;. These items get stored across over 100 AzureDevOps and GitHub repositories. To better label and prioritize bugs at that scale, we couldn’t just apply more people to the problem.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://www.microsoft.com/security/blog/2020/04/16/secure-software-development-lifecycle-machine-learning/?itm_source=miere.observer&quot;&gt;
+                    Secure the software development lifecycle with machine learning
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Microsoft was on the wrong side of history when open source exploded at the beginning of the century, and I can say that about me personally.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://www.infoq.com/news/2020/05/rust-winrt-microsoft/?itm_source=miere.observer&quot;&gt;
+                    Rust/WinRT Brings Microsoft Closer to Adopting Rust Internally
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;A case study will be written on how Microsoft allowed Zoom to eat their lunch. They spent millions on subterfuge trying to paint Slack as an inferior enemy when MSFT Teams actually can&apos;t do what Slack does and Teams&apos; real competitor was Zoom. Now Zoom has 300M Daily Users. Lol.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://twitter.com/chamath/status/1254522890373885952?s=12&amp;amp;itm_source=miere.observer&quot;&gt;
+                    Chamath Palihapitiya
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Rust/WinRT lets you call any WinRT API past, present, and future using code generated on the fly directly from the metadata describing the API and right into your Rust package where you can call them as if they were just another Rust module.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- Microsoft president Brad Smith, taken from &lt;a href=&quot;https://www.theverge.com/2020/5/18/21262103/microsoft-open-source-linux-history-wrong-statement?itm_source=miere.observer&quot;&gt;
+                    Microsoft: we were wrong about open source
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Rust on the Radar&lt;/h2&gt;
+        &lt;h3&gt;As we&apos;re talking about Rust, it seems that is not only Microsoft who&apos;s investing time and effort on it.&lt;/h3&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;There are many benefits a standardized ABI would bring to Rust. A stable ABI enables dynamic linking between Rust crates, which would allow for Rust programs to support dynamically loaded plugins (a feature common in C/C++). Dynamic linking would result in shorter compile-times and lower disk-space use for projects, as multiple projects could link to the same dylib. For example, imagine having multiple CLIs all link to the same core library crate.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://internals.rust-lang.org/t/a-stable-modular-abi-for-rust/12347?itm_source=miere.observer&quot;&gt;
+                    A Stable Modular ABI for Rust
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Programming is hard.&lt;/p&gt;
+            &lt;p&gt;Not because our hardware is complex, but simply because we’re all humans. Our attention span is limited, our memory is volatile — in other words, we tend to make mistakes.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://medium.com/coding-rust/why-rust-b539d0ea5b65?itm_source=miere.observer&quot;&gt;
+                    Why Rust?
+                &lt;/a&gt; by Omar Faroque&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;The deno_core crate is a very bare bones version of Deno. It does not have dependencies on TypeScript nor on Tokio. It simply provides our Op and Resource infrastructure. That is, it provides an organized way of binding Rust futures to JavaScript promises. The CLI is of course built entirely on top of deno_core.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://deno.land/v1?itm_source=miere.observer&quot;&gt;
+                    Deno 1.0
+                &lt;/a&gt; by Ryan Dahl, Bert Belder, and Bartek Iwańczuk&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Fowler and Friends&lt;/h2&gt;
+        &lt;h3&gt;It looks like a busy week for Martin Fowler and his friends. New ThoughtWorks Radar was released, a few blog entries has been updated and the man himself has carved another set terms and added to his legacy to the Software Engineering.&lt;/h3&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;This division of development into lines of work that split and merge is central to the workflow of software development teams, and several patterns have evolved to help us keep a handle on all this activity. Like most software patterns, few of them are gold standards that all teams should follow.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://martinfowler.com/articles/branching-patterns.html?itm_source=miere.observer&quot;&gt;
+                    Patterns for Managing Source Code Branches
+                &lt;/a&gt; by Martin Fowler&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;For this Radar, we decided to call out again infrastructure as code as well as pipelines as code, and we also had a number of conversations about infrastructure configurations, ML pipelines and other related areas. We find that the teams who commonly own these areas do not embrace enduring engineering practices such as applying software design principles, automation, continuous integration, testing, and so on.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://www.thoughtworks.com/radar?itm_source=miere.observer&quot;&gt;
+                    ThoughtWorks&apos; Technology Radar
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Coming to understand the threat model for your system is not simple. There are an unlimited number of threats you can imagine to any system, and many of them could be likely. [...] Cyber threats chain in unexpected, unpredictable and even chaotic ways. Factors to do with culture, process and technology all contribute. This complexity and uncertainty is at the root of the cyber security problem. This is why security requirements are so hard for software development teams to agree upon.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://martinfowler.com/articles/agile-threat-modelling.html?itm_source=miere.observer&quot;&gt;
+                    A Guide to Threat Modelling for Developers
+                &lt;/a&gt; by Jim Gumbley&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Other relevant quotes&lt;/h2&gt;
+        &lt;h3&gt;Hum, let me see... What else should be mentioned?&lt;/h3&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Zoom scaled from 20 million to 300 million users&amp;lt;/b&amp;gt; virtually over night. What&apos;s incredible is from the outside they&apos;ve shown little in the way of apparent growing pains, though on the inside it&apos;s a good bet a lot of craziness is going on.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;http://highscalability.com/blog/2020/5/14/a-short-on-how-zoom-works.html?itm_source=miere.observer&quot;&gt;
+                    A Short On How Zoom Works
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Besides being an interesting approach to a very common problem, their discussion of Piranha also provides some very interesting insights into an organization that&apos;s *heavily* invested in feature flagging....&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- Pete Hodgson about &lt;a href=&quot;https://twitter.com/ph1/status/1263186192951939072?itm_source=miere.observer&quot;&gt;
+                    Uber open-sourcing Piranha
+                &lt;/a&gt;, a feature-flagging tool&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Deferring integration can increase the risk of merge conflicts, which causes you to move more slowly as you spend more energy addressing those conflicts. Slow change can sometimes be more risky than you expect because of the costs of extra work needed to reconcile conflicts, as well as the technical debt that results from bypassing the normal process to fix critical errors.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://www.techwell.com/techwell-insights/2020/05/code-integration-when-moving-slowly-actually-has-more-risk?itm_source=miere.observer&quot;&gt;
+                    Code Integration: When Moving Slowly Actually Has More Risk
+                &lt;/a&gt; by Steve Berczuk&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Simply put, testing in production means testing your features in the environment where your features will live. So what if a feature works in staging, that&apos;s great, but you should care if the feature works in production, that&apos;s what matters.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- Talia Nassi on&lt;a href=&quot;https://kentcdodds.com/chats-with-kent-podcast/seasons/03/episodes/talia-nassi-on-testing-in-production?itm_source=miere.observer&quot;&gt;
+                    Testing in Production
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;[...] when I was asked to reduce the resource requirements of a large MongoDB cluster, I reached the conclusion that the most obvious target - attribute names - wouldn’t lead to the kind of impact I wanted.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- Richard Startin on&lt;a href=&quot;https://richardstartin.github.io/posts/shrinking-bson-documents?itm_source=miere.observer&quot;&gt;
+                    Shrinking BSON Documents
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;The most considerable impact I see is in regards to velocity. The team can focus on other business-impactful projects, rather than EKS and Kubernetes maintenance -- the undifferentiated heavy lifting is eliminated. The same reason people move from physical data centers to the cloud, or from EC2 to Serverless: offloading that effort to AWS is a very good proposition.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://www.infoq.com/news/2020/05/container-scaling-fargate/?itm_source=miere.observer&quot;&gt;
+                    Q&amp;amp;A on Container Scaling with Fargate
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Did you know that &lt;a href=&quot;http://pypi.org&quot;&gt;http://pypi.org&lt;/a&gt; serves 800 million requests and delivers 200 million packages totalling 400 terabytes ... a day? No. Exactly. You want it to just work. Every day, rain or shine. To keep it that way: sponsor them&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://twitter.com/betatim/status/1246792203894231042?src=miere.observer&quot;&gt;
+                    Tim Head
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;We recently migrated a few small systems to CockroachDB (as a stepping stone). Overall, the experience was positive. The hassle free HA is a huge peace of mind. I know people say this is easy to do in PG. I have recently setup 2ndQuadrant&apos;s pglogical for another system. That was also easy (though the documentation was pretty bad). The end result is quite different though and CockroachDB is just simpler to reason about and manage and, I think, more generally applicable.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://news.ycombinator.com/item?id=23087514?itm_source=miere.observer&quot;&gt;
+                    latch
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Our actual use-case is a little complex to go into in tweets. But suffice to say, the PUT costs alone to S3 if we did 1-to-1 would end up being just under half our total running costs when factoring in DDB, Lambda, SQS, APIG, etc.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://twitter.com/alexbdebrie/status/1250224930643423234?s=12&amp;amp;src=miere.observer&quot;&gt;
+                    Wayne Robinson
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Need operational analytics in &lt;a href=&quot;https://twitter.com/hashtag/NoSQL?src=miere.observer&quot;&gt;#NoSQL&lt;/a&gt;? Maintain time bound rollups in &lt;a href=&quot;https://twitter.com/dynamodb?src=miere.observer&quot;&gt;@DynamoDB&lt;/a&gt; with Streams/Lambda then query relevant items by date range and aggregate client side for fast reporting on scaled out data. Turn complex ad hoc queries into simple select statements and save $$$&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://twitter.com/houlihan_rick/status/1258024512035176450?s=12&amp;amp;src=miere.observer&quot;&gt;
+                    Rick Houlihan
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Another part of the solution is GPU acceleration using grCUDA — an open-source language binding that allows developers to share data between NVIDIA GPUs and GraalVM languages (R, Python, JavaScript), and also launch GPU kernels. The team implemented the performance critical components in CUDA for the GPU, and used grCUDA from Python to exchange data with the GPU and to invoke the GPU kernels.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://medium.com/graalvm/optimizing-machine-learning-performance-at-netsuite-with-graalvm-and-nvidia-gpus-d0d40f0b0cf1?itm_source=miere.observer&quot;&gt;
+                    Optimizing Machine Learning Performance at Netsuite with GraalVM and NVIDIA GPUs
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Although event-driven architecture has existed for more than 15 years, only recently has it gained massive popularity, and there is a reason for that. Most companies are going through a “digital transformation” phase, and with that, crazy requirements occur. The complexity of these requirements force engineers to adopt new ways of designing software, ones that incur less coupling between services and lower maintenance overhead. EDA is one solution to these problems but it is not the only one.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://stackoverflow.blog/2020/03/16/how-event-driven-architecture-solves-modern-web-app-problems/?itm_source=miere.observer&quot;&gt;
+                    How event-driven architecture solves modern web app problems
+                &lt;/a&gt;&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;So, let&apos;s look at the resulting context of moving to microservices with entity services:&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Performance analysis and debugging is more difficult. Tracing tools such as Zipkin are necessary.&lt;/li&gt;
+                &lt;li&gt;Additional overhead of marshalling and parsing requests and replies consumes some of our precious latency budget.&lt;/li&gt;
+                &lt;li&gt;Individual units of code are smaller.&lt;/li&gt;
+                &lt;li&gt;Each team can deploy on its own cadence.&lt;/li&gt;
+                &lt;li&gt;Semantic coupling requires cross-team negotiation.&lt;/li&gt;
+                &lt;li&gt;Features mainly accrue in &quot;nexuses&quot; such as API, aggregator, or UI servers.&lt;/li&gt;
+                &lt;li&gt;Entity services are invoked on nearly every request, so they will become heavily loaded.&lt;/li&gt;
+                &lt;li&gt;Overall availability is coupled to many different services, even though we expect individual services to be deployed frequently. (A deployment look exactly like an outage to callers!)&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://stackoverflow.blog/2020/03/16/how-event-driven-architecture-solves-modern-web-app-problems/?itm_source=miere.observer&quot;&gt;
+                    The Entity Service Antipattern
+                &lt;/a&gt; by Michael T. Nygard&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+        &lt;blockquote class=&quot;quote&quot;&gt;
+            &lt;p&gt;Moving all the “what does the world around me look like?” side effects to the beginning of the program, and all the “change the world around me!” side effects to the end of the program, we achieve maximum testability of program logic. And minimum convolution. And separation of concerns: one module makes the decisions, another one carries them out. Consider this possibility the next time you find yourself in testing pain.&lt;/p&gt;
+            &lt;footer&gt;
+                &lt;cite&gt;- &lt;a href=&quot;https://jessitron.com/2015/06/06/ultratestable-coding-style/?itm_source=miere.observer&quot;&gt;
+                    Ultratestable Coding Style
+                &lt;/a&gt; by Jessica Joy Kerr&lt;/cite&gt;
+            &lt;/footer&gt;
+        &lt;/blockquote&gt;
+    &lt;/section&gt;
+&lt;/article&gt;</content><author><name></name></author><category term="news" /><category term="engineering" /><category term="news" /><summary type="html">This is my reading list from the past few days. I decided to put them here as it might be helpful to someone else. It was deeply inspired by HighScalability blog, a source I’ve been consuming for years.</summary></entry><entry><title type="html">Documenting Your Software Architecture</title><link href="https://miere.observer/engineering/2020/05/22/Documenting-Your-Software-Architecture.html" rel="alternate" type="text/html" title="Documenting Your Software Architecture" /><published>2020-05-22T00:00:00+10:00</published><updated>2020-05-22T00:00:00+10:00</updated><id>https://miere.observer/engineering/2020/05/22/Documenting-Your-Software-Architecture</id><content type="html" xml:base="https://miere.observer/engineering/2020/05/22/Documenting-Your-Software-Architecture.html">&lt;p&gt;In the 2000s we went from documenting every single class of our software to not at all. It was an attempt to increase the delivery pace, keeping the team away from tasks that, eventually, have to be remade once the software changes. As a side effect, scaling the team became a problem. The most notable one is the lack of autonomy from its members. Not only newcomers need special attention to get familiarized with the basics of their software (like building and running it), but they would still ask several questions until they understand how it works and how it solves the problem it was designed for.&lt;/p&gt;
 
 &lt;p&gt;It is a known fact that designing new software requires meticulous planning, strict alignment between team members and keep them focused on the defined goal. Reducing the scope of your documentation to the software architecture might be a good starting point, as you probably don’t need to document every single class of your software to give them enough direction when they are coding. It relieves teams from frequently asked questions and forcing its members to stick with previous definitions unless a big change is necessary, and will let them focus on the business side of their projects.&lt;/p&gt;
 
@@ -497,231 +546,7 @@ awarded its employees with a (big) slice of the profit they’ve got by reducing
 
 &lt;p&gt;The first three diagrams are his creations, all of which adopts simplistic notations to demonstrate how a particular piece of the system is working. Code Diagrams, on the other hand, are basically UML and he discourages us to adopt them as they tend to become outdated quite frequently. It is there in the case you have a specific need where documenting the source code itself is mandatory task.&lt;/p&gt;
 
-&lt;p&gt;C4Model is &lt;a href=&quot;https://c4model.com/&quot;&gt;well documented on its website&lt;/a&gt;, with several years spent polishing it to reach this level of simplicity and organization. The beauty behind these diagrams lies in the fact we can pick our target audience, allowing us to choose when and who should be involved in the documentation process.&lt;/p&gt;</content><author><name></name></author><category term="engineering" /><category term="engineering" /><summary type="html">In the 2000s we went from documenting every single class of our software to not at all. It was an attempt to increase the delivery pace, keeping the team away from tasks that, eventually, have to be remade once the software changes. As a side effect, scaling the team became a problem. The most notable one is the lack of autonomy from its members. Not only newcomers need special attention to get familiarized with the basics of their software (like building and running it), but they would still ask several questions until they understand how it works and how it solves the problem it was designed for.</summary></entry><entry><title type="html">Stuff Internet Says About Software Development #1</title><link href="https://miere.observer/news/2020/05/22/What-Internet-Says-About-Software-Development.html" rel="alternate" type="text/html" title="Stuff Internet Says About Software Development #1" /><published>2020-05-22T00:00:00+10:00</published><updated>2020-05-22T00:00:00+10:00</updated><id>https://miere.observer/news/2020/05/22/What-Internet-Says-About-Software-Development</id><content type="html" xml:base="https://miere.observer/news/2020/05/22/What-Internet-Says-About-Software-Development.html">&lt;p&gt;&lt;em&gt;This is my reading list from the past few days. I decided to put them here as it might be helpful to someone else. It was deeply inspired by &lt;a href=&quot;http://highscalability.com&quot;&gt;HighScalability&lt;/a&gt; blog, a source I’ve been consuming for years.&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;article class=&quot;internet-timeline&quot;&gt;
-    &lt;section&gt;
-        &lt;h2&gt;Microsoft all over the places&lt;/h2&gt;
-        &lt;h3&gt;Microsoft keeps its push to become a major player in the Open Source community. Let's take a look at the majestic presence they have at the media recently.&lt;/h3&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;At Microsoft, 47,000 developers generate nearly &lt;b&gt;30 thousand bugs a month&lt;/b&gt;. These items get stored across over 100 AzureDevOps and GitHub repositories. To better label and prioritize bugs at that scale, we couldn’t just apply more people to the problem.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://www.microsoft.com/security/blog/2020/04/16/secure-software-development-lifecycle-machine-learning/?itm_source=miere.observer&quot;&gt;
-                    Secure the software development lifecycle with machine learning
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Microsoft was on the wrong side of history when open source exploded at the beginning of the century, and I can say that about me personally.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://www.infoq.com/news/2020/05/rust-winrt-microsoft/?itm_source=miere.observer&quot;&gt;
-                    Rust/WinRT Brings Microsoft Closer to Adopting Rust Internally
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;A case study will be written on how Microsoft allowed Zoom to eat their lunch. They spent millions on subterfuge trying to paint Slack as an inferior enemy when MSFT Teams actually can't do what Slack does and Teams' real competitor was Zoom. Now Zoom has 300M Daily Users. Lol.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://twitter.com/chamath/status/1254522890373885952?s=12&amp;amp;itm_source=miere.observer&quot;&gt;
-                    Chamath Palihapitiya
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Rust/WinRT lets you call any WinRT API past, present, and future using code generated on the fly directly from the metadata describing the API and right into your Rust package where you can call them as if they were just another Rust module.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- Microsoft president Brad Smith, taken from &lt;a href=&quot;https://www.theverge.com/2020/5/18/21262103/microsoft-open-source-linux-history-wrong-statement?itm_source=miere.observer&quot;&gt;
-                    Microsoft: we were wrong about open source
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h2&gt;Rust on the Radar&lt;/h2&gt;
-        &lt;h3&gt;As we're talking about Rust, it seems that is not only Microsoft who's investing time and effort on it.&lt;/h3&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;There are many benefits a standardized ABI would bring to Rust. A stable ABI enables dynamic linking between Rust crates, which would allow for Rust programs to support dynamically loaded plugins (a feature common in C/C++). Dynamic linking would result in shorter compile-times and lower disk-space use for projects, as multiple projects could link to the same dylib. For example, imagine having multiple CLIs all link to the same core library crate.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://internals.rust-lang.org/t/a-stable-modular-abi-for-rust/12347?itm_source=miere.observer&quot;&gt;
-                    A Stable Modular ABI for Rust
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Programming is hard.&lt;/p&gt;
-            &lt;p&gt;Not because our hardware is complex, but simply because we’re all humans. Our attention span is limited, our memory is volatile — in other words, we tend to make mistakes.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://medium.com/coding-rust/why-rust-b539d0ea5b65?itm_source=miere.observer&quot;&gt;
-                    Why Rust?
-                &lt;/a&gt; by Omar Faroque&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;The deno_core crate is a very bare bones version of Deno. It does not have dependencies on TypeScript nor on Tokio. It simply provides our Op and Resource infrastructure. That is, it provides an organized way of binding Rust futures to JavaScript promises. The CLI is of course built entirely on top of deno_core.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://deno.land/v1?itm_source=miere.observer&quot;&gt;
-                    Deno 1.0
-                &lt;/a&gt; by Ryan Dahl, Bert Belder, and Bartek Iwańczuk&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h2&gt;Fowler and Friends&lt;/h2&gt;
-        &lt;h3&gt;It looks like a busy week for Martin Fowler and his friends. New ThoughtWorks Radar was released, a few blog entries has been updated and the man himself has carved another set terms and added to his legacy to the Software Engineering.&lt;/h3&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;This division of development into lines of work that split and merge is central to the workflow of software development teams, and several patterns have evolved to help us keep a handle on all this activity. Like most software patterns, few of them are gold standards that all teams should follow.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://martinfowler.com/articles/branching-patterns.html?itm_source=miere.observer&quot;&gt;
-                    Patterns for Managing Source Code Branches
-                &lt;/a&gt; by Martin Fowler&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;For this Radar, we decided to call out again infrastructure as code as well as pipelines as code, and we also had a number of conversations about infrastructure configurations, ML pipelines and other related areas. We find that the teams who commonly own these areas do not embrace enduring engineering practices such as applying software design principles, automation, continuous integration, testing, and so on.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://www.thoughtworks.com/radar?itm_source=miere.observer&quot;&gt;
-                    ThoughtWorks' Technology Radar
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Coming to understand the threat model for your system is not simple. There are an unlimited number of threats you can imagine to any system, and many of them could be likely. [...] Cyber threats chain in unexpected, unpredictable and even chaotic ways. Factors to do with culture, process and technology all contribute. This complexity and uncertainty is at the root of the cyber security problem. This is why security requirements are so hard for software development teams to agree upon.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://martinfowler.com/articles/agile-threat-modelling.html?itm_source=miere.observer&quot;&gt;
-                    A Guide to Threat Modelling for Developers
-                &lt;/a&gt; by Jim Gumbley&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-    &lt;/section&gt;
-    &lt;section&gt;
-        &lt;h2&gt;Other relevant quotes&lt;/h2&gt;
-        &lt;h3&gt;Hum, let me see... What else should be mentioned?&lt;/h3&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Zoom scaled from 20 million to 300 million users&amp;lt;/b&amp;gt; virtually over night. What's incredible is from the outside they've shown little in the way of apparent growing pains, though on the inside it's a good bet a lot of craziness is going on.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;http://highscalability.com/blog/2020/5/14/a-short-on-how-zoom-works.html?itm_source=miere.observer&quot;&gt;
-                    A Short On How Zoom Works
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Besides being an interesting approach to a very common problem, their discussion of Piranha also provides some very interesting insights into an organization that's *heavily* invested in feature flagging....&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- Pete Hodgson about &lt;a href=&quot;https://twitter.com/ph1/status/1263186192951939072?itm_source=miere.observer&quot;&gt;
-                    Uber open-sourcing Piranha
-                &lt;/a&gt;, a feature-flagging tool&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Deferring integration can increase the risk of merge conflicts, which causes you to move more slowly as you spend more energy addressing those conflicts. Slow change can sometimes be more risky than you expect because of the costs of extra work needed to reconcile conflicts, as well as the technical debt that results from bypassing the normal process to fix critical errors.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://www.techwell.com/techwell-insights/2020/05/code-integration-when-moving-slowly-actually-has-more-risk?itm_source=miere.observer&quot;&gt;
-                    Code Integration: When Moving Slowly Actually Has More Risk
-                &lt;/a&gt; by Steve Berczuk&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Simply put, testing in production means testing your features in the environment where your features will live. So what if a feature works in staging, that's great, but you should care if the feature works in production, that's what matters.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- Talia Nassi on&lt;a href=&quot;https://kentcdodds.com/chats-with-kent-podcast/seasons/03/episodes/talia-nassi-on-testing-in-production?itm_source=miere.observer&quot;&gt;
-                    Testing in Production
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;[...] when I was asked to reduce the resource requirements of a large MongoDB cluster, I reached the conclusion that the most obvious target - attribute names - wouldn’t lead to the kind of impact I wanted.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- Richard Startin on&lt;a href=&quot;https://richardstartin.github.io/posts/shrinking-bson-documents?itm_source=miere.observer&quot;&gt;
-                    Shrinking BSON Documents
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;The most considerable impact I see is in regards to velocity. The team can focus on other business-impactful projects, rather than EKS and Kubernetes maintenance -- the undifferentiated heavy lifting is eliminated. The same reason people move from physical data centers to the cloud, or from EC2 to Serverless: offloading that effort to AWS is a very good proposition.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://www.infoq.com/news/2020/05/container-scaling-fargate/?itm_source=miere.observer&quot;&gt;
-                    Q&amp;amp;A on Container Scaling with Fargate
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Did you know that &lt;a href=&quot;http://pypi.org&quot;&gt;http://pypi.org&lt;/a&gt; serves 800 million requests and delivers 200 million packages totalling 400 terabytes ... a day? No. Exactly. You want it to just work. Every day, rain or shine. To keep it that way: sponsor them&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://twitter.com/betatim/status/1246792203894231042?src=miere.observer&quot;&gt;
-                    Tim Head
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;We recently migrated a few small systems to CockroachDB (as a stepping stone). Overall, the experience was positive. The hassle free HA is a huge peace of mind. I know people say this is easy to do in PG. I have recently setup 2ndQuadrant's pglogical for another system. That was also easy (though the documentation was pretty bad). The end result is quite different though and CockroachDB is just simpler to reason about and manage and, I think, more generally applicable.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://news.ycombinator.com/item?id=23087514?itm_source=miere.observer&quot;&gt;
-                    latch
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Our actual use-case is a little complex to go into in tweets. But suffice to say, the PUT costs alone to S3 if we did 1-to-1 would end up being just under half our total running costs when factoring in DDB, Lambda, SQS, APIG, etc.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://twitter.com/alexbdebrie/status/1250224930643423234?s=12&amp;amp;src=miere.observer&quot;&gt;
-                    Wayne Robinson
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Need operational analytics in &lt;a href=&quot;https://twitter.com/hashtag/NoSQL?src=miere.observer&quot;&gt;#NoSQL&lt;/a&gt;? Maintain time bound rollups in &lt;a href=&quot;https://twitter.com/dynamodb?src=miere.observer&quot;&gt;@DynamoDB&lt;/a&gt; with Streams/Lambda then query relevant items by date range and aggregate client side for fast reporting on scaled out data. Turn complex ad hoc queries into simple select statements and save $$$&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://twitter.com/houlihan_rick/status/1258024512035176450?s=12&amp;amp;src=miere.observer&quot;&gt;
-                    Rick Houlihan
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Another part of the solution is GPU acceleration using grCUDA — an open-source language binding that allows developers to share data between NVIDIA GPUs and GraalVM languages (R, Python, JavaScript), and also launch GPU kernels. The team implemented the performance critical components in CUDA for the GPU, and used grCUDA from Python to exchange data with the GPU and to invoke the GPU kernels.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://medium.com/graalvm/optimizing-machine-learning-performance-at-netsuite-with-graalvm-and-nvidia-gpus-d0d40f0b0cf1?itm_source=miere.observer&quot;&gt;
-                    Optimizing Machine Learning Performance at Netsuite with GraalVM and NVIDIA GPUs
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Although event-driven architecture has existed for more than 15 years, only recently has it gained massive popularity, and there is a reason for that. Most companies are going through a “digital transformation” phase, and with that, crazy requirements occur. The complexity of these requirements force engineers to adopt new ways of designing software, ones that incur less coupling between services and lower maintenance overhead. EDA is one solution to these problems but it is not the only one.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://stackoverflow.blog/2020/03/16/how-event-driven-architecture-solves-modern-web-app-problems/?itm_source=miere.observer&quot;&gt;
-                    How event-driven architecture solves modern web app problems
-                &lt;/a&gt;&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;So, let's look at the resulting context of moving to microservices with entity services:&lt;/p&gt;
-            &lt;ul&gt;
-                &lt;li&gt;Performance analysis and debugging is more difficult. Tracing tools such as Zipkin are necessary.&lt;/li&gt;
-                &lt;li&gt;Additional overhead of marshalling and parsing requests and replies consumes some of our precious latency budget.&lt;/li&gt;
-                &lt;li&gt;Individual units of code are smaller.&lt;/li&gt;
-                &lt;li&gt;Each team can deploy on its own cadence.&lt;/li&gt;
-                &lt;li&gt;Semantic coupling requires cross-team negotiation.&lt;/li&gt;
-                &lt;li&gt;Features mainly accrue in &quot;nexuses&quot; such as API, aggregator, or UI servers.&lt;/li&gt;
-                &lt;li&gt;Entity services are invoked on nearly every request, so they will become heavily loaded.&lt;/li&gt;
-                &lt;li&gt;Overall availability is coupled to many different services, even though we expect individual services to be deployed frequently. (A deployment look exactly like an outage to callers!)&lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://stackoverflow.blog/2020/03/16/how-event-driven-architecture-solves-modern-web-app-problems/?itm_source=miere.observer&quot;&gt;
-                    The Entity Service Antipattern
-                &lt;/a&gt; by Michael T. Nygard&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-        &lt;blockquote class=&quot;quote&quot;&gt;
-            &lt;p&gt;Moving all the “what does the world around me look like?” side effects to the beginning of the program, and all the “change the world around me!” side effects to the end of the program, we achieve maximum testability of program logic. And minimum convolution. And separation of concerns: one module makes the decisions, another one carries them out. Consider this possibility the next time you find yourself in testing pain.&lt;/p&gt;
-            &lt;footer&gt;
-                &lt;cite&gt;- &lt;a href=&quot;https://jessitron.com/2015/06/06/ultratestable-coding-style/?itm_source=miere.observer&quot;&gt;
-                    Ultratestable Coding Style
-                &lt;/a&gt; by Jessica Joy Kerr&lt;/cite&gt;
-            &lt;/footer&gt;
-        &lt;/blockquote&gt;
-    &lt;/section&gt;
-&lt;/article&gt;</content><author><name></name></author><category term="news" /><category term="engineering" /><category term="news" /><summary type="html">This is my reading list from the past few days. I decided to put them here as it might be helpful to someone else. It was deeply inspired by HighScalability blog, a source I’ve been consuming for years.</summary></entry><entry><title type="html">Re: Ensuring backwards compatibility in distributed systems</title><link href="https://miere.observer/engineering/2020/05/20/Re-Ensuring-backwards-compatibility-in-distributed-systems.html" rel="alternate" type="text/html" title="Re: Ensuring backwards compatibility in distributed systems" /><published>2020-05-20T00:00:00+10:00</published><updated>2020-05-20T00:00:00+10:00</updated><id>https://miere.observer/engineering/2020/05/20/Re-Ensuring-backwards-compatibility-in-distributed-systems</id><content type="html" xml:base="https://miere.observer/engineering/2020/05/20/Re-Ensuring-backwards-compatibility-in-distributed-systems.html">&lt;p&gt;A few days ago, I spotted a blog post from StackOverflow that drew my attention: &lt;a href=&quot;https://stackoverflow.blog/2020/05/13/ensuring-backwards-compatibility-in-distributed-systems/&quot;&gt;Ensuring backwards compatibility in distributed systems&lt;/a&gt;. That is the sort of topic I love to consume as it gives me new insights and let me know how people are solving similar problems. The article was engagingly good and kept me focused on reading it until the end.&lt;/p&gt;
+&lt;p&gt;C4Model is &lt;a href=&quot;https://c4model.com/&quot;&gt;well documented on its website&lt;/a&gt;, with several years spent polishing it to reach this level of simplicity and organization. The beauty behind these diagrams lies in the fact we can pick our target audience, allowing us to choose when and who should be involved in the documentation process.&lt;/p&gt;</content><author><name></name></author><category term="engineering" /><category term="engineering" /><summary type="html">In the 2000s we went from documenting every single class of our software to not at all. It was an attempt to increase the delivery pace, keeping the team away from tasks that, eventually, have to be remade once the software changes. As a side effect, scaling the team became a problem. The most notable one is the lack of autonomy from its members. Not only newcomers need special attention to get familiarized with the basics of their software (like building and running it), but they would still ask several questions until they understand how it works and how it solves the problem it was designed for.</summary></entry><entry><title type="html">Re: Ensuring backwards compatibility in distributed systems</title><link href="https://miere.observer/engineering/2020/05/20/Re-Ensuring-backwards-compatibility-in-distributed-systems.html" rel="alternate" type="text/html" title="Re: Ensuring backwards compatibility in distributed systems" /><published>2020-05-20T00:00:00+10:00</published><updated>2020-05-20T00:00:00+10:00</updated><id>https://miere.observer/engineering/2020/05/20/Re-Ensuring-backwards-compatibility-in-distributed-systems</id><content type="html" xml:base="https://miere.observer/engineering/2020/05/20/Re-Ensuring-backwards-compatibility-in-distributed-systems.html">&lt;p&gt;A few days ago, I spotted a blog post from StackOverflow that drew my attention: &lt;a href=&quot;https://stackoverflow.blog/2020/05/13/ensuring-backwards-compatibility-in-distributed-systems/&quot;&gt;Ensuring backwards compatibility in distributed systems&lt;/a&gt;. That is the sort of topic I love to consume as it gives me new insights and let me know how people are solving similar problems. The article was engagingly good and kept me focused on reading it until the end.&lt;/p&gt;
 
 &lt;p&gt;I would like, though, to write a few remarks about a few definitions assumed in the article which, if taken by the book, are not strictly correct. The idea behind the following paragraphs is far from detracting the author or the post itself. StackOverflow has a massive audience and knowing the correct definition might help them to adopt the right technique for the right job.&lt;/p&gt;
 
@@ -771,7 +596,7 @@ awarded its employees with a (big) slice of the profit they’ve got by reducing
     &lt;section&gt;
         &lt;time&gt;7:14&lt;/time&gt;
         &lt;h2&gt;Third-party Monolith&lt;/h2&gt;
-        &lt;p&gt;Newman describes a third-party monolith as everything &quot;that is completely out of your control&quot;, something you can't change its internal behaviour. It might be your CRM software that your SaaS application relies on or even that old piece of software which you don't have the source code.&lt;/p&gt;
+        &lt;p&gt;Newman describes a third-party monolith as everything &quot;that is completely out of your control&quot;, something you can&apos;t change its internal behaviour. It might be your CRM software that your SaaS application relies on or even that old piece of software which you don&apos;t have the source code.&lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;time&gt;8:01&lt;/time&gt;
@@ -782,14 +607,14 @@ awarded its employees with a (big) slice of the profit they’ve got by reducing
     &lt;section&gt;
         &lt;time&gt;10:20&lt;/time&gt;
         &lt;blockquote&gt;
-            &lt;p&gt;Fundamentally, you have to accept that monolith isn't necessarily the enemy - it's extremely rare that your goal is to kill the monolith. It sometimes happens but, most of the time, you're in a situation where you're trying to achieve something as a business but your current architecture won't let you achieve that goal.&lt;/p&gt;
+            &lt;p&gt;Fundamentally, you have to accept that monolith isn&apos;t necessarily the enemy - it&apos;s extremely rare that your goal is to kill the monolith. It sometimes happens but, most of the time, you&apos;re in a situation where you&apos;re trying to achieve something as a business but your current architecture won&apos;t let you achieve that goal.&lt;/p&gt;
         &lt;/blockquote&gt;
         &lt;p&gt;This is an important bit from his presentation and it needs to be transcribed as is. A Monolith Service by itself is not a bad thing and, like any other architectural decision, it has its pros and cons. We should only switch from a monolith to a microservice architecture when its benefits overcome the cost of maintaining a complex distributed system.&lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;time&gt;12:44&lt;/time&gt;
         &lt;blockquote&gt;
-            &lt;p&gt;You won't appreciate the true horror, pain and suffering of microservices until you're running then in production.&lt;/p&gt;
+            &lt;p&gt;You won&apos;t appreciate the true horror, pain and suffering of microservices until you&apos;re running then in production.&lt;/p&gt;
         &lt;/blockquote&gt;
         &lt;p&gt;Perhaps a good start might be extracting one module from your Modular Monolith into an external service. What you learn from observing this new service might give you enough insights to continue with the transition from a monolith to a microservice architecture.&lt;/p&gt;
     &lt;/section&gt;
@@ -806,7 +631,7 @@ awarded its employees with a (big) slice of the profit they’ve got by reducing
         &lt;blockquote&gt;
             &lt;p&gt;When making a significant change to how a piece of functionality is implemented, the challenge is how to work on this reimplementation over a period of time. With branch-by-abstraction, you create a single abstraction point over the functionality to be reimplemented, allowing both the existing functionality and the new implementation to co-exist inside the same running process at the same time.&lt;/p&gt;
         &lt;/blockquote&gt;
-        &lt;p&gt;At this point in his presentation, he started to describe the ideal step-by-step to implement this pattern. I've modified it slightly to make it easier to reproduce.&lt;/p&gt;
+        &lt;p&gt;At this point in his presentation, he started to describe the ideal step-by-step to implement this pattern. I&apos;ve modified it slightly to make it easier to reproduce.&lt;/p&gt;
         &lt;ol&gt;
             &lt;li&gt;&lt;b&gt;Isolate the current implementation&lt;/b&gt; - This is the first and most important and delicate step of this pattern, where you isolate the current implementation from the rest of the service. At this step you have to move the logic of the current functionality you intend to replace and move it to a single place (same package, module or folder).&lt;/li&gt;
             &lt;li&gt;&lt;b&gt;Create an abstraction point&lt;/b&gt; - Create an interface that will behave as the contract to call that given functionality. With the &lt;a href=&quot;http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod&quot;&gt;Liskov Substitution Principle&lt;/a&gt; in mind, you must make sure your software calls a default implementation of this internal, which will call your just isolated functionality.&lt;/li&gt;
@@ -818,7 +643,7 @@ awarded its employees with a (big) slice of the profit they’ve got by reducing
     &lt;section&gt;
         &lt;time&gt;26:07&lt;/time&gt;
         &lt;h2&gt;Parallel Run&lt;/h2&gt;
-        &lt;p&gt;Being a variation of Branch by Abstraction, Parallel Run allows both implementations to co-exist at the same time. This is particularly useful to check if the behaviour has changed. Although both branches have different implementations it's expected that they to behave the same way, unless otherwise noted. Therefore, when comparing the outcome of both functionalities, it's important to take the original implementation as the source of truth, where any discrepancy in the result comparison between them should be considered a failure in the new service.&lt;/p&gt;
+        &lt;p&gt;Being a variation of Branch by Abstraction, Parallel Run allows both implementations to co-exist at the same time. This is particularly useful to check if the behaviour has changed. Although both branches have different implementations it&apos;s expected that they to behave the same way, unless otherwise noted. Therefore, when comparing the outcome of both functionalities, it&apos;s important to take the original implementation as the source of truth, where any discrepancy in the result comparison between them should be considered a failure in the new service.&lt;/p&gt;
     &lt;/section&gt;
     &lt;section&gt;
         &lt;time&gt;28:10&lt;/time&gt;

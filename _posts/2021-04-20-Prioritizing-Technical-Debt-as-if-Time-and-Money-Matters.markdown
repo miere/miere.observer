@@ -44,13 +44,13 @@ header-img: 'https://i.ytimg.com/vi/fl4aZ2KXBsQ/maxresdefault.jpg'
             intertwined that it prevents us to perceive the problems as it is, leading us to tackle <i>"the symptoms more than the root cause"</i>.
         </p>
         <p>
-            What he's experienced is somewhat similar to what I've witnessed in the past few years. If we, as technical and business leaders,
-            only monitor the tickets we have in the backlog we might no be able to identify the impact that technical debts impose to our users.
+            What he has experienced is somewhat similar to what I've witnessed in the past few years. If we, as technical and business leaders,
+            only monitor the tickets we have in the backlog we might not be able to identify the impact that technical debts impose to our users.
             Therefore, to actually solve the problem, we need to understand the underlying issue - the root cause of the problem. It might imply
-            on revisiting a software, or component, design - or even how we approach and process the interaction with the user.
+            on revisiting a software, a component design or even how we approach and process the interaction with the user.
         </p>
         <p>
-            It worth mention that Tornhill is not advocating perfectionism. In general, users don't mind to live with one or two glitches in the app
+            It worth mention that Tornhill is not advocating perfectionism. In general, users don't mind living with one or two glitches in the app
             as long as it doesn't impact their work routine. But as we neglect the existence of those technical debts, the time to release of new
             features or fix bugs grows bigger (and faster) than the symptoms experienced by the users.      
         </p>
